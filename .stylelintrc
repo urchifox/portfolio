@@ -1,3 +1,15 @@
 {
-  "extends": "stylelint-config-htmlacademy"
+  "extends": "stylelint-config-htmlacademy",
+  "rules": {
+    "at-rule-no-unknown": [
+      true,
+      {
+        "ignoreAtRules": [
+          "function",
+          "return",
+          "mixin"
+        ]
+      }
+    ]
+  }
 }
