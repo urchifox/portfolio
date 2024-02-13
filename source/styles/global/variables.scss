@@ -28,7 +28,7 @@ $on-small-medium: "screen and (max-width: #{$breakpoint-large - $breakpoint-gap}
     --color-accent-medium-light: hsl(275, 90%, 81%);
     --color-accent-light: hsl(275, 100%, 90%);
 
-    color-scheme: dark;
+    color-scheme: light;
   }
 
   @media (prefers-color-scheme: dark) {
