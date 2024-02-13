@@ -1,4 +1,4 @@
-// Nunito
+// NUNITO
 
 @font-face {
   font-family: "Nunito";
@@ -6,6 +6,7 @@
   font-display: swap;
   src:
     local("Nunito"),
+    url("./../../fonts/Nunito/Nunito-Medium.woff2") format("woff2"),
     url("./../../fonts/Nunito/Nunito-Medium.woff") format("woff");
 }
 
@@ -15,6 +16,7 @@
   font-display: swap;
   src:
     local("Nunito"),
+    url("./../../fonts/Nunito/Nunito-Bold.woff2") format("woff2"),
     url("./../../fonts/Nunito/Nunito-Bold.woff") format("woff");
 }
 
@@ -25,10 +27,11 @@
   font-display: swap;
   src:
     local("Nunito"),
+    url("./../../fonts/Nunito/Nunito-BoldItalic.woff2") format("woff2"),
     url("./../../fonts/Nunito/Nunito-BoldItalic.woff") format("woff");
 }
 
-// NunitoSans
+// NUNITOSANS
 
 @font-face {
   font-family: "NunitoSans";
@@ -36,7 +39,8 @@
   font-display: swap;
   src:
     local("NunitoSans"),
-    url("./../../fonts/NunitoSans/NunitoSans-Regular.ttf") format("truetype");
+    url("./../../fonts/NunitoSans/NunitoSans-Regular.woff2") format("woff2"),
+    url("./../../fonts/NunitoSans/NunitoSans-Regular.woff") format("woff");
 }
 
 @font-face {
@@ -45,7 +49,8 @@
   font-display: swap;
   src:
     local("NunitoSans"),
-    url("./../../fonts/NunitoSans/NunitoSans-Bold.ttf") format("truetype");
+    url("./../../fonts/NunitoSans/NunitoSans-Bold.woff2") format("woff2"),
+    url("./../../fonts/NunitoSans/NunitoSans-Bold.woff") format("woff");
 }
 
 @font-face {
@@ -54,5 +59,6 @@
   font-display: swap;
   src:
     local("NunitoSans"),
-    url("./../../fonts/NunitoSans/NunitoSans-Black.ttf") format("truetype");
+    url("./../../fonts/NunitoSans/NunitoSans-Black.woff2") format("woff2"),
+    url("./../../fonts/NunitoSans/NunitoSans-Black.woff") format("woff");
 }
