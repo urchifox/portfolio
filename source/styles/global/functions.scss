@@ -1,0 +1,4 @@
+@function color-opacity($color, $opacity) {
+  $percent: $opacity * 100%;
+  @return color-mix(in srgb, $color $percent, transparent)
+}
