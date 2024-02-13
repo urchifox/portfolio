@@ -7,10 +7,10 @@
 
   font-family: $font-family-basic;
   font-weight: $font-weight-medium;
-  color: $color-basic-dark;
+  color: var(--color-basic-dark);
   font-size: 16px;
 
-  background-color: $color-basic-light;
+  background-color: var(--color-basic-light);
 
   @media #{$on-medium} {
     font-size: 18px;
