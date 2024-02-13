@@ -15,3 +15,20 @@ a {
   text-decoration: none;
   color: inherit;
 }
+
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    /* stylelint-disable declaration-no-important */
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+    /* stylelint-enable declaration-no-important */
+  }
+}
