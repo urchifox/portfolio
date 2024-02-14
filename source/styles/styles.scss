@@ -6,5 +6,12 @@
 @import "./global/global.scss";
 @import "./global/helpers.scss";
 
-/* BLOCKS */
+/* REUSABLE BLOCKS */
+@import "./blocks/container.scss";
+@import "./blocks/button.scss";
+
+/* SECTIONS / ARTICLES */
+
+/* MAIN BLOCKS */
 @import "./blocks/page.scss";
+@import "./blocks/header.scss";

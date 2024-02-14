@@ -1,0 +1,108 @@
+.header {
+  padding-top: $font-size-1;
+  padding-bottom: $font-size-1;
+  border-bottom: 2px solid var(--color-basic-medium);
+  background-color: color-opacity(var(--color-basic-light), 0.6);
+
+  // TODO на мобилке при открытом меню добавить оверлей с блюром и серым цветом + блокировка скролла и тача
+}
+
+.header__container {
+  display: grid;
+  align-items: center;
+
+  @media #{$on-small} {
+    grid-template-columns: 1fr 1fr;
+    gap: $font-size-1;
+  }
+
+  @media #{$on-medium} {
+    grid-template-columns: 1fr auto;
+    gap: $font-size-3;
+  }
+
+  @media #{$on-large} {
+    grid-template-columns: 1fr auto 1fr;
+    gap: $font-size-3;
+  }
+}
+
+.header__menu-toggle-wrapper {
+  @media #{$on-small} {
+    grid-row: 1 / 2;
+    justify-self: start;
+  }
+
+  @media #{$on-medium-large} {
+    display: none;
+  }
+}
+
+.header__menu-toggle {
+  &:checked {
+    --icon-url: url("./../../images/icons/stack.svg#close");
+  }
+}
+
+.header__menu {
+  @media #{$on-small} {
+    grid-column: 1 / -1;
+    grid-row: 2 / 3;
+
+    // TODO добавить анимацию выдвигания меню при клике на кнопку
+    :has(.header__menu-toggle:not(:checked)) & {
+      display: none;
+    }
+
+    :has(.header__menu-toggle:checked) & {
+      display: block;
+    }
+  }
+
+  @media #{$on-large} {
+    grid-column: 2 / 3;
+  }
+}
+
+.header__menu-list {
+  @include clear-list;
+
+  display: flex;
+  flex-wrap: wrap;
+
+  font-size: $font-size-2;
+
+  @media #{$on-small} {
+    flex-direction: column;
+    gap: $font-size-s;
+  }
+
+  @media #{$on-medium-large} {
+    gap: $font-size-xxs $font-size-2;
+  }
+}
+
+.header__theme-toggle-container {
+  justify-self: end;
+
+  @media #{$on-small} {
+    grid-row: 1 / 2;
+  }
+
+  @media #{$on-large} {
+    grid-column: 3 / 4;
+  }
+}
+
+.header__menu-link {
+  cursor: pointer;
+  transition: color $transition-basic;
+
+  &:hover {
+    color: var(--color-accent-medium-light);
+  }
+
+  &:active {
+    color: var(--color-accent-light);
+  }
+}
