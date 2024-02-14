@@ -7,7 +7,16 @@
         "ignoreAtRules": [
           "function",
           "return",
+          "include",
           "mixin"
+        ]
+      }
+    ],
+    "function-no-unknown": [
+      true,
+      {
+        "ignoreFunctions": [
+          "color-opacity"
         ]
       }
     ]
