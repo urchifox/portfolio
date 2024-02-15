@@ -1,8 +1,8 @@
 .header {
   padding-top: $font-size-1;
   padding-bottom: $font-size-1;
-  border-bottom: 2px solid var(--color-basic-medium);
-  background-color: color-opacity(var(--color-basic-light), 0.6);
+  border-bottom: 2px solid var(--color-background-accent);
+  background-color: color-opacity(var(--color-background-basic), 0.6);
 
   // TODO на мобилке при открытом меню добавить оверлей с блюром и серым цветом + блокировка скролла и тача
 }
@@ -82,7 +82,7 @@
   }
 }
 
-.header__theme-toggle-container {
+.header__scheme-toggle {
   justify-self: end;
 
   @media #{$on-small} {
@@ -94,15 +94,16 @@
   }
 }
 
+
 .header__menu-link {
   cursor: pointer;
   transition: color $transition-basic;
 
   &:hover {
-    color: var(--color-accent-medium-light);
+    color: var(--color-interactive-secondary);
   }
 
   &:active {
-    color: var(--color-accent-light);
+    color: var(--color-interactive-accent);
   }
 }

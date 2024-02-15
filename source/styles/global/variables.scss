@@ -14,37 +14,20 @@ $on-medium-large: "screen and (min-width: #{$breakpoint-medium})";
 $on-small-medium: "screen and (max-width: #{$breakpoint-large - $breakpoint-gap})";
 
 // COLORS
-
 :root {
-  @media (prefers-color-scheme: light) {
-    --color-basic-dark: hsl(255, 25%, 40%);
-    --color-basic-medium-dark: hsl(225, 26%, 59%);
-    --color-basic-medium: hsl(225, 33%, 73%);
-    --color-basic-medium-light: hsl(225, 44%, 86%);
-    --color-basic-light: hsl(255, 100%, 98%);
-    --color-accent-dark: hsl(275, 33%, 49%);
-    --color-accent-medium-dark: hsl(275, 47%, 62%);
-    --color-accent-medium: hsl(275, 64%, 71%);
-    --color-accent-medium-light: hsl(275, 90%, 81%);
-    --color-accent-light: hsl(275, 100%, 90%);
+  --color-basic-dark: hsl(255, 25%, 40%);
+  --color-basic-medium-dark: hsl(225, 26%, 59%);
+  --color-basic-medium: hsl(225, 33%, 73%);
+  --color-basic-medium-light: hsl(225, 44%, 86%);
+  --color-basic-light: hsl(255, 100%, 98%);
 
-    color-scheme: light;
-  }
+  --color-accent-dark: hsl(275, 33%, 49%);
+  --color-accent-medium-dark: hsl(275, 47%, 62%);
+  --color-accent-medium: hsl(275, 64%, 71%);
+  --color-accent-medium-light: hsl(275, 90%, 81%);
+  --color-accent-light: hsl(275, 100%, 90%);
 
-  @media (prefers-color-scheme: dark) {
-    --color-basic-dark: hsl(255, 100%, 98%);
-    --color-basic-medium-dark: hsl(225, 44%, 86%);
-    --color-basic-medium: hsl(225, 33%, 73%);
-    --color-basic-medium-light: hsl(225, 26%, 59%);
-    --color-basic-light: hsl(255, 25%, 40%);
-    --color-accent-dark: hsl(275, 100%, 90%);
-    --color-accent-medium-dark: hsl(275, 90%, 81%);
-    --color-accent-medium: hsl(275, 64%, 71%);
-    --color-accent-medium-light: hsl(275, 47%, 62%);
-    --color-accent-light: hsl(275, 33%, 49%);
-
-    color-scheme: dark;
-  }
+  color-scheme: light dark;
 }
 
 // FONTS OPTIONS

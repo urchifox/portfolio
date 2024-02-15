@@ -1,0 +1,10 @@
+
+.scheme-toggle__control {
+  &:not(:checked) {
+    --icon-url: url("./../../images/icons/stack.svg#dark-mode");
+  }
+
+  &:checked {
+    --icon-url: url("../../images/icons/stack.svg#light-mode");
+  }
+}

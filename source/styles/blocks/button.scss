@@ -1,5 +1,5 @@
 .button {
-  --icon-color: var(--color-accent-medium);
+  --icon-color: var(--color-interactive-basic);
   margin: 0;
 
   padding: 0;
@@ -15,20 +15,16 @@
   cursor: pointer;
 
   &:hover {
-    --icon-color: var(--color-accent-medium-light);
+    --icon-color: var(--color-interactive-secondary);
   }
 
   &:active {
-    --icon-color: var(--color-accent-light);
+    --icon-color: var(--color-interactive-accent);
   }
 
   &:disabled {
-    --icon-color: var(--color-basic-medium);
+    --icon-color: var(--color-interactive-disabled);
     pointer-events: none;
-  }
-
-  &--icon-dark-mode {
-    --icon-url: url("./../../images/icons/stack.svg#dark-mode");
   }
 
   &--icon-menu {
