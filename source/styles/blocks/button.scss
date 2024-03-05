@@ -53,6 +53,10 @@
     --icon-url: url("./../../images/icons/stack.svg#certificate");
   }
 
+  &--icon-external-link {
+    --icon-url: url("./../../images/icons/stack.svg#external-link");
+  }
+
   &::after {
     content: "";
     width: 100%;

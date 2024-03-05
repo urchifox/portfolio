@@ -171,3 +171,35 @@
 .subsection__button {
   flex-shrink: 0;
 }
+
+.subsection__courses-list {
+  margin-top: 0;
+  margin-bottom: 0;
+
+  padding-left: 0;
+
+  display: flex;
+  gap: $font-size-1;
+
+  list-style: none;
+
+  @media #{$on-small-medium} {
+    flex-direction: column;
+  }
+
+  @media #{$on-large} {
+    padding-left: $font-size-3;
+    padding-right: $font-size-3;
+
+    align-items: center;
+
+    background: linear-gradient(to bottom, transparent 16.5%, var(--color-background-secondary) 16.5%, var(--color-background-secondary) 83.5%, transparent 83.5%);
+  }
+}
+
+.subsection__courses-item {
+  @media #{$on-small-medium} {
+    margin-left: $font-size-3;
+    margin-right: $font-size-3;
+  }
+}
