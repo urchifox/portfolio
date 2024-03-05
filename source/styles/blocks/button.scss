@@ -3,8 +3,8 @@
   margin: 0;
 
   padding: 0;
-  width: clamp(25px, $font-size-4, 40px);
-  height: clamp(25px, $font-size-4, 40px);
+  width: clamp(22px, $font-size-4, 40px);
+  height: clamp(22px, $font-size-4, 40px);
   border: none;
 
   appearance: none;
@@ -33,6 +33,18 @@
 
   &--icon-close {
     --icon-url: url("./../../images/icons/stack.svg#close");
+  }
+
+  &--icon-whatsapp {
+    --icon-url: url("./../../images/icons/stack.svg#whatsapp");
+  }
+
+  &--icon-telegram {
+    --icon-url: url("./../../images/icons/stack.svg#telegram");
+  }
+
+  &--icon-gmail {
+    --icon-url: url("./../../images/icons/stack.svg#gmail");
   }
 
   &::after {

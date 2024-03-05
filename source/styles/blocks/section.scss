@@ -1,0 +1,109 @@
+.section {
+  &--lead {
+    padding-top: $font-size-2;
+    padding-bottom: $font-size-2;
+
+    display: grid;
+    gap: $font-size-xs $font-size-2;
+
+    color: var(--color-background-basic);
+    background-color: var(--color-background-accent);
+
+    @media #{$on-small} {
+      padding-left: $font-size-2;
+      padding-right: $font-size-2;
+
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(5, auto);
+      justify-items: center;
+
+      text-align: center;
+    }
+
+    @media #{$on-medium} {
+      padding-right: $font-size-2;
+
+      grid-template-columns: 33% 1fr;
+      grid-template-rows: repeat(4, auto);
+    }
+
+    @media #{$on-large} {
+      padding-left: $font-size-2;
+      padding-right: $font-size-2;
+
+      grid-template-columns: 33% 1fr auto;
+      grid-template-rows: repeat(3, auto);
+    }
+  }
+}
+
+.section__title {
+  margin-top: 0;
+  margin-bottom: $font-size-4;
+
+  .section--lead & {
+    margin-bottom: 0;
+    color: inherit;
+    text-align: inherit;
+  }
+}
+
+.section__tagline {
+  margin-top: 0;
+  margin-bottom: 0;
+
+  font-family: $font-family-accent;
+  font-size: $font-size-3;
+  font-weight: $font-weight-bold;
+}
+
+.section__text {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.section__picture-wrapper {
+  background-color: var(--color-background-secondary);
+
+  @media #{$on-small} {
+    margin-left: calc(0px - $font-size-2);
+    margin-right: calc(0px - $font-size-2);
+
+    grid-column: 1;
+    grid-row: 3;
+  }
+
+  @media #{$on-medium-large} {
+    margin-top: calc(0px - $font-size-2);
+    margin-bottom: calc(0px - $font-size-2);
+
+    grid-column: 1;
+    grid-row: 1 / -1;
+  }
+}
+
+.section__contacts-list {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 0;
+
+  display: flex;
+  gap: $font-size-3;
+  list-style: none;
+
+  @media #{$on-medium} {
+    justify-self: end;
+  }
+
+  @media #{$on-large} {
+    flex-direction: column;
+
+    grid-column: 3;
+    grid-row: 1 / -1;
+    align-self: end;
+  }
+}
+
+.section__contacts-link {
+  --icon-color: var(--color-background-basic);
+}
