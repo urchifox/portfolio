@@ -1,8 +1,8 @@
 .header {
   padding-top: $font-size-1;
   padding-bottom: $font-size-1;
-  border-bottom: 2px solid var(--color-background-accent);
-  background-color: color-opacity(var(--color-background-basic), 0.6);
+  border-bottom: 2px solid var(--color-background-secondary);
+  background-color: var(--color-background-basic);
 
   // TODO на мобилке при открытом меню добавить оверлей с блюром и серым цветом + блокировка скролла и тача
 }

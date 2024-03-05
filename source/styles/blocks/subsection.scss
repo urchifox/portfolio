@@ -1,0 +1,116 @@
+.subsection {
+  margin-bottom: $font-size-6;
+}
+
+.subsection__skills-list {
+  margin-top: 0;
+  margin-bottom: 0;
+
+  padding-left: 0;
+  border-bottom: 2px solid var(--color-background-secondary);
+
+
+  list-style: none;
+
+  @media #{$on-large} {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+  }
+}
+
+.subsection__skills-item {
+  padding-top: $font-size-1;
+  padding-bottom: $font-size-1;
+  border-top: 2px solid var(--color-background-secondary);
+
+  display: flex;
+  gap: $font-size-1;
+  align-items: center;
+
+  @media #{$on-small} {
+    padding-left: $font-size-3;
+    padding-right: $font-size-3;
+  }
+
+  @media #{$on-medium} {
+    padding-left: 16.5%;
+    padding-right: 16.5%;
+  }
+
+  @media #{$on-large} {
+    padding-left: $font-size-3;
+    padding-right: $font-size-3;
+    width: 50%;
+  }
+
+  &:last-child:nth-child(odd) {
+    @media #{$on-large} {
+      padding-left: calc(25% + $font-size-3);
+      padding-right: calc(25% + $font-size-3);
+      width: 100%;
+    }
+  }
+}
+
+.subsection__skills-icon-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: $font-size-s;
+}
+
+.subsection__skills-icon {
+  margin-top: 0;
+  margin-bottom: 0;
+
+  width: $font-size-4;
+  height: $font-size-4;
+
+  background-image: var(--icon-url);
+
+  &--icon-html {
+    --icon-url: url("./../../images/icons/stack.svg#html");
+  }
+
+  &--icon-css {
+    --icon-url: url("./../../images/icons/stack.svg#css");
+  }
+
+  &--icon-sass {
+    --icon-url: url("./../../images/icons/stack.svg#sass");
+  }
+
+  &--icon-javascript {
+    --icon-url: url("./../../images/icons/stack.svg#javascript");
+  }
+
+  &--icon-git {
+    --icon-url: url("./../../images/icons/stack.svg#git");
+  }
+
+  &--icon-github {
+    --icon-url: url("./../../images/icons/stack.svg#github");
+  }
+
+  &--icon-bem {
+    --icon-url: url("./../../images/icons/stack.svg#bem");
+  }
+
+  &--icon-gulp {
+    --icon-url: url("./../../images/icons/stack.svg#gulp");
+  }
+
+  &--icon-webpack {
+    --icon-url: url("./../../images/icons/stack.svg#webpack");
+  }
+}
+
+.subsection__skills-text {
+  margin-top: 0;
+  margin-bottom: 0;
+
+  &:first-child {
+    text-align: center;
+  }
+}
