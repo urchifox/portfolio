@@ -1,0 +1,49 @@
+.practice-card {
+  padding: $font-size-2;
+
+  border-radius: $font-size-2;
+  background-color: var(--color-background-basic);
+}
+
+.practice-card__title {
+  margin-top: 0;
+  margin-bottom: $font-size-1;
+
+  font-size: $font-size-3;
+  font-weight: $font-weight-bold;
+}
+
+.practice-card__text {
+  margin-top: 0;
+  margin-bottom: $font-size-xs;
+}
+
+.practice-card__projects {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: $font-size-xxs;
+}
+
+.practice-card__caption {
+  margin-top: 0;
+  margin-bottom: 0;
+
+  width: min-content;
+
+  font-size: $font-size-s;
+  color: var(--color-text-secondary);
+}
+
+.practice-card__projects-list {
+  margin-top: 0;
+  margin-bottom: 0;
+
+  padding-left: 0;
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: $font-size-xxs;
+
+  list-style: none;
+}
