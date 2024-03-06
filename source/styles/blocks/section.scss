@@ -1,13 +1,18 @@
 .section {
   &--lead {
+    color: var(--color-background-basic);
+    background-color: var(--color-background-accent);
+  }
+}
+
+.section__container {
+  &--lead {
     padding-top: $font-size-2;
     padding-bottom: $font-size-2;
 
     display: grid;
     gap: $font-size-xs $font-size-2;
 
-    color: var(--color-background-basic);
-    background-color: var(--color-background-accent);
 
     @media #{$on-small} {
       padding-left: $font-size-2;

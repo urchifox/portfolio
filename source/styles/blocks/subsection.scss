@@ -7,17 +7,32 @@
   margin-bottom: $font-size-3;
 }
 
+.subsection__skills-container {
+  @media #{$on-large} {
+    margin: 0 auto;
+
+    padding-left: $font-size-3;
+    padding-right: $font-size-3;
+    width: 100%;
+    max-width: $max-content-width;
+  }
+}
+
 .subsection__skills-list {
   margin-top: 0;
   margin-bottom: 0;
 
   padding-left: 0;
+  border-top: 2px solid var(--color-background-secondary);
   border-bottom: 2px solid var(--color-background-secondary);
-
 
   list-style: none;
 
   @media #{$on-large} {
+    border-left: 2px solid var(--color-background-secondary);
+    border-right: 2px solid var(--color-background-secondary);
+    border-radius: $font-size-3;
+
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -28,7 +43,6 @@
 .subsection__skills-item {
   padding-top: $font-size-1;
   padding-bottom: $font-size-1;
-  border-top: 2px solid var(--color-background-secondary);
 
   display: flex;
   gap: $font-size-1;
@@ -48,6 +62,18 @@
     padding-left: $font-size-3;
     padding-right: $font-size-3;
     width: 50%;
+  }
+
+  &:not(:first-child) {
+    @media #{$on-small-medium} {
+      border-top: 2px solid var(--color-background-secondary);
+    }
+  }
+
+  &:not(:where(:first-child, :nth-child(2))) {
+    @media #{$on-large} {
+      border-top: 2px solid var(--color-background-secondary);
+    }
   }
 
   &:last-child:nth-child(odd) {
@@ -120,6 +146,10 @@
   }
 }
 
+.subsection__practice-list-wrapper {
+  background-color: var(--color-background-secondary);
+}
+
 .subsection__practice-list {
   padding-top: $font-size-3;
   padding-bottom: $font-size-3;
@@ -130,7 +160,6 @@
   align-items: center;
 
   list-style: none;
-  background-color: var(--color-background-secondary);
 }
 
 .subsection__practice-item {
@@ -172,11 +201,20 @@
   flex-shrink: 0;
 }
 
+.subsection__courses-list-wrapper {
+  @media #{$on-large} {
+    background:
+      linear-gradient(to bottom,
+      transparent 16.5%,
+      var(--color-background-secondary) 16.5%,
+      var(--color-background-secondary) 83.5%,
+      transparent 83.5%);
+  }
+}
+
 .subsection__courses-list {
   margin-top: 0;
   margin-bottom: 0;
-
-  padding-left: 0;
 
   display: flex;
   gap: $font-size-1;
@@ -188,18 +226,6 @@
   }
 
   @media #{$on-large} {
-    padding-left: $font-size-3;
-    padding-right: $font-size-3;
-
     align-items: center;
-
-    background: linear-gradient(to bottom, transparent 16.5%, var(--color-background-secondary) 16.5%, var(--color-background-secondary) 83.5%, transparent 83.5%);
-  }
-}
-
-.subsection__courses-item {
-  @media #{$on-small-medium} {
-    margin-left: $font-size-3;
-    margin-right: $font-size-3;
   }
 }

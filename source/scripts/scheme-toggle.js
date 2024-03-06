@@ -41,7 +41,6 @@ const onControlClick = (evt) => {
 
 const init = () => {
   const systemScheme = getSystemScheme();
-  console.log(systemScheme);
   control.checked = systemScheme === 'dark';
 
   control.addEventListener('click', onControlClick);
