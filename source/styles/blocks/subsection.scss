@@ -216,7 +216,7 @@
   margin-top: 0;
   margin-bottom: 0;
 
-  display: flex;
+  display: grid;
   gap: $font-size-1;
 
   list-style: none;
@@ -226,6 +226,7 @@
   }
 
   @media #{$on-large} {
+    grid-template-columns: repeat(3, 1fr);
     align-items: center;
   }
 }
