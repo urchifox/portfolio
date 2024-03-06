@@ -42,6 +42,18 @@
   }
 }
 
+.section__wrapper {
+  &--additions {
+    display: grid;
+    gap: $font-size-1;
+
+    @media #{$on-large} {
+      grid-template-columns: repeat(2, 1fr);
+      align-items: start;
+    }
+  }
+}
+
 .section__title {
   margin-top: 0;
   margin-bottom: $font-size-4;
