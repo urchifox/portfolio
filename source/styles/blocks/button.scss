@@ -57,6 +57,10 @@
     --icon-url: url("./../../images/icons/stack.svg#external-link");
   }
 
+  &--icon-github {
+    --icon-url: url("./../../images/icons/stack.svg#github");
+  }
+
   &::after {
     content: "";
     width: 100%;
