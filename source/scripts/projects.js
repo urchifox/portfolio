@@ -1,7 +1,8 @@
 import {createElement} from './utils.js';
-import {PROJECTS_DATA} from './projects-data.js';
+import {typeName, PROJECTS_DATA} from './projects-data.js';
 
 const root = document.querySelector('.projects__list');
+const buttons = document.querySelectorAll('input[name="filter"]');
 const fragment = document.createDocumentFragment();
 
 const getStackTemplate = (tools) => tools.reduce((template, tool) => /*html*/`${template}
@@ -62,16 +63,26 @@ const getTemplate = ({name, type, descrption, tools, github, webpage, images}) =
   </li>
 `;
 
-const render = () => {
-  PROJECTS_DATA.forEach((datum) => {
+const render = (data) => {
+  data.forEach((datum) => {
     const card = createElement(getTemplate(datum));
     fragment.append(card);
   });
   root.append(fragment);
 };
 
+const onButtonClick = (evt) => {
+  const filteredData = evt.target.value === 'all' ?
+    PROJECTS_DATA :
+    PROJECTS_DATA.filter((datum) => datum.type === typeName[evt.target.value]);
+
+  root.innerHTML = '';
+  render(filteredData);
+};
+
 const init = () => {
-  render();
+  render(PROJECTS_DATA);
+  buttons.forEach((button) => button.addEventListener('change', onButtonClick));
 };
 
 export {init};

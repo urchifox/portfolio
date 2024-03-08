@@ -1,4 +1,4 @@
-const typeName = {
+export const typeName = {
   diploma: 'Дипломный проект',
   trainig: 'Тренировка навыка',
   personal: 'Персональный проект',

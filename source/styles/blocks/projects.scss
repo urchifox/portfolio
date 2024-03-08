@@ -38,7 +38,7 @@
   }
 }
 
-.projects__filters-button {
+.projects__filters-label {
   border: none;
   background-color: transparent;
 
@@ -60,6 +60,10 @@
     color: var(--color-interactive-disabled);
     pointer-events: none;
   }
+
+  &:has(:checked) {
+    color: var(--color-interactive-basic);
+  }
 }
 
 .projects__filters-count {
@@ -67,6 +71,10 @@
 
   :where(:disabled, :active, :hover) > & {
     color: inherit;
+  }
+
+  :checked ~ & {
+    color: var(--color-interactive-basic);
   }
 }
 
