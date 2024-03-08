@@ -13,15 +13,15 @@ const stackName = {
 };
 
 export const PROJECTS_DATA = [
-  {
-    name: 'Portfolio',
-    type: typeName.personal,
-    descrption: 'Здесь будет описание этого проекта',
-    tools: [stackName.html, stackName.sass, stackName.js, stackName.bem],
-    github: 'https://github.com/urchifox/portfolio',
-    webpage: 'https://urchifox.github.io/portfolio/',
-    images: ['']
-  },
+  // {
+  //   name: 'Portfolio',
+  //   type: typeName.personal,
+  //   descrption: 'Здесь будет описание этого проекта',
+  //   tools: [stackName.html, stackName.sass, stackName.js, stackName.bem],
+  //   github: 'https://github.com/urchifox/portfolio',
+  //   webpage: 'https://urchifox.github.io/portfolio/',
+  //   images: ['']
+  // },
   {
     name: 'Cat Energy',
     type: typeName.diploma,

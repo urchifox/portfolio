@@ -3,6 +3,7 @@ import {typeName, PROJECTS_DATA} from './projects-data.js';
 
 const root = document.querySelector('.projects__list');
 const buttons = document.querySelectorAll('input[name="filter"]');
+const counters = document.querySelectorAll('.projects__filters-count');
 const fragment = document.createDocumentFragment();
 
 const getStackTemplate = (tools) => tools.reduce((template, tool) => /*html*/`${template}
@@ -82,6 +83,11 @@ const onButtonClick = (evt) => {
 
 const init = () => {
   render(PROJECTS_DATA);
+  counters.forEach((counter) => {
+    counter.textContent = counter.dataset.type === 'all' ?
+      `(${PROJECTS_DATA.length})` :
+      `(${PROJECTS_DATA.filter((datum) => datum.type === typeName[counter.dataset.type]).length})`;
+  });
   buttons.forEach((button) => button.addEventListener('change', onButtonClick));
 };
 
