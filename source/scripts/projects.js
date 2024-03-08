@@ -2,7 +2,9 @@ import {createElement} from './utils.js';
 import {typeName, PROJECTS_DATA} from './projects-data.js';
 
 const root = document.querySelector('.projects__list');
-const buttons = document.querySelectorAll('input[name="filter"]');
+const filtrationButtons = document.querySelectorAll('input[name="filter"]');
+const defaultFiltratonButton = document.querySelector('input#all[name="filter"]');
+const links = document.querySelectorAll('a[href^="#project-"]');
 const counters = document.querySelectorAll('.projects__filters-count');
 const fragment = document.createDocumentFragment();
 
@@ -42,8 +44,8 @@ const getImagesTemplate = (images) => images.reduce((template, image) => /*html*
       alt="Скриншот страницы проекта">
   </picture>`, '');
 
-const getTemplate = ({name, type, descrption, tools, github, webpage, images}) => /*html*/`
-  <li class="projects__item project-card" id="project">
+const getTemplate = ({id, name, type, descrption, tools, github, webpage, images}) => /*html*/`
+  <li class="projects__item project-card" id="${id}">
     <h3 class="project-card__title">${name}</h3>
     <p class="project-card__caption">${type}</p>
     <p class="project-card__text">${descrption}</p>
@@ -81,6 +83,12 @@ const onButtonClick = (evt) => {
   render(filteredData);
 };
 
+const onLinkClick = () => {
+  defaultFiltratonButton.checked = true;
+  root.innerHTML = '';
+  render(PROJECTS_DATA);
+};
+
 const init = () => {
   render(PROJECTS_DATA);
   counters.forEach((counter) => {
@@ -88,7 +96,8 @@ const init = () => {
       `(${PROJECTS_DATA.length})` :
       `(${PROJECTS_DATA.filter((datum) => datum.type === typeName[counter.dataset.type]).length})`;
   });
-  buttons.forEach((button) => button.addEventListener('change', onButtonClick));
+  filtrationButtons.forEach((button) => button.addEventListener('change', onButtonClick));
+  links.forEach((link) => link.addEventListener('click', onLinkClick));
 };
 
 export {init};
