@@ -31,7 +31,7 @@ export const PROJECTS_DATA = [
     tools: [stackName.html, stackName.sass, stackName.js, stackName.bem],
     github: 'https://github.com/urchifox/cat-energy',
     webpage: 'https://urchifox.github.io/cat-energy/',
-    images: ['']
+    images: ['cat-energy']
   },
   {
     id: 'project-grafit-academy',
@@ -49,7 +49,7 @@ export const PROJECTS_DATA = [
     tools: [stackName.html, stackName.css, stackName.js, stackName.bem],
     github: 'https://github.com/urchifox/grafit-academy',
     webpage: 'https://urchifox.github.io/grafit-academy/',
-    images: ['']
+    images: ['grafit-academy']
   },
   {
     id: 'project-online-smartphones-store',
@@ -59,7 +59,7 @@ export const PROJECTS_DATA = [
     tools: [stackName.html, stackName.css, stackName.js, stackName.bem],
     github: 'https://github.com/urchifox/online-store',
     webpage: 'https://urchifox.github.io/online-store/',
-    images: ['']
+    images: ['online-smartphones-store']
   },
   {
     id: 'project-multilayer-exercises',
@@ -69,7 +69,7 @@ export const PROJECTS_DATA = [
     tools: [stackName.html, stackName.css, stackName.js, stackName.bem],
     github: 'https://github.com/urchifox/multilayer-exercise',
     webpage: 'https://urchifox.github.io/multilayer-exercise/',
-    images: ['']
+    images: ['multilayer-exercises']
   },
   {
     id: 'project-big-trip',
@@ -81,7 +81,7 @@ export const PROJECTS_DATA = [
     tools: [stackName.js],
     github: 'https://github.com/urchifox/big-trip',
     webpage: 'https://urchifox.github.io/big-trip/',
-    images: ['']
+    images: ['big-trip']
   },
   {
     id: 'project-kekstagram',
@@ -95,7 +95,7 @@ export const PROJECTS_DATA = [
     tools: [stackName.js],
     github: 'https://github.com/urchifox/kekstagram',
     webpage: 'https://urchifox.github.io/kekstagram/',
-    images: ['']
+    images: ['kekstagram']
   },
   {
     id: 'project-italian-chefs-blog',
@@ -111,7 +111,7 @@ export const PROJECTS_DATA = [
     tools: [stackName.html, stackName.css, stackName.bem],
     github: 'https://github.com/urchifox/Italian-chefs-blog__article',
     webpage: 'https://urchifox.github.io/Italian-chefs-blog__article/',
-    images: ['']
+    images: ['italian-chefs-blog']
   },
   {
     id: 'project-science-blog',
@@ -128,7 +128,7 @@ export const PROJECTS_DATA = [
     tools: [stackName.html, stackName.css, stackName.bem,],
     github: 'https://github.com/urchifox/SCIENCE__article_carbohydrates',
     webpage: 'https://urchifox.github.io/SCIENCE__article_carbohydrates/',
-    images: ['']
+    images: ['science-blog']
   },
   {
     id: 'project-onenews',
@@ -144,7 +144,7 @@ export const PROJECTS_DATA = [
     tools: [stackName.html, stackName.css, stackName.bem],
     github: 'https://github.com/urchifox/OneNews__article_credits',
     webpage: 'https://urchifox.github.io/OneNews__article_credits/',
-    images: ['']
+    images: ['onenews']
   },
   {
     id: 'project-blogick',
@@ -161,6 +161,6 @@ export const PROJECTS_DATA = [
     tools: [stackName.html, stackName.css, stackName.bem],
     github: 'https://github.com/urchifox/Blogick__article_Georgia',
     webpage: 'https://urchifox.github.io/Blogick__article_Georgia/',
-    images: ['']
+    images: ['blogick']
   },
 ];

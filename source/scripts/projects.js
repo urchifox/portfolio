@@ -16,30 +16,30 @@ const getStackTemplate = (tools) => tools.reduce((template, tool) => /*html*/`${
 const getImagesTemplate = (images) => images.reduce((template, image) => /*html*/`
   <picture>
     <source type="image/webp" media="(min-width: 1200px)"
-      srcset="./images/${image}-large@1x.webp 1x,
-              ./images/${image}-large@2x.webp 2x"
+      srcset="./images/cover-${image}-large@1x.webp 1x,
+              ./images/cover-${image}-large@2x.webp 2x"
       width="441" height="248">
     <source type="image/webp" media="(min-width: 760px)"
-      srcset="./images/${image}-medium@1x.webp 1x,
-              ./images/${image}-medium@2x.webp 2x"
+      srcset="./images/cover-${image}-medium@1x.webp 1x,
+              ./images/cover-${image}-medium@2x.webp 2x"
       width="1096" height="616">
     <source type="image/webp"
-      srcset="./images/${image}-small@1x.webp 1x,
-              ./images/${image}-small@2x.webp 2x"
+      srcset="./images/cover-${image}-small@1x.webp 1x,
+              ./images/cover-${image}-small@2x.webp 2x"
       width="689" height="387">
 
       <source type="image/jpg" media="(min-width: 1200px)"
-        srcset="./images/${image}-large@1x.jpg 1x,
-                ./images/${image}-large@2x.jpg 2x"
+        srcset="./images/cover-${image}-large@1x.jpg 1x,
+                ./images/cover-${image}-large@2x.jpg 2x"
         width="441" height="248">
       <source type="image/jpg" media="(min-width: 760px)"
-        srcset="./images/${image}-medium@1x.jpg 1x,
-                ./images/${image}-medium@2x.jpg 2x"
+        srcset="./images/cover-${image}-medium@1x.jpg 1x,
+                ./images/cover-${image}-medium@2x.jpg 2x"
         width="1096" height="616">
 
     <img class="project-card__picture"
-      src="./images/${image}-small@1x.jpg"
-      srcset="./images/${image}-small@2x.jpg 2x"
+      src="./images/cover-${image}-small@1x.jpg"
+      srcset="./images/$cover-{image}-small@2x.jpg 2x"
       width="689" height="387"
       alt="Скриншот страницы проекта">
   </picture>`, '');

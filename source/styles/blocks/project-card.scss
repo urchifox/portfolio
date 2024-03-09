@@ -142,10 +142,6 @@
   height: auto;
   aspect-ratio: 16 / 9;
 
-  border-radius: $font-size-1;
-
-  background-color: var(--color-background-secondary);
-
   @media #{$on-small} {
     grid-column: 1;
     grid-row: 1;
@@ -160,4 +156,12 @@
     grid-column: 1;
     grid-row: 1 / 5;
   }
+}
+
+.project-card__picture {
+  border-radius: $font-size-1;
+
+  display: block;
+  object-fit: cover;
+  background-color: var(--color-background-secondary);
 }
