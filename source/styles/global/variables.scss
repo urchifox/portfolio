@@ -1,1 +1,56 @@
-/* здесь используйте глобальные переменные */
+// SCREEN SIZES
+$breakpoint-small: 320px;
+$breakpoint-medium: 760px;
+$breakpoint-large: 1200px;
+$breakpoint-gap: 0.02px;
+
+$max-content-width: 1600px;
+
+// MEDIA QUERIES
+$on-small: "screen and (max-width: #{$breakpoint-medium - $breakpoint-gap})";
+$on-medium: "screen and (min-width: #{$breakpoint-medium}) and (max-width: #{$breakpoint-large - $breakpoint-gap})";
+$on-large: "screen and (min-width: #{$breakpoint-large})";
+$on-medium-large: "screen and (min-width: #{$breakpoint-medium})";
+$on-small-medium: "screen and (max-width: #{$breakpoint-large - $breakpoint-gap})";
+
+// COLORS
+:root {
+  --color-basic-dark: hsl(255, 25%, 40%);
+  --color-basic-medium-dark: hsl(225, 26%, 59%);
+  --color-basic-medium: hsl(225, 33%, 73%);
+  --color-basic-medium-light: hsl(225, 44%, 86%);
+  --color-basic-light: hsl(255, 100%, 98%);
+
+  --color-accent-dark: hsl(275, 33%, 49%);
+  --color-accent-medium-dark: hsl(275, 47%, 62%);
+  --color-accent-medium: hsl(275, 64%, 71%);
+  --color-accent-medium-light: hsl(275, 90%, 81%);
+  --color-accent-light: hsl(275, 100%, 90%);
+
+  color-scheme: light dark;
+}
+
+// FONTS OPTIONS
+$font-family-basic : "Nunito",     "Calibri", sans-serif;
+$font-family-accent: "NunitoSans", "Calibri", sans-serif;
+
+$font-weight-regular: 400;
+$font-weight-medium : 500;
+$font-weight-bold   : 700;
+$font-weight-black  : 900;
+
+$font-size-7: 3.8rem;
+$font-size-6: 3rem;
+$font-size-5: 2.4rem;
+$font-size-4: 1.9rem;
+$font-size-3: 1.5rem;
+$font-size-2: 1.25rem;
+$font-size-1: 1rem;
+$font-size-s: 0.8rem;
+$font-size-xs: 0.64rem;
+$font-size-xxs: 0.5rem;
+
+// TRANSITION
+$transition-time-basic: 0.3s;
+$transition-timing-function-basic: ease-out;
+$transition-basic: $transition-time-basic $transition-timing-function-basic;

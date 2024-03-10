@@ -1,0 +1,233 @@
+.subsection {
+  margin-bottom: $font-size-6;
+}
+
+
+.subsection__subtitle {
+  margin-top: 0;
+  margin-bottom: $font-size-3;
+}
+
+.subsection__skills-container {
+  @media #{$on-large} {
+    margin: 0 auto;
+
+    padding-left: $font-size-3;
+    padding-right: $font-size-3;
+    width: 100%;
+    max-width: $max-content-width;
+  }
+}
+
+.subsection__skills-list {
+  margin-top: 0;
+  margin-bottom: 0;
+
+  padding-left: 0;
+  border-top: 2px solid var(--color-background-secondary);
+  border-bottom: 2px solid var(--color-background-secondary);
+
+  list-style: none;
+
+  @media #{$on-large} {
+    border-left: 2px solid var(--color-background-secondary);
+    border-right: 2px solid var(--color-background-secondary);
+    border-radius: $font-size-3;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+  }
+}
+
+.subsection__skills-item {
+  padding-top: $font-size-1;
+  padding-bottom: $font-size-1;
+
+  display: flex;
+  gap: $font-size-1;
+  align-items: center;
+
+  @media #{$on-small} {
+    padding-left: $font-size-3;
+    padding-right: $font-size-3;
+  }
+
+  @media #{$on-medium} {
+    padding-left: 16.5%;
+    padding-right: 16.5%;
+  }
+
+  @media #{$on-large} {
+    padding-left: $font-size-3;
+    padding-right: $font-size-3;
+    width: 50%;
+  }
+
+  &:not(:first-child) {
+    @media #{$on-small-medium} {
+      border-top: 2px solid var(--color-background-secondary);
+    }
+  }
+
+  &:not(:where(:first-child, :nth-child(2))) {
+    @media #{$on-large} {
+      border-top: 2px solid var(--color-background-secondary);
+    }
+  }
+
+  &:last-child:nth-child(odd) {
+    @media #{$on-large} {
+      padding-left: calc(25% + $font-size-3);
+      padding-right: calc(25% + $font-size-3);
+      width: 100%;
+    }
+  }
+}
+
+.subsection__skills-icon-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: $font-size-s;
+}
+
+.subsection__skills-icon {
+  margin-top: 0;
+  margin-bottom: 0;
+
+  width: $font-size-4;
+  height: $font-size-4;
+
+  background-image: var(--icon-url);
+
+  &--icon-html {
+    --icon-url: url("./../../images/icons/stack.svg#html");
+  }
+
+  &--icon-css {
+    --icon-url: url("./../../images/icons/stack.svg#css");
+  }
+
+  &--icon-sass {
+    --icon-url: url("./../../images/icons/stack.svg#sass");
+  }
+
+  &--icon-javascript {
+    --icon-url: url("./../../images/icons/stack.svg#javascript");
+  }
+
+  &--icon-git {
+    --icon-url: url("./../../images/icons/stack.svg#git");
+  }
+
+  &--icon-github {
+    --icon-url: url("./../../images/icons/stack.svg#github");
+  }
+
+  &--icon-bem {
+    --icon-url: url("./../../images/icons/stack.svg#bem");
+  }
+
+  &--icon-gulp {
+    --icon-url: url("./../../images/icons/stack.svg#gulp");
+  }
+
+  &--icon-webpack {
+    --icon-url: url("./../../images/icons/stack.svg#webpack");
+  }
+}
+
+.subsection__skills-text {
+  margin-top: 0;
+  margin-bottom: 0;
+
+  &:first-child {
+    text-align: center;
+  }
+}
+
+.subsection__practice-list-wrapper {
+  background-color: var(--color-background-secondary);
+}
+
+.subsection__practice-list {
+  padding-top: $font-size-3;
+  padding-bottom: $font-size-3;
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: $font-size-1;
+  align-items: center;
+
+  list-style: none;
+}
+
+.subsection__practice-item {
+  flex-shrink: 0;
+
+  @media #{$on-small} {
+    width: 100%;
+  }
+
+  @media #{$on-medium} {
+    width: calc(50% - $font-size-1 / 2);
+  }
+
+  @media #{$on-large} {
+    width: calc(33.3% - $font-size-1 / 2);
+  }
+
+  &:nth-child(4n),
+  &:nth-child(4n - 3) {
+    @media #{$on-large} {
+      width: calc(66.6% - $font-size-1 / 2);
+    }
+  }
+}
+
+.subsection__caption-wrapper {
+  display: flex;
+  gap: $font-size-s;
+  align-items: center;
+  justify-content: center;
+}
+
+.subsection__caption {
+  font-size: $font-size-2;
+  text-align: center;
+}
+
+.subsection__button {
+  flex-shrink: 0;
+}
+
+.subsection__courses-list-wrapper {
+  @media #{$on-large} {
+    background:
+      linear-gradient(to bottom,
+      transparent 16.5%,
+      var(--color-background-secondary) 16.5%,
+      var(--color-background-secondary) 83.5%,
+      transparent 83.5%);
+  }
+}
+
+.subsection__courses-list {
+  margin-top: 0;
+  margin-bottom: 0;
+
+  display: grid;
+  gap: $font-size-1;
+
+  list-style: none;
+
+  @media #{$on-small-medium} {
+    flex-direction: column;
+  }
+
+  @media #{$on-large} {
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+  }
+}

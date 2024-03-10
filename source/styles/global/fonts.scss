@@ -1,1 +1,64 @@
-/* здесь подключите шрифты */
+// NUNITO
+
+@font-face {
+  font-family: "Nunito";
+  font-weight: 500;
+  font-display: swap;
+  src:
+    local("Nunito"),
+    url("./../../fonts/Nunito/Nunito-Medium.woff2") format("woff2"),
+    url("./../../fonts/Nunito/Nunito-Medium.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Nunito";
+  font-weight: 700;
+  font-display: swap;
+  src:
+    local("Nunito"),
+    url("./../../fonts/Nunito/Nunito-Bold.woff2") format("woff2"),
+    url("./../../fonts/Nunito/Nunito-Bold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Nunito";
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+  src:
+    local("Nunito"),
+    url("./../../fonts/Nunito/Nunito-BoldItalic.woff2") format("woff2"),
+    url("./../../fonts/Nunito/Nunito-BoldItalic.woff") format("woff");
+}
+
+// NUNITOSANS
+
+@font-face {
+  font-family: "NunitoSans";
+  font-weight: 400;
+  font-display: swap;
+  src:
+    local("NunitoSans"),
+    url("./../../fonts/NunitoSans/NunitoSans-Regular.woff2") format("woff2"),
+    url("./../../fonts/NunitoSans/NunitoSans-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "NunitoSans";
+  font-weight: 700;
+  font-display: swap;
+  src:
+    local("NunitoSans"),
+    url("./../../fonts/NunitoSans/NunitoSans-Bold.woff2") format("woff2"),
+    url("./../../fonts/NunitoSans/NunitoSans-Bold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "NunitoSans";
+  font-weight: 900;
+  font-display: swap;
+  src:
+    local("NunitoSans"),
+    url("./../../fonts/NunitoSans/NunitoSans-Black.woff2") format("woff2"),
+    url("./../../fonts/NunitoSans/NunitoSans-Black.woff") format("woff");
+}

@@ -1,7 +1,30 @@
 /* GLOBAL */
 @import "./global/variables.scss";
-@import "./global/global.scss";
+@import "./global/mixins.scss";
+@import "./global/functions.scss";
 @import "./global/fonts.scss";
+@import "./global/global.scss";
+@import "./global/helpers.scss";
 
-/* BLOCKS */
+/* REUSABLE BLOCKS */
+@import "./blocks/container.scss";
+@import "./blocks/modal.scss";
+@import "./blocks/title.scss";
+@import "./blocks/subtitle.scss";
+@import "./blocks/button.scss";
+@import "./blocks/practice-card.scss";
+@import "./blocks/course-card.scss";
+@import "./blocks/projects.scss";
+@import "./blocks/project-card.scss";
+@import "./blocks/additions-card.scss";
+@import "./blocks/scheme-toggle.scss";
+
+/* SECTIONS / ARTICLES */
+@import "./blocks/section.scss";
+@import "./blocks/subsection.scss";
+
+/* MAIN BLOCKS */
+@import "./blocks/page.scss";
 @import "./blocks/header.scss";
+@import "./blocks/main.scss";
+@import "./blocks/footer.scss";
