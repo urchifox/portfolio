@@ -25,6 +25,11 @@
   color: var(--color-text-basic);
 
   background-color: var(--color-background-basic);
+  scrollbar-gutter: stable;
+
+  &:has(.modal[open]) {
+    overflow: hidden;
+  }
 }
 
 .page__header {
