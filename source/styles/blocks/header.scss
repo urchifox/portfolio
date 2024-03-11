@@ -4,7 +4,19 @@
   border-bottom: 2px solid var(--color-background-secondary);
   background-color: var(--color-background-basic);
 
-  // TODO на мобилке при открытом меню добавить оверлей с блюром и серым цветом + блокировка скролла и тача
+  &:has(.header__menu-toggle:checked)::before {
+    @media #{$on-small} {
+      content: "";
+      position: absolute;
+      top: calc(2px + 100%);
+      left: 0;
+      right: 0;
+
+      height: 100vh;
+
+      backdrop-filter: blur(5px);
+    }
+  }
 }
 
 .header__container {

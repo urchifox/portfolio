@@ -13,23 +13,6 @@ $on-large: "screen and (min-width: #{$breakpoint-large})";
 $on-medium-large: "screen and (min-width: #{$breakpoint-medium})";
 $on-small-medium: "screen and (max-width: #{$breakpoint-large - $breakpoint-gap})";
 
-// COLORS
-:root {
-  --color-basic-dark: hsl(255, 25%, 40%);
-  --color-basic-medium-dark: hsl(225, 26%, 59%);
-  --color-basic-medium: hsl(225, 33%, 73%);
-  --color-basic-medium-light: hsl(225, 44%, 86%);
-  --color-basic-light: hsl(255, 100%, 98%);
-
-  --color-accent-dark: hsl(275, 33%, 49%);
-  --color-accent-medium-dark: hsl(275, 47%, 62%);
-  --color-accent-medium: hsl(275, 64%, 71%);
-  --color-accent-medium-light: hsl(275, 90%, 81%);
-  --color-accent-light: hsl(275, 100%, 90%);
-
-  color-scheme: light dark;
-}
-
 // FONTS OPTIONS
 $font-family-basic : "Nunito",     "Calibri", sans-serif;
 $font-family-accent: "NunitoSans", "Calibri", sans-serif;
@@ -54,3 +37,23 @@ $font-size-xxs: 0.5rem;
 $transition-time-basic: 0.3s;
 $transition-timing-function-basic: ease-out;
 $transition-basic: $transition-time-basic $transition-timing-function-basic;
+
+:root {
+  // COLORS
+  --color-basic-dark: hsl(255, 25%, 40%);
+  --color-basic-medium-dark: hsl(225, 26%, 59%);
+  --color-basic-medium: hsl(225, 33%, 73%);
+  --color-basic-medium-light: hsl(225, 44%, 86%);
+  --color-basic-light: hsl(255, 100%, 98%);
+
+  --color-accent-dark: hsl(275, 33%, 49%);
+  --color-accent-medium-dark: hsl(275, 47%, 62%);
+  --color-accent-medium: hsl(275, 64%, 71%);
+  --color-accent-medium-light: hsl(275, 90%, 81%);
+  --color-accent-light: hsl(275, 100%, 90%);
+
+  color-scheme: light dark;
+
+  // ELEMENTS SIZES
+  --header-height: calc(#{$font-size-1} * 2 + #{$font-size-2});
+}

@@ -1,5 +1,5 @@
 .page {
-  scroll-padding-top: $font-size-7;
+  scroll-padding-top: calc($font-size-4 + var(--header-height));
   scroll-behavior: smooth;
 
   font-size: 12px;
@@ -30,14 +30,21 @@
   &:has(.modal[open]) {
     overflow: hidden;
   }
+
+  &:has(.header__menu-toggle:checked) {
+    @media #{$on-small} {
+      overflow: hidden;
+    }
+  }
 }
 
 .page__header {
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
   z-index: 1;
 }
-
 
 .page__footer {
   margin-top: auto;
