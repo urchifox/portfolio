@@ -1,25 +1,29 @@
-const lightStyles = document.querySelectorAll('link[rel=stylesheet][media*=light]');
-const darkStyles = document.querySelectorAll('link[rel=stylesheet][media*=dark]');
-const darckSchemeMedia = matchMedia('(prefers-color-scheme: dark');
+const lightStyles = document.querySelectorAll('link[rel=stylesheet][media*=prefers-color-scheme][media*=light]');
+const darkStyles = document.querySelectorAll('link[rel=stylesheet][media*=prefers-color-scheme][media*=dark]');
+const darkSchemeMedia = matchMedia('(prefers-color-scheme: dark)');
 const control = document.querySelector('.scheme-toggle__control');
 
 const getSystemScheme = () => {
-  const darkScheme = darckSchemeMedia.matches;
+  const darkScheme = darkSchemeMedia.matches;
 
   return darkScheme ? 'dark' : 'light';
 };
 
-// TODO использовать localStorage для запоминания темы но сбрасывать тему при уходе со страницы
+const getSavedLocalScheme = () => localStorage.getItem('color-scheme-local');
 
-// const getSavedScheme = () => localStorage.getItem('color-scheme');
+const getSavedSystemScheme = () => localStorage.getItem('color-scheme-system');
 
-// const saveScheme = (scheme) => {
-//   localStorage.setItem('color-scheme', scheme);
-// };
+const saveLocalScheme = (scheme) => {
+  localStorage.setItem('color-scheme-local', scheme);
+};
 
-// const clearScheme = () => {
-//   localStorage.removeItem('color-scheme');
-// };
+const saveSystemScheme = (scheme) => {
+  localStorage.setItem('color-scheme-system', scheme);
+};
+
+const clearLocalScheme = () => {
+  localStorage.removeItem('color-scheme-local');
+};
 
 const setScheme = (scheme) => {
   const lightMedia = (scheme === 'light') ? 'all' : 'not all';
@@ -36,13 +40,22 @@ const setScheme = (scheme) => {
 
 const onControlClick = (evt) => {
   const scheme = (evt.target.checked) ? 'dark' : 'light';
+  saveLocalScheme(scheme);
   setScheme(scheme);
 };
 
 const init = () => {
-  const systemScheme = getSystemScheme();
-  control.checked = systemScheme === 'dark';
+  const savedLocalScheme = getSavedLocalScheme();
+  const savedSystemScheme = getSavedSystemScheme();
+  const currentSystemScheme = getSystemScheme();
 
+  if (savedSystemScheme !== currentSystemScheme) {
+    saveSystemScheme(currentSystemScheme);
+    clearLocalScheme();
+  }
+
+  setScheme(savedLocalScheme ?? currentSystemScheme);
+  control.checked = (savedLocalScheme ?? currentSystemScheme) === 'dark';
   control.addEventListener('click', onControlClick);
 };
 
