@@ -1,5 +1,5 @@
 .page {
-  scroll-padding-top: $font-size-7;
+  scroll-padding-top: var(--header-height);
   scroll-behavior: smooth;
 
   font-size: 12px;
