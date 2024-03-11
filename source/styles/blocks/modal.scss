@@ -18,6 +18,11 @@
   }
 }
 
+.backdrop {
+  background-color: transparent;
+  backdrop-filter: blur(5px);
+}
+
 .modal__picture {
   margin: auto;
 
