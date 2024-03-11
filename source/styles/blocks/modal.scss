@@ -13,7 +13,8 @@
   background-color: transparent;
 
   &::backdrop {
-    background-color: color-opacity(var(--color-text-secondary), 0.5);
+    background-color: transparent;
+    backdrop-filter: blur(5px);
   }
 }
 
@@ -24,6 +25,7 @@
   padding-bottom: $font-size-1;
   padding-left: calc($font-size-xxs*2 + clamp(22px, $font-size-4, 40px));
   padding-right: calc($font-size-xxs*2 + clamp(22px, $font-size-4, 40px));
+  border: 2px solid var(--color-background-secondary);
 
   border-radius: $font-size-1;
   width: 100%;
