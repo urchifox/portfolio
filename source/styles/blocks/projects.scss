@@ -31,7 +31,7 @@
 
   @media #{$on-large} {
     position: sticky;
-    top: var(--header-height);
+    top: calc($font-size-2 + var(--header-height));
     padding: $font-size-2;
     flex-direction: column;
 

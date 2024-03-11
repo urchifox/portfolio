@@ -1,5 +1,5 @@
 .page {
-  scroll-padding-top: var(--header-height);
+  scroll-padding-top: calc($font-size-4 + var(--header-height));
   scroll-behavior: smooth;
 
   font-size: 12px;
@@ -33,11 +33,12 @@
 }
 
 .page__header {
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
   z-index: 1;
 }
-
 
 .page__footer {
   margin-top: auto;
