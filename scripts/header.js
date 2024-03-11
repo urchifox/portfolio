@@ -1,0 +1,1 @@
+var e=document.querySelector(".header"),n=e.clientHeight,c=e.querySelector(".header__menu-toggle"),o=e.querySelectorAll(".header__menu-link"),l=()=>{c.checked=!1},r=()=>{document.documentElement.style.setProperty("--header-height",`${n}px`),o.forEach(t=>t.addEventListener("click",l))};export{r as init};
