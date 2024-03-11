@@ -1,11 +1,10 @@
+const dialogPolyfillURL = 'https://esm.run/dialog-polyfill';
+const isBrowserNotSupportDialog = window.HTMLDialogElement === undefined;
+
 const modals = document.querySelectorAll('.modal');
 const controls = document.querySelectorAll('[data-modal-id]');
 const closeButtons = document.querySelectorAll('.modal__button');
 const map = new Map();
-
-// TODO добавить поддержку https://doka.guide/html/dialog/#rasshiryaem-brauzernuyu-podderzhku
-const dialogPolyfillURL = 'https://esm.run/dialog-polyfill';
-const isBrowserNotSupportDialog = window.HTMLDialogElement === undefined;
 
 const onControlClick = (evt) => {
   const control = evt.target.closest('[data-modal-id]');
