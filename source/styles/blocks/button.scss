@@ -61,6 +61,10 @@
     --icon-url: url("./../../images/icons/stack.svg#github");
   }
 
+  &--icon-cv {
+    --icon-url: url("./../../images/icons/stack.svg#cv");
+  }
+
   &::after {
     content: "";
     width: 100%;
