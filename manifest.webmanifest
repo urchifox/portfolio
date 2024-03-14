@@ -1,0 +1,10 @@
+{
+  "name": "Катерина Евтухова",
+  "icons": [
+    { "src": "favicons/16.png", "type": "image/png", "sizes": "16x16" },
+    { "src": "favicons/32.png", "type": "image/png", "sizes": "32x32" },
+    { "src": "favicons/192.png", "type": "image/png", "sizes": "192x192" },
+    { "src": "favicons/256.png", "type": "image/png", "sizes": "256x256" },
+    { "src": "favicons/512.png", "type": "image/png", "sizes": "512x512" }
+  ]
+}
