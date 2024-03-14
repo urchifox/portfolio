@@ -75,6 +75,7 @@ const render = (data) => {
 };
 
 const onButtonClick = (evt) => {
+  root.scrollIntoView();
   const filteredData = evt.target.value === 'all' ?
     PROJECTS_DATA :
     PROJECTS_DATA.filter((datum) => datum.type === typeName[evt.target.value]);
