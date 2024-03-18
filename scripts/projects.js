@@ -66,7 +66,7 @@ function l(t){let r=document.createElement("div");return r.innerHTML=t,r.firstEl
                 ./images/cover-${i}-medium@2x.jpg 2x"
         width="1096" height="616">
 
-    <img class="project-card__picture"
+    <img class="project-card__picture" loading="lazy"
       src="./images/cover-${i}-small@1x.jpg"
       srcset="./images/$cover-{image}-small@2x.jpg 2x"
       width="689" height="387"
@@ -91,4 +91,4 @@ function l(t){let r=document.createElement("div");return r.innerHTML=t,r.firstEl
       ${y(b)}
     </div>
   </li>
-`,o=t=>{t.forEach(r=>{let i=l(j(r));n.append(i)}),a.append(n)},w=t=>{let r=t.target.value==="all"?c:c.filter(i=>i.type===s[t.target.value]);a.innerHTML="",o(r)},k=()=>{d.checked=!0,a.innerHTML="",o(c)},C=()=>{o(c),f.forEach(t=>{t.textContent=t.dataset.type==="all"?`(${c.length})`:`(${c.filter(r=>r.type===s[t.dataset.type]).length})`}),u.forEach(t=>t.addEventListener("change",w)),x.forEach(t=>t.addEventListener("click",k))};export{C as init};
+`,o=t=>{t.forEach(r=>{let i=l(j(r));n.append(i)}),a.append(n)},w=t=>{a.scrollIntoView();let r=t.target.value==="all"?c:c.filter(i=>i.type===s[t.target.value]);a.innerHTML="",o(r)},k=()=>{d.checked=!0,a.innerHTML="",o(c)},C=()=>{o(c),f.forEach(t=>{t.textContent=t.dataset.type==="all"?`(${c.length})`:`(${c.filter(r=>r.type===s[t.dataset.type]).length})`}),u.forEach(t=>t.addEventListener("change",w)),x.forEach(t=>t.addEventListener("click",k))};export{C as init};
