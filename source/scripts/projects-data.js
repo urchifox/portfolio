@@ -13,15 +13,19 @@ const stackName = {
 };
 
 export const PROJECTS_DATA = [
-  // {
-  //   name: 'Portfolio',
-  //   type: typeName.personal,
-  //   descrption: 'Здесь будет описание этого проекта',
-  //   tools: [stackName.html, stackName.sass, stackName.js, stackName.bem],
-  //   github: 'https://github.com/urchifox/portfolio',
-  //   webpage: 'https://urchifox.github.io/portfolio/',
-  //   images: ['']
-  // },
+  {
+    name: 'Portfolio',
+    type: typeName.personal,
+    descrption: `Страница-портфолио, где я собрала и оформила главные свои навыки и наиболее интересные проекты. Для этого проекта я самостоятельно сформировала техзадание и создала макет в Figma для 3-х состояний сайта на экранах разного размера. В качестве критериев качества кода я придерживаюсь кодгайда школы HTML Academy. В некоторых случаях я сознательно отступила от части правил или изменила их.
+    </br>Наиболее интересные и сложные задачи проекта:
+    </br>- настройка и переключение цветовых тем: я взяла за основу реализацию Вадима Макеева, которую он разбирал в видео-роликах, но адаптировала под свой дизайн, слегка изменив логику скрипта;
+    </br>- использование относительных единиц измерения: все размеры шрифтов, а также расстояния между элементами привязаны к базовому размеру шрифта;
+    </br>- работа с новыми для меня элементами: изучила нюансы работы тегов details и dialog.`,
+    tools: [stackName.html, stackName.sass, stackName.js, stackName.bem],
+    github: 'https://github.com/urchifox/portfolio',
+    webpage: 'https://urchifox.github.io/portfolio/',
+    images: ['portfolio']
+  },
   {
     id: 'project-cat-energy',
     name: 'Cat Energy',
