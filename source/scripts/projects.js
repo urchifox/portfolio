@@ -37,7 +37,7 @@ const getImagesTemplate = (images) => images.reduce((template, image) => /*html*
                 ./images/cover-${image}-medium@2x.jpg 2x"
         width="1096" height="616">
 
-    <img class="project-card__picture"
+    <img class="project-card__picture" loading="lazy"
       src="./images/cover-${image}-small@1x.jpg"
       srcset="./images/$cover-{image}-small@2x.jpg 2x"
       width="689" height="387"
