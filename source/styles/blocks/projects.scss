@@ -47,6 +47,7 @@
   font-family: $font-family-basic;
   font-size: $font-size-2;
   text-align: left;
+  word-break: break-word;
 
   cursor: pointer;
 
@@ -65,6 +66,12 @@
 
   &:has(:checked) {
     color: var(--color-interactive-basic);
+  }
+
+  &:has(:focus-visible) {
+    outline: 3px solid var(--color-interactive-secondary);
+    outline-offset: 0.25rem;
+    border-radius: 0.125rem;
   }
 }
 

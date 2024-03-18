@@ -16,14 +16,21 @@
 .additions-card__title {
   margin-top: 0;
   margin-bottom: 0;
+  padding-left: $font-size-1;
+  padding-right: $font-size-1;
 
   font-family: $font-family-accent;
   font-size: $font-size-4;
   font-weight: $font-weight-black;
+  text-align: center;
   color: var(--color-background-basic);
+  word-break: break-word;
 }
 
 .additions-card__button {
+  padding-top: 0;
+  padding-left: $font-size-1;
+  padding-right: $font-size-1;
   padding-bottom: $font-size-xxs;
   border: none;
 
@@ -31,9 +38,11 @@
   font-size: $font-size-1;
   font-style: italic;
   font-weight: $font-weight-bold;
+  text-align: center;
   text-decoration: underline dashed;
   text-underline-offset: $font-size-xxs;
   color: var(--color-background-basic);
+  word-break: break-word;
 
   background-color: transparent;
   cursor: pointer;
@@ -80,6 +89,7 @@
 
   font-size: $font-size-2;
   font-weight: $font-weight-bold;
+  word-break: break-word;
 
   transition: color $transition-basic;
   cursor: pointer;
@@ -141,6 +151,8 @@
 .additions-card__text {
   margin-top: 0;
   margin-bottom: $font-size-xxs;
+
+  word-break: break-word;
 
   &:first-child {
     font-size: $font-size-2;

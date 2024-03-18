@@ -32,6 +32,7 @@
 
   font-weight: $font-weight-bold;
   font-size: $font-size-3;
+  word-break: break-word;
 
   @media #{$on-medium} {
     grid-column: 1 / -1;
@@ -44,6 +45,7 @@
   margin-bottom: $font-size-xs;
 
   color: var(--color-text-secondary);
+  word-break: break-word;
 
   @media #{$on-medium} {
     grid-column: 1 / -1;
@@ -53,6 +55,8 @@
 
 .project-card__text {
   margin-top: 0;
+
+  word-break: break-word;
 
   @media #{$on-small} {
     margin-bottom: $font-size-xs;
@@ -162,5 +166,6 @@
 
   display: block;
   object-fit: cover;
+  aspect-ratio: 16 / 9;
   background-color: var(--color-background-secondary);
 }

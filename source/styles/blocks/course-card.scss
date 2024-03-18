@@ -19,6 +19,7 @@
 
   font-size: $font-size-3;
   font-weight: $font-weight-bold;
+  word-break: break-word;
 }
 
 .course-card__caption {
@@ -26,11 +27,14 @@
 
   font-size: $font-size-s;
   color: var(--color-text-secondary);
+  word-break: break-word;
 }
 
 .course-card__text {
   margin-top: 0;
   margin-bottom: $font-size-xs;
+
+  word-break: break-word;
 }
 
 .course-card__buttons-wrapper {
@@ -48,10 +52,24 @@
   display: flex;
   gap: $font-size-xxs;
   align-items: center;
-}
 
-.course-card__button-text {
   text-transform: lowercase;
   font-size: $font-size-s;
   color: var(--color-text-secondary);
+  word-break: break-word;
+
+  transition: color $transition-basic;
+
+  &:hover {
+    color: var(--color-interactive-secondary);
+  }
+
+  &:active {
+    color: var(--color-interactive-accent);
+  }
+
+  &:disabled {
+    color: var(--color-interactive-disabled);
+    pointer-events: none;
+  }
 }
