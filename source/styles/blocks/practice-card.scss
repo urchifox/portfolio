@@ -11,11 +11,14 @@
 
   font-size: $font-size-3;
   font-weight: $font-weight-bold;
+  word-break: break-word;
 }
 
 .practice-card__text {
   margin-top: 0;
   margin-bottom: $font-size-xs;
+
+  word-break: break-word;
 }
 
 .practice-card__projects {
@@ -29,10 +32,12 @@
   margin-top: 0;
   margin-bottom: 0;
 
-  width: min-content;
+  width: auto;
+  max-width: 100%;
 
   font-size: $font-size-s;
   color: var(--color-text-secondary);
+  word-break: break-all;
 }
 
 .practice-card__projects-list {
