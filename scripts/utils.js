@@ -1,1 +1,1 @@
-function t(n){let e=document.createElement("div");return e.innerHTML=n,e.firstElementChild}export{t as createElement};
+var n=t=>{let e=document.createElement("div");return e.innerHTML=t,e.firstElementChild},c=t=>{let e=t.getBoundingClientRect(),o=window.innerHeight/2;return e.top<=o&&e.bottom>=o},i=()=>document.documentElement.scrollTop<10,r=()=>{let t=document.documentElement.scrollTop;return document.body.scrollHeight-window.innerHeight-t<10};export{n as createElement,c as isInTheMiddle,r as isScrolledToBottom,i as isScrolledToTop};
