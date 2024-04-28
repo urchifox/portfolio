@@ -1,7 +1,6 @@
 .header {
   padding-top: $font-size-1;
   padding-bottom: $font-size-1;
-  border-bottom: 2px solid var(--color-background-secondary);
   background-color: var(--color-background-basic);
 
   &:has(.header__menu-toggle:checked)::before {
@@ -16,6 +15,10 @@
 
       backdrop-filter: blur(5px);
     }
+  }
+
+  @media #{$on-medium-large} {
+    border-bottom: 2px solid var(--color-background-secondary);
   }
 }
 
@@ -119,5 +122,40 @@
 
   &:active {
     color: var(--color-interactive-accent);
+  }
+
+  &--current {
+    color: var(--color-interactive-basic);
+  }
+}
+
+.header__scroll-indicator {
+  position: absolute;
+  bottom: -2px;
+
+  height: 2px;
+
+  @media #{$on-small} {
+    --scroll-percent: 0%;
+    left: 0;
+    right: 0;
+
+    background:
+      linear-gradient(
+        to right,
+        var(--color-interactive-basic) var(--scroll-percent),
+        var(--color-background-secondary) var(--scroll-percent)
+      );
+  }
+
+  @media #{$on-medium-large} {
+    left: 0;
+    width: 0;
+
+    background-color: var(--color-interactive-basic);
+
+    transition:
+      left $transition-basic,
+      width $transition-basic;
   }
 }
