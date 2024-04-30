@@ -124,6 +124,8 @@
 
     background-color: var(--color-interactive-basic);
     mask-image: url("./../../images/icons/stack.svg#expand-circle");
+    transform: rotate(0deg);
+    transform-origin: center;
 
     transition:
       background-color $transition-basic,
@@ -148,18 +150,45 @@
   }
 }
 
+.additions-card__content {
+  overflow: hidden;
+  display: grid;
+  /* intentionally independent from .animation as Safari 16
+  would otherwise ignore the expansion animation. */
+  animation-duration: $transition-time-basic;
+}
+
+.additions-card__content--animating {
+  animation-name: grid-expand;
+  animation-timing-function: ease-out;
+}
+
+.additions-card__content--collapsing {
+  animation-direction: reverse;
+  animation-timing-function: ease-in;
+}
+
+.additions-card__text-wrapper {
+  min-height: 0;
+}
+
 .additions-card__text {
   margin-top: 0;
   margin-bottom: $font-size-xxs;
 
   word-break: break-word;
 
-  &:first-child {
-    font-size: $font-size-2;
-    font-weight: $font-weight-bold;
-  }
-
   &:last-child {
     margin-bottom: 0;
+  }
+}
+
+@keyframes grid-expand {
+  0% {
+    grid-template-rows: 0fr;
+  }
+
+  100% {
+    grid-template-rows: 1fr;
   }
 }
