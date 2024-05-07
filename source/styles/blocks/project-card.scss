@@ -143,7 +143,6 @@
 
   width: 100%;
   height: auto;
-  aspect-ratio: 16 / 9;
 
   @media #{$on-small} {
     grid-column: 1;
@@ -165,7 +164,6 @@
   border-radius: $font-size-1;
 
   display: block;
-  object-fit: cover;
   aspect-ratio: 16 / 9;
   background-color: var(--color-background-secondary);
 }
