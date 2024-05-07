@@ -1,14 +1,12 @@
 const dialogPolyfillURL = 'https://esm.run/dialog-polyfill';
 const isBrowserNotSupportDialog = window.HTMLDialogElement === undefined;
 
-const modals = document.querySelectorAll('.modal');
 const controls = document.querySelectorAll('[data-modal-id]');
-const closeButtons = document.querySelectorAll('.modal__button');
-const map = new Map();
+const modalsMap = new Map();
 
 const onControlClick = (evt) => {
   const control = evt.target.closest('[data-modal-id]');
-  const modal = map.get(control);
+  const modal = modalsMap.get(control);
   evt.preventDefault();
   modal.showModal();
 };
@@ -26,6 +24,14 @@ const onBackdropClick = (evt) => {
   }
 };
 
+const onImgLoaded = (evt) => {
+  const wrapper = evt.target.closest('.modal__picture-wrapper');
+  const spinner = wrapper.parentNode.querySelector('.modal__spinner');
+  spinner.remove();
+
+  wrapper.className += ' modal__picture-wrapper--loaded';
+};
+
 const init = () => {
   if (isBrowserNotSupportDialog) {
     const dialogs = document.querySelectorAll('dialog');
@@ -38,11 +44,12 @@ const init = () => {
 
   controls.forEach((control) => {
     const modal = document.querySelector(`#${control.dataset.modalId}`);
-    map.set(control, modal);
+    modalsMap.set(control, modal);
     control.addEventListener('click', onControlClick);
+    modal.querySelector('.modal__picture').addEventListener('load', onImgLoaded);
+    modal.addEventListener('click', onBackdropClick);
+    modal.querySelector('.modal__button').addEventListener('click', onCloseClick);
   });
-  closeButtons.forEach((button) => button.addEventListener('click', onCloseClick));
-  modals.forEach((modal) => modal.addEventListener('click', onBackdropClick));
 };
 
 export {init};
