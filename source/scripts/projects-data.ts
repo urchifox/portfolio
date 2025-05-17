@@ -2,7 +2,9 @@ export const typeName = {
   diploma: 'Дипломный проект',
   trainig: 'Тренировка навыка',
   personal: 'Персональный проект',
-};
+} as const;
+type TypeNameMap = typeof typeName;
+type TypeNameValue = TypeNameMap[keyof TypeNameMap];
 
 const stackName = {
   html: 'html',
@@ -10,10 +12,24 @@ const stackName = {
   sass: 'sass',
   js: 'javascript',
   bem: 'bem',
-};
+} as const;
+type StackNameMap = typeof stackName;
+export type StackNameValue = StackNameMap[keyof StackNameMap];
 
-export const PROJECTS_DATA = [
+export type ProjectData = {
+  id: string
+  name: string
+  type: TypeNameValue
+  descrption: string
+  tools: Array<StackNameValue>
+  github: string
+  webpage: string
+  images: Array<string>
+}
+
+export const PROJECTS_DATA: Array<ProjectData> = [
   {
+    id: 'portfolio',
     name: 'Portfolio',
     type: typeName.personal,
     descrption: `Страница-портфолио, где я собрала и оформила главные свои навыки и наиболее интересные проекты. Для этого проекта я самостоятельно сформировала техзадание и создала макет в Figma для 3-х состояний сайта на экранах разного размера. В качестве критериев качества кода я придерживаюсь кодгайда школы HTML Academy. В некоторых случаях я сознательно отступила от части правил или изменила их.

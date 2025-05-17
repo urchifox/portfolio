@@ -1,9 +1,9 @@
-import {isInTheMiddle, isScrolledToTop, isScrolledToBottom} from './utils.js';
+import {isInTheMiddle, isScrolledToTop, isScrolledToBottom, queryElement, queryElements} from './utils.js';
 
-const root = document.querySelector('.header');
-const button = root.querySelector('.header__menu-toggle');
-const progressBar = root.querySelector('.header__scroll-indicator');
-const links = root.querySelectorAll('.header__menu-link');
+const root = queryElement('.header');
+const button = queryElement<HTMLInputElement>('.header__menu-toggle', root);
+const progressBar = queryElement('.header__scroll-indicator', root);
+const links = queryElements<HTMLLinkElement>('.header__menu-link', root);
 const linksMap = new Map();
 
 links.forEach((link) => {
@@ -15,7 +15,7 @@ links.forEach((link) => {
 let currentTarget = linksMap.keys().next().value;
 
 const setHeaderHeight = () => {
-  const height = root.clientHeight;
+  const height = root?.clientHeight ?? 0;
   document.documentElement.style.setProperty('--header-height', `${height}px`);
 };
 
@@ -25,13 +25,13 @@ const onLinkClick = () => {
   }
 };
 
-const onOverlayClick = (evt) => {
+const onOverlayClick = (evt: MouseEvent) => {
   if (evt.offsetY > root.offsetHeight) {
     button.checked = false;
   }
 };
 
-const changeCurrentTarget = (newTarget) => {
+const changeCurrentTarget = (newTarget: HTMLLinkElement) => {
   linksMap.get(currentTarget).classList.remove('header__menu-link--current');
   currentTarget = newTarget;
   const currentLink = linksMap.get(currentTarget);
