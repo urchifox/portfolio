@@ -56,6 +56,7 @@
     "sass": "1.70.0",
     "stylelint": "16.2.1",
     "stylelint-config-htmlacademy": "4.0.5",
+    "typescript": "^5.8.3",
     "w3c-html-validator": "1.6.4"
   }
 }
