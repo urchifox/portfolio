@@ -1,19 +1,19 @@
-import {createElement} from './utils.js';
-import {typeName, PROJECTS_DATA} from './projects-data.js';
+import {createElement, isHtmlElement, isHtmlInputElement, queryElement, queryElements} from './utils.js';
+import {typeName, PROJECTS_DATA, ProjectData, StackNameValue} from './projects-data.js';
 
-const root = document.querySelector('.projects__list');
-const filtrationButtons = document.querySelectorAll('input[name="filter"]');
-const defaultFiltratonButton = document.querySelector('input#all[name="filter"]');
-const links = document.querySelectorAll('a[href^="#project-"]');
-const counters = document.querySelectorAll('.projects__filters-count');
+const root = queryElement('.projects__list');
+const filtrationButtons = queryElements('input[name="filter"]');
+const defaultFiltratonButton = queryElement<HTMLInputElement>('input#all[name="filter"]');
+const links = queryElements('a[href^="#project-"]');
+const counters = queryElements('.projects__filters-count');
 const fragment = document.createDocumentFragment();
 
-const getStackTemplate = (tools) => tools.reduce((template, tool) => /*html*/`${template}
+const getStackTemplate = (tools: Array<StackNameValue>) => tools.reduce((template, tool) => /*html*/`${template}
   <li class="project-card__stack-item project-card__stack-item--icon-${tool}">
     <span class="visually-hidden">${tool}</span>
   </li>`, '');
 
-const getImagesTemplate = (images) => images.reduce((template, image) => /*html*/`
+const getImagesTemplate = (images: Array<string>) => images.reduce((template, image) => /*html*/`${template}
   <picture>
     <source type="image/webp" media="(min-width: 1200px)"
       srcset="./images/cover-${image}-large@1x.webp 1x,
@@ -44,7 +44,7 @@ const getImagesTemplate = (images) => images.reduce((template, image) => /*html*
       alt="Скриншот страницы проекта">
   </picture>`, '');
 
-const getTemplate = ({id, name, type, descrption, tools, github, webpage, images}) => /*html*/`
+const getTemplate = ({id, name, type, descrption, tools, github, webpage, images}: ProjectData) => /*html*/`
   <li class="projects__item project-card" id="${id}">
     <h3 class="project-card__title">${name}</h3>
     <p class="project-card__caption">${type}</p>
@@ -66,19 +66,26 @@ const getTemplate = ({id, name, type, descrption, tools, github, webpage, images
   </li>
 `;
 
-const render = (data) => {
+const render = (data: Array<ProjectData>) => {
   data.forEach((datum) => {
     const card = createElement(getTemplate(datum));
-    fragment.append(card);
+    if (isHtmlElement(card)) fragment.append(card);
   });
   root.append(fragment);
 };
 
-const onButtonClick = (evt) => {
+const isTypeNameKey = (key: string): key is keyof typeof typeName => {
+  return Object.keys(typeName).includes(key)
+}
+
+const onButtonClick = (evt: Event) => {
+  if (!isHtmlInputElement(evt.target)) return
+
   root.scrollIntoView();
-  const filteredData = evt.target.value === 'all' ?
-    PROJECTS_DATA :
-    PROJECTS_DATA.filter((datum) => datum.type === typeName[evt.target.value]);
+  const value = evt.target.value
+  const filteredData = isTypeNameKey(value) ?
+    PROJECTS_DATA.filter((datum) => datum.type === typeName[value]) :
+    PROJECTS_DATA;
 
   root.innerHTML = '';
   render(filteredData);
@@ -95,7 +102,11 @@ const init = () => {
   counters.forEach((counter) => {
     counter.textContent = counter.dataset.type === 'all' ?
       `(${PROJECTS_DATA.length})` :
-      `(${PROJECTS_DATA.filter((datum) => datum.type === typeName[counter.dataset.type]).length})`;
+      `(${PROJECTS_DATA.filter((datum) =>
+          counter.dataset.type !== undefined &&
+          isTypeNameKey(counter.dataset.type) &&
+          datum.type === typeName[counter.dataset.type]
+        ).length})`;
   });
   filtrationButtons.forEach((button) => button.addEventListener('change', onButtonClick));
   links.forEach((link) => link.addEventListener('click', onLinkClick));

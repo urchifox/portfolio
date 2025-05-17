@@ -25,6 +25,8 @@
     "lint:bem": "gulp lintBem --silent",
     "lint:styles": "stylelint \"source/styles/**/*.scss\"",
     "lint:scripts": "eslint . --ignore-path .gitignore --ignore-pattern 'vendor/**'",
+    "ts": "tsc --noEmit",
+    "check": "npm run lint && npm run ts",
     "optimize": "npm-run-all -p optimize:**",
     "optimize:raster": "gulp optimizeRaster",
     "optimize:vector": "gulp optimizeVector"
@@ -56,6 +58,7 @@
     "sass": "1.70.0",
     "stylelint": "16.2.1",
     "stylelint-config-htmlacademy": "4.0.5",
+    "typescript": "^5.8.3",
     "w3c-html-validator": "1.6.4"
   }
 }

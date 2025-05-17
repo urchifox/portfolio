@@ -1,33 +1,40 @@
+import { isHtmlDialogElement, isHtmlElement, queryElement, queryElements } from "./utils";
+
 const dialogPolyfillURL = 'https://esm.run/dialog-polyfill';
 const isBrowserNotSupportDialog = window.HTMLDialogElement === undefined;
 
-const controls = document.querySelectorAll('[data-modal-id]');
+const controls = queryElements('[data-modal-id]');
 const modalsMap = new Map();
 
-const onControlClick = (evt) => {
+const onControlClick = (evt: MouseEvent) => {
+  if (!isHtmlElement(evt.target)) return;
   const control = evt.target.closest('[data-modal-id]');
   const modal = modalsMap.get(control);
   evt.preventDefault();
   modal.showModal();
 };
 
-const onCloseClick = (evt) => {
+const onCloseClick = (evt: MouseEvent) => {
   evt.stopPropagation();
-  evt.target.closest('.modal').close();
+  if (!isHtmlElement(evt.target)) return;
+  const modal = evt.target.closest('.modal');
+  if (isHtmlDialogElement(modal)) modal.close();
 };
 
-const onBackdropClick = (evt) => {
+const onBackdropClick = (evt: MouseEvent) => {
   const modal = evt.currentTarget;
 
   if (evt.target === modal) {
-    modal.close();
+      if (isHtmlDialogElement(modal)) modal.close();
   }
 };
 
-const onImgLoaded = (evt) => {
+const onImgLoaded = (evt: Event) => {
+  if (!isHtmlElement(evt.target)) return;
   const wrapper = evt.target.closest('.modal__picture-wrapper');
-  const spinner = wrapper.parentNode.querySelector('.modal__spinner');
-  spinner.remove();
+  if (!isHtmlElement(wrapper)) return;
+  const spinner = wrapper.parentNode?.querySelector('.modal__spinner');
+  spinner?.remove();
 
   wrapper.className += ' modal__picture-wrapper--loaded';
 };
@@ -43,12 +50,12 @@ const init = () => {
   }
 
   controls.forEach((control) => {
-    const modal = document.querySelector(`#${control.dataset.modalId}`);
+    const modal = queryElement(`#${control.dataset.modalId}`);
     modalsMap.set(control, modal);
     control.addEventListener('click', onControlClick);
-    modal.querySelector('.modal__picture').addEventListener('load', onImgLoaded);
+    queryElement('.modal__picture', modal).addEventListener('load', onImgLoaded);
     modal.addEventListener('click', onBackdropClick);
-    modal.querySelector('.modal__button').addEventListener('click', onCloseClick);
+    queryElement('.modal__button', modal).addEventListener('click', onCloseClick);
   });
 };
 

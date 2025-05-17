@@ -1,39 +1,47 @@
+import { isHtmlButtonElement, isHtmlDetailsElement, isHtmlElement, queryElements } from "./utils";
+
 const ButtonText = {
   CLOSED: 'Раскрыть все',
   OPENED: 'Свернуть все',
-};
+} as const;
 
 const ContentClass = {
   ANIMATING: 'additions-card__content--animating',
   COLLAPSING: 'additions-card__content--collapsing'
-};
+} as const;
 
-const buttons = document.querySelectorAll('.additions-card__button');
-const summariesMap = new Map();
+const buttons = queryElements<HTMLButtonElement>('.additions-card__button');
+const summariesMap = new Map<HTMLButtonElement, Array<HTMLElement>>();
 
 for (const button of buttons) {
-  const connectedSummaries = button.parentNode.querySelectorAll('.additions-card__summary');
+  const buttonParent = button.parentNode
+  if (!isHtmlElement(buttonParent)) continue;
+  const connectedSummaries = queryElements('.additions-card__summary', buttonParent);
   summariesMap.set(button, [...connectedSummaries]);
 }
 
 const summaries = [...summariesMap.values()].flat();
 
-const onButtonClick = (evt) => {
+const onButtonClick = (evt: MouseEvent) => {
+  if (!isHtmlButtonElement(evt.target)) return
   const text = evt.target.textContent;
   const isClosed = text === ButtonText.CLOSED;
 
   evt.target.textContent = isClosed ? ButtonText.OPENED : ButtonText.CLOSED;
 
-  summariesMap.get(evt.target).forEach((summary) => {
-    if (summary.parentElement.open !== isClosed) {
+  summariesMap.get(evt.target)?.forEach((summary) => {
+    const summaryParent = summary.parentElement
+    if (isHtmlDetailsElement(summaryParent) && summaryParent.open !== isClosed) {
       summary.click();
     }
   });
 };
 
-const onSummaryClick = (evt) => {
+const onSummaryClick = (evt: MouseEvent) => {
+  if (!isHtmlElement(evt.target)) return;
   const detailsElement = evt.target.parentElement;
   const contentElement = evt.target.nextElementSibling;
+  if (!isHtmlElement(contentElement) || !isHtmlDetailsElement(detailsElement)) return;
 
   // Chrome sometimes has a hiccup and gets stuck.
   // So we make sure to remove those classes manually,
@@ -45,7 +53,7 @@ const onSummaryClick = (evt) => {
     return;
   }
 
-  const addAnimationEndListener = (cb) => contentElement.addEventListener(
+  const addAnimationEndListener = (cb: () => void) => contentElement.addEventListener(
     'animationend', cb, {once: true}
   );
 
