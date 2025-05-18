@@ -118,6 +118,10 @@
     --icon-url: url("./../../images/icons/stack.svg#sass");
   }
 
+  &--icon-typescript {
+    --icon-url: url("./../../images/icons/stack.svg#typescript");
+  }
+
   &--icon-javascript {
     --icon-url: url("./../../images/icons/stack.svg#javascript");
   }
@@ -132,6 +136,10 @@
 
   &--icon-bem {
     --icon-url: url("./../../images/icons/stack.svg#bem");
+  }
+
+  &--icon-vite {
+    --icon-url: url("./../../images/icons/stack.svg#vite");
   }
 
   &--icon-gulp {
