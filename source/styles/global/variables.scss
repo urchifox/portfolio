@@ -4,7 +4,7 @@ $breakpoint-medium: 760px;
 $breakpoint-large: 1200px;
 $breakpoint-gap: 0.02px;
 
-$max-content-width: 1600px;
+$max-content-width: 1400px;
 
 // MEDIA QUERIES
 $on-small: "screen and (max-width: #{$breakpoint-medium - $breakpoint-gap})";
@@ -37,6 +37,10 @@ $font-size-xxs: 0.5rem;
 $transition-time-basic: 0.3s;
 $transition-timing-function-basic: ease-out;
 $transition-basic: $transition-time-basic $transition-timing-function-basic;
+
+// OUTLINES
+$border-standard: 1px solid var(--color-background-secondary);
+$shadow-standard: 0 0 $font-size-xxs 1px var(--color-background-secondary);
 
 :root {
   // COLORS

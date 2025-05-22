@@ -35,8 +35,10 @@
     padding: $font-size-2;
     flex-direction: column;
 
-    border: 2px solid var(--color-background-secondary);
-    border-radius: $font-size-3;
+    border: $border-standard;
+    border-radius: $font-size-xs;
+
+    box-shadow: $shadow-standard;
   }
 }
 
