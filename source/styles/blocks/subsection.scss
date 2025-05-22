@@ -37,7 +37,7 @@
   @media #{$on-large} {
     border-left: 2px solid var(--color-background-secondary);
     border-right: 2px solid var(--color-background-secondary);
-    border-radius: $font-size-3;
+    border-radius: $font-size-xs;
 
     display: flex;
     flex-wrap: wrap;
