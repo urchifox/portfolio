@@ -38,6 +38,10 @@ $transition-time-basic: 0.3s;
 $transition-timing-function-basic: ease-out;
 $transition-basic: $transition-time-basic $transition-timing-function-basic;
 
+// OUTLINES
+$border-standard: 1px solid var(--color-background-secondary);
+$shadow-standard: 0 0 $font-size-xxs 1px var(--color-background-secondary);
+
 :root {
   // COLORS
   --color-basic-dark: hsl(255, 25%, 40%);
