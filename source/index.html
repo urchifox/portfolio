@@ -53,10 +53,16 @@
               <a class="header__menu-link header__menu-link--current" href="#about">Обо мне</a>
             </li>
             <li class="header__menu-item">
-              <a class="header__menu-link" href="#skills">Навыки</a>
+              <a class="header__menu-link" href="#skills">Стек</a>
             </li>
+            <!-- <li class="header__menu-item">
+              <a class="header__menu-link" href="#work">Опыт работы</a>
+            </li> -->
             <li class="header__menu-item">
               <a class="header__menu-link" href="#projects">Проекты</a>
+            </li>
+            <li class="header__menu-item">
+              <a class="header__menu-link" href="#learning">Обучение</a>
             </li>
             <li class="header__menu-item">
               <a class="header__menu-link" href="#additions">Дополнительно</a>
@@ -134,10 +140,9 @@
       </section>
 
       <section class="main__section section" id="skills">
-        <h2 class="section__title title container">Навыки</h2>
+        <h2 class="section__title title container">Стек</h2>
 
-        <section class="section__subsection subsection">
-          <h3 class="visually-hidden">Технологии</h3>
+        <div class="section__subsection subsection">
           <div class="subsection__skills-container">
             <ul class="subsection__skills-list">
               <li class="subsection__skills-item">
@@ -205,8 +210,53 @@
               </li>
             </ul>
           </div>
-        </section>
+        </div>
+      </section>
 
+      <!-- <section class="main__section section" id="work">
+        <h2 class="section__title title container">Опыт работы</h2>
+      </section> -->
+
+      <section class="main__section section container" id="projects">
+        <h2 class="section__title title">Проекты</h2>
+        <div class="section__subsection subsection projects ">
+          <ul class="projects__filters-list">
+            <li class="projects__filters-item">
+              <label class="projects__filters-label">
+                <input class="visually-hidden" id="all" value="all" name="filter" type="radio" checked/>
+                <span class="projects__filters-text">Все проекты</span>
+                <span class="projects__filters-count" data-type="all">(?)</span>
+              </label>
+            </li>
+            <li class="projects__filters-item">
+              <label class="projects__filters-label">
+                <input class="visually-hidden" id="diploma" value="diploma" name="filter" type="radio"/>
+                <span class="projects__filters-text">Дипломные проекты</span>
+                <span class="projects__filters-count" data-type="diploma">(?)</span>
+              </label>
+            </li>
+            <li class="projects__filters-item">
+              <label class="projects__filters-label">
+                <input class="visually-hidden" id="trainig" value="trainig" name="filter" type="radio"/>
+                <span class="projects__filters-text">Тренировки навыков</span>
+                <span class="projects__filters-count" data-type="trainig">(?)</span>
+              </label>
+            </li>
+            <li class="projects__filters-item">
+              <label class="projects__filters-label">
+                <input class="visually-hidden" id="personal" value="personal" name="filter" type="radio"/>
+                <span class="projects__filters-text">Личные проекты</span>
+                <span class="projects__filters-count" data-type="personal">(?)</span>
+              </label>
+            </li>
+          </ul>
+          <ul class="projects__list">
+          </ul>
+        </div>
+      </section>
+
+      <section class="main__section section" id="learning">
+        <h2 class="section__title title container">Обучение</h2>
         <section class="section__subsection subsection">
           <h3 class="subsection__title subtitle container">Изученные методические материалы с отработкой на практических кейсах</h3>
           <div class="subsection__practice-list-wrapper">
@@ -472,44 +522,6 @@
             </ul>
           </div>
         </section>
-      </section>
-
-      <section class="main__section section container" id="projects">
-        <h2 class="section__title title">Проекты</h2>
-        <div class="section__subsection subsection projects ">
-          <ul class="projects__filters-list">
-            <li class="projects__filters-item">
-              <label class="projects__filters-label">
-                <input class="visually-hidden" id="all" value="all" name="filter" type="radio" checked/>
-                <span class="projects__filters-text">Все проекты</span>
-                <span class="projects__filters-count" data-type="all">(?)</span>
-              </label>
-            </li>
-            <li class="projects__filters-item">
-              <label class="projects__filters-label">
-                <input class="visually-hidden" id="diploma" value="diploma" name="filter" type="radio"/>
-                <span class="projects__filters-text">Дипломные проекты</span>
-                <span class="projects__filters-count" data-type="diploma">(?)</span>
-              </label>
-            </li>
-            <li class="projects__filters-item">
-              <label class="projects__filters-label">
-                <input class="visually-hidden" id="trainig" value="trainig" name="filter" type="radio"/>
-                <span class="projects__filters-text">Тренировки навыков</span>
-                <span class="projects__filters-count" data-type="trainig">(?)</span>
-              </label>
-            </li>
-            <li class="projects__filters-item">
-              <label class="projects__filters-label">
-                <input class="visually-hidden" id="personal" value="personal" name="filter" type="radio"/>
-                <span class="projects__filters-text">Личные проекты</span>
-                <span class="projects__filters-count" data-type="personal">(?)</span>
-              </label>
-            </li>
-          </ul>
-          <ul class="projects__list">
-          </ul>
-        </div>
       </section>
 
       <section class="main__section section container" id="additions">
