@@ -44,6 +44,20 @@ export const PROJECTS_DATA: Array<ProjectData> = [
     images: ['portfolio']
   },
   {
+    id: 'feature-support',
+    name: 'Check feature support',
+    type: typeName.personal,
+    descrption: `Сайт-инструмент для проверки поддержки CSS-свойств в браузере, в котором он открыт. Проект вырос из рабочей задачи по поддержке дефолтных мобильных браузеров (например, Samsung Internet), для которых не было достоверной информации о поддержке CSS.
+    </br>В рамках работы над этим проектом были реализованы:
+    </br>- двойная проверка на базе CSS.supports и @supports с цветовой индикацией результата;
+    </br>- отдельная логика для проверки поддержки единиц измерения и пользовательских свойств;
+    </br>- минималистичный интерфейс для быстрого ввода CSS-свойств и мгновенного получения ответа.`,
+    tools: [stackName.html, stackName.sass, stackName.ts, stackName.bem],
+    github: 'https://github.com/urchifox/check-feature-support',
+    webpage: 'https://urchifox.github.io/check-feature-support/',
+    images: ['feature-support']
+  },
+  {
     id: 'project-cat-energy',
     name: 'Cat Energy',
     type: typeName.diploma,
