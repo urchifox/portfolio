@@ -11,6 +11,7 @@ const stackName = {
   css: 'css',
   sass: 'sass',
   js: 'javascript',
+  ts: 'typescript',
   bem: 'bem',
 } as const;
 type StackNameMap = typeof stackName;
@@ -37,10 +38,24 @@ export const PROJECTS_DATA: Array<ProjectData> = [
     </br>- настройка и переключение цветовых тем: я взяла за основу реализацию Вадима Макеева, которую он разбирал в видео-роликах, но адаптировала под свой дизайн, слегка изменив логику скрипта;
     </br>- использование относительных единиц измерения: все размеры шрифтов, а также расстояния между элементами привязаны к базовому размеру шрифта;
     </br>- работа с новыми для меня элементами: изучила нюансы работы тегов details и dialog.`,
-    tools: [stackName.html, stackName.sass, stackName.js, stackName.bem],
+    tools: [stackName.html, stackName.sass, stackName.ts, stackName.bem],
     github: 'https://github.com/urchifox/portfolio',
     webpage: 'https://urchifox.github.io/portfolio/',
     images: ['portfolio']
+  },
+  {
+    id: 'feature-support',
+    name: 'Check feature support',
+    type: typeName.personal,
+    descrption: `Сайт-инструмент для проверки поддержки CSS-свойств в браузере, в котором он открыт. Проект вырос из рабочей задачи по поддержке дефолтных мобильных браузеров (например, Samsung Internet), для которых не было достоверной информации о поддержке CSS.
+    </br>В рамках работы над этим проектом были реализованы:
+    </br>- двойная проверка на базе CSS.supports и @supports с цветовой индикацией результата;
+    </br>- отдельная логика для проверки поддержки единиц измерения и пользовательских свойств;
+    </br>- минималистичный интерфейс для быстрого ввода CSS-свойств и мгновенного получения ответа.`,
+    tools: [stackName.html, stackName.sass, stackName.ts, stackName.bem],
+    github: 'https://github.com/urchifox/check-feature-support',
+    webpage: 'https://urchifox.github.io/check-feature-support/',
+    images: ['feature-support']
   },
   {
     id: 'project-cat-energy',
