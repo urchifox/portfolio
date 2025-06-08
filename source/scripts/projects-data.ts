@@ -11,6 +11,7 @@ const stackName = {
   css: 'css',
   sass: 'sass',
   js: 'javascript',
+  ts: 'typescript',
   bem: 'bem',
 } as const;
 type StackNameMap = typeof stackName;
