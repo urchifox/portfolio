@@ -1,9 +1,21 @@
 .career-card {
+  position: relative;
   padding: $font-size-2;
   border: $border-standard;
   border-radius: $font-size-xs;
   box-shadow: $shadow-standard;
-  background-color: var(--color-background-basic);;
+  background-color: var(--color-background-basic);
+  container-type: inline-size;
+  container-name: card;
+}
+
+.career-card__header {
+  @media #{$on-large} {
+    display: flex;
+    gap: 15ch;
+    justify-content: space-between;
+    align-items: baseline;
+  }
 }
 
 .career-card__title {
@@ -12,10 +24,27 @@
 
   font-weight: $font-weight-bold;
   font-size: $font-size-3;
+  text-align: center;
   word-break: break-word;
 }
 
+.career-card__subtitle {
+  margin-top: 0;
+  margin-bottom: $font-size-xxs;
+  margin-left: $font-size-6;
+  font-weight: 700;
+
+  :not(.career-card__column-item) > & {
+    @container (min-width: 65ch) {
+      margin-left: 0;
+      text-align: center;
+    }
+  }
+}
+
+
 .career-card__company-description {
+  margin-top: 0;
   margin-bottom: $font-size-xxs;
 
   font-size: $font-size-2;
@@ -36,10 +65,16 @@
 }
 
 .career-card__date {
-  margin-top: 0;
-  margin-bottom: $font-size-s;
+  position: absolute;
+  top: -$font-size-3;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0;
 
-  color: var(--color-text-secondary);
+  color: var(--color-background-basic);
+  font-size: $font-size-2;
+  font-family: $font-family-accent;
+  font-weight: 700;
   word-break: break-word;
 }
 
@@ -53,4 +88,19 @@
 .career-card__description-list {
   margin: 0;
   padding-left: $font-size-1;
+}
+
+.career-card__column-wrapper {
+  column-count: 2;
+  column-width: 30ch;
+  column-gap: 5ch;
+  margin-bottom: $font-size-xs;
+}
+
+.career-card__column-item {
+  break-inside: avoid;
+
+  &:not(:last-child) {
+    margin-bottom: $font-size-xs;
+  }
 }

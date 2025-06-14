@@ -6,14 +6,14 @@
 
   display: flex;
   flex-direction: column;
-  gap: $font-size-1;
+  gap: $font-size-5;
 
   &::before {
     content: "";
     position: absolute;
     z-index: -1;
-    top: -$font-size-xxs;
-    bottom: -$font-size-xxs;
+    top: -$font-size-4;
+    bottom: -$font-size-xs;
     left: $font-size-2;
     right: $font-size-2;
 
