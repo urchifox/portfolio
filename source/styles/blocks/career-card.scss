@@ -1,0 +1,56 @@
+.career-card {
+  padding: $font-size-2;
+  border: $border-standard;
+  border-radius: $font-size-xs;
+  box-shadow: $shadow-standard;
+  background-color: var(--color-background-basic);;
+}
+
+.career-card__title {
+  margin-top: 0;
+  margin-bottom: $font-size-1;
+
+  font-weight: $font-weight-bold;
+  font-size: $font-size-3;
+  word-break: break-word;
+}
+
+.career-card__company-description {
+  margin-bottom: $font-size-xxs;
+
+  font-size: $font-size-2;
+  word-break: break-word;
+}
+
+.career-card__company-name {
+  font-weight: $font-weight-bold;
+  color: var(--color-interactive-basic);
+
+  &:hover {
+    color: var(--color-interactive-secondary);
+  }
+
+  &:active {
+    color: var(--color-interactive-accent);
+  }
+}
+
+.career-card__date {
+  margin-top: 0;
+  margin-bottom: $font-size-s;
+
+  color: var(--color-text-secondary);
+  word-break: break-word;
+}
+
+.career-card__text {
+  margin-top: 0;
+  margin-bottom: $font-size-xxs;
+
+  word-break: break-word;
+}
+
+.career-card__description-list {
+  margin: 0;
+  padding-left: $font-size-1;
+}
