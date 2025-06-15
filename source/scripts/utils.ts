@@ -46,29 +46,29 @@ export function queryElements<T extends HTMLElement = HTMLElement>(
 }
 
 export function isHtmlElement(element: unknown): element is HTMLElement {
-	return element instanceof HTMLElement
+  return element instanceof HTMLElement
 }
 
 export function isHtmlDialogElement(
-	element: unknown
+  element: unknown
 ): element is HTMLDialogElement {
-	return isHtmlElement(element) && element.tagName === "DIALOG"
+  return isHtmlElement(element) && element.tagName === "DIALOG"
 }
 
 export function isHtmlDetailsElement(
-	element: unknown
+  element: unknown
 ): element is HTMLDetailsElement {
-	return isHtmlElement(element) && element.tagName === "DETAILS"
+  return isHtmlElement(element) && element.tagName === "DETAILS"
 }
 
 export function isHtmlInputElement(
-	element: unknown
+  element: unknown
 ): element is HTMLInputElement {
-	return isHtmlElement(element) && element.tagName === "INPUT"
+  return isHtmlElement(element) && element.tagName === "INPUT"
 }
 
 export function isHtmlButtonElement(
-	element: unknown
+  element: unknown
 ): element is HTMLButtonElement {
-	return isHtmlElement(element) && element.tagName === "BUTTON"
+  return isHtmlElement(element) && element.tagName === "BUTTON"
 }
