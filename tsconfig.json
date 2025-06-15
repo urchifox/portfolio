@@ -1,21 +1,21 @@
 {
-	"compilerOptions": {
-		"target": "ES2020",
-		"useDefineForClassFields": true,
-		"module": "ESNext",
-		"lib": ["ES2022", "DOM", "DOM.Iterable"],
-		"skipLibCheck": true,
-		"allowJs": true,
+  "compilerOptions": {
+    "target": "ES2020",
+    "useDefineForClassFields": true,
+    "module": "ESNext",
+    "lib": ["ES2022", "DOM", "DOM.Iterable"],
+    "skipLibCheck": true,
+    "allowJs": true,
 
-		/* Bundler mode */
-		"moduleResolution": "bundler",
-		"allowImportingTsExtensions": true,
-		"resolveJsonModule": true,
-		"isolatedModules": true,
-		"noEmit": true,
+    /* Bundler mode */
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
 
-		"strict": true,
-		"noImplicitOverride": true,
-	},
-	"include": ["./source/scripts"]
+    "strict": true,
+    "noImplicitOverride": true,
+  },
+  "include": ["./source/scripts"]
 }

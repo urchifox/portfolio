@@ -1,0 +1,126 @@
+.career-card {
+  position: relative;
+  padding-top: $font-size-s;
+  padding-bottom: $font-size-2;
+  padding-inline: $font-size-2;
+  border: $border-standard;
+  border-radius: $font-size-xs;
+  box-shadow: $shadow-standard;
+  background-color: var(--color-background-basic);
+  container-type: inline-size;
+  container-name: card;
+}
+
+.career-card__header {
+  @media #{$on-large} {
+    display: flex;
+    gap: $font-size-6;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+}
+
+.career-card__title {
+  margin-top: 0;
+  margin-bottom: $font-size-1;
+
+  font-weight: $font-weight-bold;
+  font-size: $font-size-3;
+  text-align: center;
+  word-break: break-word;
+}
+
+.career-card__subtitle {
+  margin-top: 0;
+  margin-bottom: $font-size-xxs;
+  margin-left: $font-size-3;
+  font-weight: 700;
+
+  :not(.career-card__column-item) > & {
+    @container (min-width: 65ch) {
+      margin-left: 0;
+      text-align: center;
+    }
+  }
+}
+
+
+.career-card__company-description {
+  margin-top: 0;
+  margin-bottom: $font-size-xxs;
+
+  font-size: $font-size-2;
+  word-break: break-word;
+
+  @media #{$on-large} {
+    font-size: $font-size-3;
+  }
+}
+
+.career-card__company-name {
+  font-weight: $font-weight-bold;
+  color: var(--color-interactive-basic);
+
+  &:hover {
+    color: var(--color-interactive-secondary);
+  }
+
+  &:active {
+    color: var(--color-interactive-accent);
+  }
+}
+
+.career-card__date {
+  position: absolute;
+  top: -$font-size-3;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0;
+
+  color: var(--color-background-basic);
+  font-size: $font-size-2;
+  font-family: $font-family-accent;
+  font-weight: 700;
+  word-break: break-word;
+}
+
+.career-card__text {
+  margin-top: 0;
+  margin-bottom: $font-size-xxs;
+
+  word-break: break-word;
+}
+
+.career-card__description-list {
+  margin: 0;
+  padding-left: 0;
+  list-style: disc inside;
+}
+
+.career-card__description-item {
+  &::marker {
+    color: var(--color-background-secondary);
+  }
+}
+
+.career-card__column-wrapper {
+  --column-gap: 5ch;
+  column-count: 2;
+  column-width: 30ch;
+  column-gap: var(--column-gap);
+  margin-bottom: $font-size-xs;
+}
+
+.career-card__column-item {
+  break-inside: avoid;
+
+  &:first-child:last-child {
+    @container (min-width: 65ch) {
+      width: calc(200% + var(--column-gap));
+    }
+  }
+
+  &:not(:last-child) {
+    margin-bottom: $font-size-xs;
+  }
+}

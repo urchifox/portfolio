@@ -9,6 +9,7 @@
 
   @media #{$on-small-medium} {
     box-shadow:
+      $shadow-standard,
       50vw  0 0 calc(0px - $font-size-2) var(--color-background-secondary),
       -50vw  0 0 calc(0px - $font-size-2) var(--color-background-secondary);
   }

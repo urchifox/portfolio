@@ -152,3 +152,7 @@
 .section__contacts-link {
   --icon-color: var(--color-background-basic);
 }
+
+.section__career-list {
+  margin-top: calc($font-size-4  * 2);
+}
