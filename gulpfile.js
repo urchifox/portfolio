@@ -17,6 +17,7 @@ import svgo from 'gulp-svgmin';
 import { stacksvg } from 'gulp-stacksvg';
 import server from 'browser-sync';
 import bemlinter from 'gulp-html-bemlinter';
+import pug from 'gulp-pug';
 
 const { src, dest, watch, series, parallel } = gulp;
 const sass = gulpSass(dartSass);
@@ -41,6 +42,14 @@ export function processMarkup () {
     .pipe(htmlmin({ collapseWhitespace: !isDevelopment }))
     .pipe(dest(PATH_TO_DIST))
     .pipe(server.stream());
+}
+
+export function compilePug() {
+  return src(`${PATH_TO_SOURCE}pug/*.pug`)
+    .pipe(pug({
+      pretty: true // чтобы разметка была не минифицирована
+    }))
+    .pipe(dest(PATH_TO_DIST));
 }
 
 export function lintBem () {
@@ -150,7 +159,8 @@ export function startServer () {
     });
   });
 
-  watch(`${PATH_TO_SOURCE}**/*.{html,njk}`, series(processMarkup));
+  watch(`${PATH_TO_SOURCE}pug/**/*.pug`, compilePug);
+  // watch(`${PATH_TO_SOURCE}**/*.{html,njk}`, series(processMarkup));
   watch(`${PATH_TO_SOURCE}styles/**/*.scss`, series(processStyles));
   watch(`${PATH_TO_SOURCE}scripts/**/*.{js,ts}`, series(processScripts));
   watch(`${PATH_TO_SOURCE}images/icons/**/*.svg`, series(createStack, reloadServer));
@@ -175,7 +185,8 @@ export function buildProd (done) {
   series(
     removeBuild,
     parallel(
-      processMarkup,
+      compilePug,
+      // processMarkup,
       processStyles,
       processScripts,
       createStack,
@@ -188,7 +199,8 @@ export function runDev (done) {
   series(
     removeBuild,
     parallel(
-      processMarkup,
+      compilePug,
+      // processMarkup,
       processStyles,
       processScripts,
       createStack,
