@@ -1,7 +1,5 @@
-mixin header(parentClass)
-  - const blockClass = "header"
-  - const mixinClass = parentClass ? `${parentClass}__${blockClass}` : ''
-  header(class=[mixinClass, blockClass])
+mixin header(className)
+  header(class=className)
     div(class="header__container container")
       label(class="header__menu-toggle-wrapper")
         span(class="visually-hidden") Открыть меню

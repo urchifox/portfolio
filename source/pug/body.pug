@@ -1,6 +1,7 @@
+include utils
 body(class="page__body")
   include header
-  +header("page")
+  +header(getBlockClass('page', 'header'))
 
   main(class="page__main main")
     include about
