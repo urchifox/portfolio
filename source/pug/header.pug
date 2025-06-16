@@ -5,18 +5,11 @@ header(class="page__header header")
       input(class="header__menu-toggle button button--icon-menu", name="menu", type="checkbox")
     nav(class="header__menu")
       ul(class="header__menu-list")
-        li(class="header__menu-item")
-          a(class="header__menu-link header__menu-link--current", href="#about") Обо мне
-        li(class="header__menu-item")
-          a(class="header__menu-link", href="#skills") Стек
-        li(class="header__menu-item")
-          a(class="header__menu-link", href="#work") Опыт
-        li(class="header__menu-item")
-          a(class="header__menu-link", href="#projects") Проекты
-        li(class="header__menu-item")
-          a(class="header__menu-link", href="#learning") Обучение
-        li(class="header__menu-item")
-          a(class="header__menu-link", href="#additions") Дополнительно
+
+        each val, key in {about: "Обо мне", skills: "Стек", work: "Опыт", projects: "Проекты", learning: "Обучение", additions: "Дополнительно"}
+          li(class="header__menu-item")
+            a(class="header__menu-link", href=`#${key}`)= val
+
     label(class="header__scheme-toggle scheme-toggle")
       span(class="visually-hidden") Темная тема
       input(class="scheme-toggle__control button", name="scheme", type="checkbox", role="switch")
