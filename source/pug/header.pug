@@ -1,15 +1,18 @@
-header(class="page__header header")
-  div(class="header__container container")
-    label(class="header__menu-toggle-wrapper")
-      span(class="visually-hidden") Открыть меню
-      input(class="header__menu-toggle button button--icon-menu", name="menu", type="checkbox")
-    nav(class="header__menu")
-      ul(class="header__menu-list")
-        each val, key in blocks
-          li(class="header__menu-item")
-            a(class="header__menu-link", href=`#${key}`)= val
+mixin header(parentClass)
+  - const blockClass = "header"
+  - const mixinClass = parentClass ? `${parentClass}__${blockClass}` : ''
+  header(class=[mixinClass, blockClass])
+    div(class="header__container container")
+      label(class="header__menu-toggle-wrapper")
+        span(class="visually-hidden") Открыть меню
+        input(class="header__menu-toggle button button--icon-menu", name="menu", type="checkbox")
+      nav(class="header__menu")
+        ul(class="header__menu-list")
+          each val, key in blocks
+            li(class="header__menu-item")
+              a(class="header__menu-link", href=`#${key}`)= val
 
-    label(class="header__scheme-toggle scheme-toggle")
-      span(class="visually-hidden") Темная тема
-      input(class="scheme-toggle__control button", name="scheme", type="checkbox", role="switch")
-  div(class="header__scroll-indicator", aria-hidden="true")
+      label(class="header__scheme-toggle scheme-toggle")
+        span(class="visually-hidden") Темная тема
+        input(class="scheme-toggle__control button", name="scheme", type="checkbox", role="switch")
+    div(class="header__scroll-indicator", aria-hidden="true")
