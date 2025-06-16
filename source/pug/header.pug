@@ -5,8 +5,7 @@ header(class="page__header header")
       input(class="header__menu-toggle button button--icon-menu", name="menu", type="checkbox")
     nav(class="header__menu")
       ul(class="header__menu-list")
-
-        each val, key in {about: "Обо мне", skills: "Стек", work: "Опыт", projects: "Проекты", learning: "Обучение", additions: "Дополнительно"}
+        each val, key in blocks
           li(class="header__menu-item")
             a(class="header__menu-link", href=`#${key}`)= val
 

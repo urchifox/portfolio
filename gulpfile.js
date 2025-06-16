@@ -18,6 +18,7 @@ import { stacksvg } from 'gulp-stacksvg';
 import server from 'browser-sync';
 import bemlinter from 'gulp-html-bemlinter';
 import pug from 'gulp-pug';
+import fs from 'fs';
 
 const { src, dest, watch, series, parallel } = gulp;
 const sass = gulpSass(dartSass);
@@ -45,9 +46,11 @@ export function processMarkup () {
 }
 
 export function compilePug() {
+  const blocks = JSON.parse(fs.readFileSync(`${PATH_TO_SOURCE}data/blocks.json`));
   return src(`${PATH_TO_SOURCE}pug/*.pug`)
     .pipe(pug({
-      pretty: true // чтобы разметка была не минифицирована
+      pretty: true, // чтобы разметка была не минифицирована
+      locals: { blocks },
     }))
     .pipe(dest(PATH_TO_DIST));
 }
