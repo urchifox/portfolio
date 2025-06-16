@@ -1,0 +1,31 @@
+head
+  meta(charset="UTF-8")
+  meta(name="viewport", content="width=device-width,initial-scale=1")
+  meta(name="color-scheme", content="light dark")
+  meta(name="theme-color", media="(prefers-color-scheme: light)", content="#f7f5ff")
+  meta(name="theme-color", media="(prefers-color-scheme: dark)", content="#594d80")
+  title Катерина Евтухова
+  script.
+    if (matchMedia('(prefers-color-scheme: dark)').media === 'not all') {
+    document.documentElement.style.display = 'none';
+    document.head.insertAdjacentHTML(
+    'beforeend',
+    '<link rel="stylesheet" href="styles/light-scheme.css" onload="document.documentElement.style.display=\'\'">'
+    );
+    }
+  link(rel="icon", href="favicon.ico")
+  link(rel="icon", href="16.png", sizes="16x16", type="image/png")
+  link(rel="icon", href="32.png", sizes="32x32", type="image/png")
+  link(rel="icon", href="favicons/icon.svg", type="image/svg+xml")
+  link(rel="apple-touch-icon", href="favicons/apple.png")
+  link(rel="manifest", href="manifest.webmanifest")
+  link(rel="stylesheet", href="styles/styles.css")
+  link(rel="stylesheet", href="styles/light-scheme.css", media="(prefers-color-scheme: light)")
+  link(rel="stylesheet", href="styles/dark-scheme.css", media="(prefers-color-scheme: dark)")
+  link(rel="preload", href="fonts/Nunito/Nunito-Medium.woff2", as="font", type="font/woff2", crossorigin="anonymous")
+  link(rel="preload", href="fonts/Nunito/Nunito-Bold.woff2", as="font", type="font/woff2", crossorigin="anonymous")
+  link(rel="preload", href="fonts/Nunito/Nunito-BoldItalic.woff2", as="font", type="font/woff2", crossorigin="anonymous")
+  link(rel="preload", href="fonts/NunitoSans/NunitoSans-Black.woff2", as="font", type="font/woff2", crossorigin="anonymous")
+  link(rel="preload", href="fonts/NunitoSans/NunitoSans-Bold.woff2", as="font", type="font/woff2", crossorigin="anonymous")
+  link(rel="preload", href="fonts/NunitoSans/NunitoSans-Regular.woff2", as="font", type="font/woff2", crossorigin="anonymous")
+  script(src="scripts/index.js", defer)
