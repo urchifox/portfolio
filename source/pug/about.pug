@@ -17,12 +17,7 @@ section#about(class="main__section section section--lead")
         img(class="section__picture", src="./images/lead-portrait-small@1x.jpg", srcset="./images/lead-portrait-small@2x.jpg 2x", width="760", height="380", alt="Катерина Евтухова")
     p(class="section__text") Будучи визуалом с логическим мышлением, я нашла во фронтенде идеальное место для реализации себя как специалиста. Стремлюсь создавать удобные и доступные интерфейсы, используя современные технологии. С интересом слежу за актуальными тенденциями в сфере веб-разработки.
     ul(class="section__contacts-list")
-      li(class="section__contacts-item")
-        a(class="section__contacts-link button button--icon-whatsapp", href="https://api.whatsapp.com/send?phone=79601143943")
-          span(class="visually-hidden") Написать в WhatsApp
-      li(class="section__contacts-item")
-        a(class="section__contacts-link button button--icon-telegram", href="https://t.me/urchifox")
-          span(class="visually-hidden") Написать в Telegram
-      li(class="section__contacts-item")
-        a(class="section__contacts-link button button--icon-gmail", href="mailto:uchifox@gmail.com")
-          span(class="visually-hidden") Написать на почту
+      each contact in contacts
+        li(class="section__contacts-item")
+          a(class=`section__contacts-link button button--icon-${contact.name}`, href=contact.link)
+            span(class="visually-hidden") contact.text
