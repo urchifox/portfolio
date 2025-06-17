@@ -6,9 +6,9 @@ mixin header(className)
         input(class="header__menu-toggle button button--icon-menu", name="menu", type="checkbox")
       nav(class="header__menu")
         ul(class="header__menu-list")
-          each val, key in blocks
+          each val in blocks
             li(class="header__menu-item")
-              a(class="header__menu-link", href=`#${key}`)= val
+              a(class="header__menu-link", href=`#${val.name}`)= val.text
 
       label(class="header__scheme-toggle scheme-toggle")
         span(class="visually-hidden") Темная тема
