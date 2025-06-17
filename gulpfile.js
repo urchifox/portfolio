@@ -47,10 +47,11 @@ export function processMarkup () {
 
 export function compilePug() {
   const blocks = JSON.parse(fs.readFileSync(`${PATH_TO_SOURCE}data/sections.json`));
+  const contacts = JSON.parse(fs.readFileSync(`${PATH_TO_SOURCE}data/contacts.json`));
   return src(`${PATH_TO_SOURCE}pug/*.pug`)
     .pipe(pug({
       pretty: true, // чтобы разметка была не минифицирована
-      locals: { blocks },
+      locals: { blocks, contacts },
     }))
     .pipe(dest(PATH_TO_DIST));
 }

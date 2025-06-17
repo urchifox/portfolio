@@ -1,14 +1,6 @@
 footer(class="page__footer footer")
   ul(class="footer__contacts-list container")
-    li(class="footer__contacts-item")
-      a(class="footer__contacts-link button button--icon-github", href="https://github.com/urchifox")
-        span(class="visually-hidden") Профиль на GitHub
-    li(class="footer__contacts-item")
-      a(class="footer__contacts-link button button--icon-whatsapp", href="https://api.whatsapp.com/send?phone=79601143943")
-        span(class="visually-hidden") Написать в WhatsApp
-    li(class="footer__contacts-item")
-      a(class="footer__contacts-link button button--icon-telegram", href="https://t.me/urchifox")
-        span(class="visually-hidden") Написать в Telegram
-    li(class="footer__contacts-item")
-      a(class="footer__contacts-link button button--icon-gmail", href="mailto:uchifox@gmail.com")
-        span(class="visually-hidden") Написать на почту
+    each val in contacts
+      li(class="footer__contacts-item")
+        a(class=`footer__contacts-link button button--icon-${val.name}`, href=val.link)
+          span(class="visually-hidden") val.text
