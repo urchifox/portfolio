@@ -164,7 +164,7 @@ export function startServer () {
   });
 
   watch(`${PATH_TO_SOURCE}pug/**/*.pug`, compilePug);
-  // watch(`${PATH_TO_SOURCE}**/*.{html,njk}`, series(processMarkup));
+  watch(`${PATH_TO_SOURCE}**/*.{html,njk}`, series(processMarkup));
   watch(`${PATH_TO_SOURCE}styles/**/*.scss`, series(processStyles));
   watch(`${PATH_TO_SOURCE}scripts/**/*.{js,ts}`, series(processScripts));
   watch(`${PATH_TO_SOURCE}images/icons/**/*.svg`, series(createStack, reloadServer));
@@ -190,7 +190,7 @@ export function buildProd (done) {
     removeBuild,
     parallel(
       compilePug,
-      // processMarkup,
+      processMarkup,
       processStyles,
       processScripts,
       createStack,
@@ -204,7 +204,7 @@ export function runDev (done) {
     removeBuild,
     parallel(
       compilePug,
-      // processMarkup,
+      processMarkup,
       processStyles,
       processScripts,
       createStack,
