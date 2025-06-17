@@ -46,7 +46,7 @@ export function processMarkup () {
 }
 
 export function compilePug() {
-  const blocks = JSON.parse(fs.readFileSync(`${PATH_TO_SOURCE}data/blocks.json`));
+  const blocks = JSON.parse(fs.readFileSync(`${PATH_TO_SOURCE}data/sections.json`));
   return src(`${PATH_TO_SOURCE}pug/*.pug`)
     .pipe(pug({
       pretty: true, // чтобы разметка была не минифицирована
