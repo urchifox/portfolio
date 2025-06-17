@@ -3,43 +3,11 @@ section#skills(class="main__section section")
   div(class="section__subsection subsection")
     div(class="subsection__skills-container")
       ul(class="subsection__skills-list")
-        li(class="subsection__skills-item")
-          div(class="subsection__skills-icon-wrapper")
-            p(class="subsection__skills-icon subsection__skills-icon--icon-html")
-              span(class="visually-hidden") HTML
-          p(class="subsection__skills-text") Пишу валидную семантическую разметку, знаю базовые правила доступного интерфейса, умею валидировать формы
-        li(class="subsection__skills-item")
-          div(class="subsection__skills-icon-wrapper")
-            p(class="subsection__skills-icon subsection__skills-icon--icon-css")
-              span(class="visually-hidden") CSS
-            p(class="subsection__skills-icon subsection__skills-icon--icon-sass")
-              span(class="visually-hidden") Sass
-          p(class="subsection__skills-text") Уверенно строю flex и grid сетки, оптимизирую работу с помощью кастомных свойств и переменных, умею строить адаптивные резиновые интерфейсы
-        li(class="subsection__skills-item")
-          div(class="subsection__skills-icon-wrapper")
-            p(class="subsection__skills-icon subsection__skills-icon--icon-typescript")
-              span(class="visually-hidden") TypeScript
-            p(class="subsection__skills-icon subsection__skills-icon--icon-javascript")
-              span(class="visually-hidden") JavaScript
-          p(class="subsection__skills-text") Уверенно пишу как на TypeScript, так и на ванильном JS, умею работать с асинхронными операциями, понимаю принципы работы различных алгоритмов, знакома с понятием “О” большое, думаю об алгоритмической сложности при написании кода
-        li(class="subsection__skills-item")
-          div(class="subsection__skills-icon-wrapper")
-            p(class="subsection__skills-icon subsection__skills-icon--icon-git")
-              span(class="visually-hidden") Git
-            p(class="subsection__skills-icon subsection__skills-icon--icon-github")
-              span(class="visually-hidden") GitHub
-          p(class="subsection__skills-text") Умею работать с системой контроля версий GIT, знаю основные команды по работе с репозиторием, как работать в ветках и форках
-        li(class="subsection__skills-item")
-          div(class="subsection__skills-icon-wrapper")
-            p(class="subsection__skills-icon subsection__skills-icon--icon-bem")
-              span(class="visually-hidden") БЭМ
-          p(class="subsection__skills-text") Умею делить интерфейс на переиспользуемые и независимые компоненты.
-        li(class="subsection__skills-item")
-          div(class="subsection__skills-icon-wrapper")
-            p(class="subsection__skills-icon subsection__skills-icon--icon-vite")
-              span(class="visually-hidden") Vite
-            p(class="subsection__skills-icon subsection__skills-icon--icon-webpack")
-              span(class="visually-hidden") Webpack
-            p(class="subsection__skills-icon subsection__skills-icon--icon-gulp")
-              span(class="visually-hidden") Gulp
-          p(class="subsection__skills-text") Имею опыт работы на проектах с настроенной автоматизацией (vite, webpack, gulp) и использованием npm-пакетов
+        each skill in skills
+          li(class="subsection__skills-item")
+            div(class="subsection__skills-icon-wrapper")
+              each item in skill.items
+                p(class=`subsection__skills-icon subsection__skills-icon--icon-${item.name}`)
+                  span(class="visually-hidden")=item.text
+            p(class="subsection__skills-text")=skill.text
+
