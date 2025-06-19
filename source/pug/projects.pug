@@ -2,24 +2,13 @@ section#projects(class="main__section section container")
   h2(class="section__title title") Проекты
   div(class="section__subsection subsection projects ")
     ul(class="projects__filters-list")
-      li(class="projects__filters-item")
-        label(class="projects__filters-label")
-          input#all(class="visually-hidden", value="all", name="filter", type="radio", checked)
-          span(class="projects__filters-text") Все проекты
-          span(class="projects__filters-count", data-type="all") (?)
-      li(class="projects__filters-item")
-        label(class="projects__filters-label")
-          input#diploma(class="visually-hidden", value="diploma", name="filter", type="radio")
-          span(class="projects__filters-text") Дипломные проекты
-          span(class="projects__filters-count", data-type="diploma") (?)
-      li(class="projects__filters-item")
-        label(class="projects__filters-label")
-          input#trainig(class="visually-hidden", value="trainig", name="filter", type="radio")
-          span(class="projects__filters-text") Тренировки навыков
-          span(class="projects__filters-count", data-type="trainig") (?)
-      li(class="projects__filters-item")
-        label(class="projects__filters-label")
-          input#personal(class="visually-hidden", value="personal", name="filter", type="radio")
-          span(class="projects__filters-text") Личные проекты
-          span(class="projects__filters-count", data-type="personal") (?)
+      each filter, index in [{all: "Все проекты"}, {diploma: "Дипломные проекты"}, {trainig: "Тренировки навыков"}, {personal: "Личные проекты"}]
+        - const key = Object.keys(filter)[0]
+        - const value = filter[key]
+        li(class="projects__filters-item")
+          label(class="projects__filters-label")
+            input(class="visually-hidden", id=key value=key, name="filter", type="radio", checked=index === 0)
+            span(class="projects__filters-text")= value
+            span(class="projects__filters-count", data-type="all") (?)
+
     ul(class="projects__list")
