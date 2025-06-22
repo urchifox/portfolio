@@ -9,6 +9,43 @@ section#projects(class="main__section section container")
           label(class="projects__filters-label")
             input(class="visually-hidden", id=key value=key, name="filter", type="radio", checked=index === 0)
             span(class="projects__filters-text")= value
-            span(class="projects__filters-count", data-type="all") (?)
+            span(class="projects__filters-count", data-type=key) (?)
 
     ul(class="projects__list")
+      each project in projects
+          li(class="projects__item project-card" id=project.id)
+            h3(class="project-card__title")= project.name
+            p(class="project-card__caption")= project.type
+            p(class="project-card__text")= project.descrption
+            ul(class="project-card__stack-list")
+              each tool in project.tools
+                li(class=`project-card__stack-item project-card__stack-item--icon-${tool}`)
+                  span(class="visually-hidden")= tool
+            div(class="project-card__buttons-wrapper")
+              a(class="project-card__button button button--icon-github" href=project.github)
+                span(class="visually-hidden") Проект на github
+              a(class="project-card__button button button--icon-external-link" href=project.webpage)
+                span(class="visually-hidden") Публикация проекта
+            div(class="project-card__slider")
+              for image in project.images
+                  picture
+                    source(type="image/webp", media="(min-width: 1200px)",
+                      srcset=`./images/cover-${image}-large@1x.webp 1x, ./images/cover-${image}-large@2x.webp 2x`,
+                      width="441" height="248")
+                    source(type="image/webp", media="(min-width: 760px)",
+                      srcset=`./images/cover-${image}-medium@1x.webp 1x, ./images/cover-${image}-medium@2x.webp 2x`,
+                      width="1096" height="616")
+                    source(type="image/webp",
+                      srcset=`./images/cover-${image}-small@1x.webp 1x, ./images/cover-${image}-small@2x.webp 2x`,
+                      width="689" height="387")
+                    source(type="image/jpg", media="(min-width: 1200px)",
+                      srcset=`./images/cover-${image}-large@1x.jpg 1x, ./images/cover-${image}-large@2x.jpg 2x`,
+                      width="441" height="248")
+                    source(type="image/jpg", media="(min-width: 760px)",
+                      srcset=`./images/cover-${image}-medium@1x.jpg 1x, ./images/cover-${image}-medium@2x.jpg 2x`,
+                      width="1096" height="616")
+                    img(class="project-card__picture", loading="lazy",
+                      src=`./images/cover-${image}-small@1x.jpg`,
+                      srcset=`./images/$cover-${image}-small@2x.jpg 2x`,
+                      width="689" height="387",
+                      alt="Скриншот страницы проекта")

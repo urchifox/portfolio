@@ -98,7 +98,6 @@ const onLinkClick = () => {
 };
 
 const init = () => {
-  render(PROJECTS_DATA);
   counters.forEach((counter) => {
     counter.textContent = counter.dataset.type === 'all' ?
       `(${PROJECTS_DATA.length})` :

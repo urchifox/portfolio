@@ -45,15 +45,17 @@ export function processMarkup () {
     .pipe(server.stream());
 }
 
-export function compilePug() {
+export async function compilePug() {
   const sections = JSON.parse(fs.readFileSync(`${PATH_TO_SOURCE}data/sections.json`));
   const contacts = JSON.parse(fs.readFileSync(`${PATH_TO_SOURCE}data/contacts.json`));
   const skills = JSON.parse(fs.readFileSync(`${PATH_TO_SOURCE}data/skills.json`));
   const work = JSON.parse(fs.readFileSync(`${PATH_TO_SOURCE}data/work.json`));
-  return src(`${PATH_TO_SOURCE}pug/*.pug`)
+  const {PROJECTS_DATA, typeName, stackName, } = await import(`${PATH_TO_DIST}scripts/projects-data.js`);
+
+  return src(`${PATH_TO_SOURCE}pug/index.pug`)
     .pipe(pug({
-      pretty: true, // чтобы разметка была не минифицирована
-      locals: { sections, contacts, skills, work },
+      pretty: true,
+      locals: { sections, contacts, skills, work, projects: PROJECTS_DATA, typeName, stackName },
     }))
     .pipe(dest(PATH_TO_DIST));
 }
@@ -190,11 +192,11 @@ export function buildProd (done) {
   isDevelopment = false;
   series(
     removeBuild,
+    processScripts,
     parallel(
       compilePug,
       processMarkup,
       processStyles,
-      processScripts,
       createStack,
       copyStatic,
     ),
@@ -204,11 +206,11 @@ export function buildProd (done) {
 export function runDev (done) {
   series(
     removeBuild,
+    processScripts,
     parallel(
       compilePug,
       processMarkup,
       processStyles,
-      processScripts,
       createStack,
     ),
     startServer,
