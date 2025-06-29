@@ -1,8 +1,8 @@
+import { companies, CompanyInfo } from "./companies";
+
 type WorkItem = {
   title: string;
-  companyName: string;
-  companyLink: string;
-  companyDescription: string;
+  company: CompanyInfo
   dateStart: string;
   dateEnd: string;
   tasks: string;
@@ -13,13 +13,10 @@ type WorkItem = {
 export const work: Array<WorkItem> = [
   {
     title: "Front-end разработчик",
-    companyName: "Websovet",
-    companyLink: "https://websovet.ru/gamedev",
-    companyDescription: "студия разработки casual-игр",
+    company: companies.websovet,
     dateStart: "Май 2024",
     dateEnd: "по настящее время",
-    tasks:
-      "Разработка игр и общей оболочки, обеспечение кроссбраузерности и кроссплатформенности.",
+    tasks: "Разработка игр и общей оболочки, обеспечение кроссбраузерности и кроссплатформенности.",
     tools: "TypeScript, Phaser, Vite.",
     progress: [
       "Самостоятельно разработала две игры (жанры idle и рикошет) и одну игру в жанре merge в паре с другим разработчиком. В настоящее время разрабатываю игру в жанре рулетка.",
@@ -31,9 +28,7 @@ export const work: Array<WorkItem> = [
   },
   {
     title: "Технический специалист",
-    companyName: "Grafit",
-    companyLink: "https://www.grafitart.com/",
-    companyDescription: "аутсорс арт-студия",
+    company: companies.grafit,
     dateStart: "Январь 2022",
     dateEnd: "Июнь 2024",
     tasks: "Разработка, оптимизация и автоматизация рабочих процессов.",
@@ -47,13 +42,10 @@ export const work: Array<WorkItem> = [
   },
   {
     title: "Middle / Lead 2D-художник",
-    companyName: "Grafit",
-    companyLink: "https://www.grafitart.com/",
-    companyDescription: "аутсорс арт-студия",
+    company: companies.grafit,
     dateStart: "Февраль 2019",
     dateEnd: "Декабрь 2021",
-    tasks:
-      "Создание арт-контента для видео-игр, на отдельных проектах контроль качества и доведение других работ до финального результата.",
+    tasks: "Создание арт-контента для видео-игр, на отдельных проектах контроль качества и доведение других работ до финального результата.",
     tools: "",
     progress: [
       "Написала стайл-гайд для разработки визуального контента мобильной игры.",

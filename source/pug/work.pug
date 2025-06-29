@@ -6,8 +6,8 @@ section#work(class="main__section section container")
         div(class="career-card__header")
           h3(class="career-card__title")= workItem.title
           p(class="career-card__company-description")
-            a(class="career-card__company-name", href=workItem.companyLink)= workItem.companyName
-            span &thinsp;&#8212;&thinsp;#{workItem.companyDescription}
+            a(class="career-card__company-name", href=workItem.company.link)= workItem.company.name
+            span &thinsp;&#8212;&thinsp;#{workItem.company.description}
         p(class="career-card__date") #{workItem.dateStart}&thinsp;&#8211;&thinsp;#{workItem.dateEnd}
         div(class="career-card__column-wrapper")
           div(class="career-card__column-item")
