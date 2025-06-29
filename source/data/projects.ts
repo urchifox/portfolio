@@ -1,16 +1,16 @@
 import { Stack, stackName } from "./stack";
 
-export const typeName = {
+export const projectType = {
   diploma: 'Дипломный проект',
   trainig: 'Тренировка навыка',
   personal: 'Персональный проект',
 } as const;
-type TypeNameMap = typeof typeName;
+type ProjectTypeMap = typeof projectType;
 
 export type Project = {
   id: string
   name: string
-  type: keyof TypeNameMap
+  type: keyof ProjectTypeMap
   descrption: string
   tools: Array<Stack>
   github: string

@@ -1,5 +1,5 @@
 import {isHtmlInputElement, queryElement, queryElements} from './utils.js';
-import {typeName, projects} from '../data/projects.js';
+import {projectType, projects} from '../data/projects.js';
 
 const root = queryElement('.projects__list');
 const filtrationButtons = queryElements('input[name="filter"]');
@@ -8,8 +8,8 @@ const links = queryElements('a[href^="#project-"]');
 const counters = queryElements('.projects__filters-count');
 const cards = queryElements(".project-card")
 
-const isTypeNameKey = (key: string): key is keyof typeof typeName => {
-  return Object.keys(typeName).includes(key)
+const isTypeNameKey = (key: string): key is keyof typeof projectType => {
+  return Object.keys(projectType).includes(key)
 }
 
 const onFilterClick = (evt: Event) => {

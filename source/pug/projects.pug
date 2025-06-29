@@ -15,7 +15,7 @@ section#projects(class="main__section section container")
       each project in projects
           li(class="projects__item project-card" id=project.id data-type= project.type)
             h3(class="project-card__title")= project.name
-            p(class="project-card__caption")= typeName[project.type]
+            p(class="project-card__caption")= projectType[project.type]
             p(class="project-card__text")= project.descrption
             ul(class="project-card__stack-list")
               each tool in project.tools
