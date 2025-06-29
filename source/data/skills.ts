@@ -10,6 +10,7 @@ export const skills: Array<Skill> = [
     text: "Пишу валидную семантическую разметку, знаю базовые правила доступного интерфейса, умею валидировать формы",
     items: [
       stackName.html,
+      stackName.pug,
     ],
   },
   {
@@ -24,6 +25,7 @@ export const skills: Array<Skill> = [
     items: [
       stackName.js,
       stackName.ts,
+      stackName.jq,
     ],
   },
   {

@@ -72,16 +72,19 @@
 
 .career-card__date {
   position: absolute;
-  top: -$font-size-3;
-  left: 50%;
-  transform: translateX(-50%);
+  left: 0;
+  right: 0;
+  bottom: 100%;
   margin: 0;
+
+  padding-inline: $font-size-2;
 
   color: var(--color-background-basic);
   font-size: $font-size-2;
   font-family: $font-family-accent;
   font-weight: 700;
   word-break: break-word;
+  text-align: center;
 }
 
 .career-card__text {

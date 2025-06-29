@@ -8,6 +8,10 @@ export const stackName: Record<string, Stack> = {
     name: "html",
     text: "HTML",
   },
+  pug: {
+    name: "pug",
+    text: "Pug",
+  },
   css: {
     name: "css",
     text: "CSS",
@@ -23,6 +27,10 @@ export const stackName: Record<string, Stack> = {
   ts: {
     name: "typescript",
     text: "TypeScript",
+  },
+  jq: {
+    name: "jquery",
+    text: "jQuery",
   },
   bem: {
     name: "bem",
