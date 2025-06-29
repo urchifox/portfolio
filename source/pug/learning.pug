@@ -13,7 +13,7 @@ section#learning(class="main__section section")
               time(datetime=course.dateEnd.datetime)= course.dateEnd.string
             p(class="course-card__text")= course.descrption
             div(class="course-card__buttons-wrapper")
-              a#link-js-1(class="course-card__button", href=`./images/${course.certificate.name}@1x.png`, aria-haspopup="dialog", aria-controls=course.certificate.name data-modal-id=course.certificate.name)
+              a(class="course-card__button", id=`link-${course.certificate.name}`, href=`./images/${course.certificate.name}@1x.png`, aria-haspopup="dialog", aria-controls=course.certificate.name data-modal-id=course.certificate.name)
                 span(class="button button--icon-certificate", aria-hidden="true")
                 span(class="course-card__button-text") Сертификат
               a(class="course-card__button", href=`#${course.diploma}`)
