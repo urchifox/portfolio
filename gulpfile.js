@@ -47,7 +47,7 @@ export function processMarkup () {
 
 export async function compilePug() {
   const sections = JSON.parse(fs.readFileSync(`${PATH_TO_SOURCE}data/sections.json`));
-  const contacts = JSON.parse(fs.readFileSync(`${PATH_TO_SOURCE}data/contacts.json`));
+  const {contacts} = await import(`${PATH_TO_DIST}data/contacts.js`);
   const skills = JSON.parse(fs.readFileSync(`${PATH_TO_SOURCE}data/skills.json`));
   const work = JSON.parse(fs.readFileSync(`${PATH_TO_SOURCE}data/work.json`));
   const {PROJECTS_DATA, typeName, stackName, } = await import(`${PATH_TO_DIST}data/projects-data.js`);
