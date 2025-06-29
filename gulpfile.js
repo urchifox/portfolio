@@ -49,7 +49,7 @@ export async function compilePug() {
   const { contacts } = await import(`${PATH_TO_DIST}data/contacts.js`);
   const { skills } = await import(`${PATH_TO_DIST}data/skills.js`);
   const { work } = await import(`${PATH_TO_DIST}data/work.js`);
-  const { PROJECTS_DATA, typeName, stackName } = await import(`${PATH_TO_DIST}data/projects.js`);
+  const { projects, typeName, stackName } = await import(`${PATH_TO_DIST}data/projects.js`);
   const { courses, practices } = await import(`${PATH_TO_DIST}data/learning-data.js`);
   const { sideSkills, softSkills } = await import(`${PATH_TO_DIST}data/additions-data.js`);
 
@@ -61,7 +61,7 @@ export async function compilePug() {
         contacts,
         skills,
         work,
-        projects: PROJECTS_DATA,
+        projects,
         typeName,
         stackName,
         courses,

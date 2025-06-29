@@ -7,7 +7,7 @@ export const typeName = {
 } as const;
 type TypeNameMap = typeof typeName;
 
-export type ProjectData = {
+export type Project = {
   id: string
   name: string
   type: keyof TypeNameMap
@@ -18,7 +18,7 @@ export type ProjectData = {
   images: Array<string>
 }
 
-export const PROJECTS_DATA: Array<ProjectData> = [
+export const projects: Array<Project> = [
   {
     id: 'portfolio',
     name: 'Portfolio',

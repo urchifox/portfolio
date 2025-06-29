@@ -1,5 +1,5 @@
 import {isHtmlInputElement, queryElement, queryElements} from './utils.js';
-import {typeName, PROJECTS_DATA} from '../data/projects.js';
+import {typeName, projects} from '../data/projects.js';
 
 const root = queryElement('.projects__list');
 const filtrationButtons = queryElements('input[name="filter"]');
@@ -29,8 +29,8 @@ const onLinkClick = () => {
 const init = () => {
   counters.forEach((counter) => {
     counter.textContent = counter.dataset.type === 'all' ?
-      `(${PROJECTS_DATA.length})` :
-      `(${PROJECTS_DATA.filter((datum) =>
+      `(${projects.length})` :
+      `(${projects.filter((datum) =>
           counter.dataset.type !== undefined &&
           isTypeNameKey(counter.dataset.type) &&
           datum.type === counter.dataset.type
