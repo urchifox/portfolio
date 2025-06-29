@@ -112,6 +112,10 @@
     --icon-url: url("./../../images/icons/stack.svg#html");
   }
 
+  &--icon-pug {
+    --icon-url: url("./../../images/icons/stack.svg#pug");
+  }
+
   &--icon-css {
     --icon-url: url("./../../images/icons/stack.svg#css");
   }
@@ -126,6 +130,10 @@
 
   &--icon-javascript {
     --icon-url: url("./../../images/icons/stack.svg#javascript");
+  }
+
+  &--icon-jquery {
+    --icon-url: url("./../../images/icons/stack.svg#jquery");
   }
 
   &--icon-git {
