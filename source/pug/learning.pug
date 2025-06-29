@@ -4,136 +4,54 @@ section#learning(class="main__section section")
     h3(class="subsection__title subtitle container") Пройденные курсы с групповым наставником и дипломным проектом
     div(class="subsection__courses-list-wrapper")
       ul(class="subsection__courses-list container")
-        li(class="subsection__courses-item course-card")
-          h4(class="course-card__title") JavaScript. Профессиональная разработка веб-интерфейсов
-          p(class="course-card__caption")
-            time(datetime="2023-06-06") 6 июня
-            | &#32;-&#32;
-            time(datetime="2023-08-07") 7 августа 2023
-          p(class="course-card__text") Изучила синтаксис языка, базовые конструкции, взаимодействие с DOM, асинхронные запросы к серверу и встраивание сторонних библиотек. И все это с соблюдением принципов DRY и KISS.
-          div(class="course-card__buttons-wrapper")
-            a#link-js-1(class="course-card__button", href="./images/certificate-js-1@1x.png", aria-haspopup="dialog", aria-controls="certificate-js-1", data-modal-id="certificate-js-1")
-              span(class="button button--icon-certificate", aria-hidden="true")
-              span(class="course-card__button-text") Сертификат
-            a(class="course-card__button", href="#project-kekstagram")
-              span(class="button button--icon-project", aria-hidden="true")
-              span(class="course-card__button-text") Дипломный проект
-            a(class="course-card__button", href="https://up.htmlacademy.ru/javascript/29")
-              span(class="button button--icon-external-link", aria-hidden="true")
-              span(class="course-card__button-text") Страница курса
-          dialog#certificate-js-1(class="modal")
-            div(class="modal__wrapper")
-              div(class="modal__spinner", aria-hidden="true")
-              div(class="modal__picture-wrapper")
-                picture
-                  source(type="image/webp", srcset=`./images/certificate-js-1@1x.webp 1x,
-                            ./images/certificate-js-1@2x.webp 2x`, width="922", height="1296")
-                  img(class="modal__picture", loading="lazy", src="./images/certificate-js-1@1x.png", srcset=`./images/certificate-js-1@1x.png 1x,
-                            ./images/certificate-js-1@2x.png 2x`, width="922", height="1296", alt="Сертификат школы HTML Academy удостоверяет, что Евтухова Екатерина Павловна успешно прошла курс и защитила дипломный проект, сертфикат подписан руководителем проекта Александром Першиным")
-              button(class="modal__button", type="button")
-                span(class="button button--icon-close", aria-hidden="true")
-                span(class="visually-hidden") Закрыть окно
-        li(class="subsection__courses-item course-card")
-          h4(class="course-card__title") JavaScript. Архитектура клиентских приложений
-          p(class="course-card__caption")
-            time(datetime="2023-08-07") 7 августа
-            | &#32;-&#32;
-            time(datetime="2023-10-09") 9 октября 2023
-          p(class="course-card__text") Погрузилась в углубленное изучение языка в ООП стиле. Научилась разделять интерфейс на компоненты и построила SPA в паттерне MVP. Освоила взаимодействие с сервером по протоколу HTTP, реализуя методы CRUD с помощью REST API.
-          div(class="course-card__buttons-wrapper")
-            a#link-js-2(class="course-card__button", href="./images/certificate-js-2@1x.png", aria-haspopup="dialog", aria-controls="certificate-js-2", data-modal-id="certificate-js-2")
-              span(class="button button--icon-certificate", aria-hidden="true")
-              span(class="course-card__button-text") Сертификат
-            a(class="course-card__button", href="#project-big-trip")
-              span(class="button button--icon-project", aria-hidden="true")
-              span(class="course-card__button-text") Дипломный проект
-            a(class="course-card__button", href="https://up.htmlacademy.ru/ecmascript/21")
-              span(class="button button--icon-external-link", aria-hidden="true")
-              span(class="course-card__button-text") Страница курса
-          dialog#certificate-js-2(class="modal")
-            div(class="modal__wrapper")
-              div(class="modal__spinner", aria-hidden="true")
-              div(class="modal__picture-wrapper")
-                picture
-                  source(type="image/webp", srcset=`./images/certificate-js-2@1x.webp 1x,
-                            ./images/certificate-js-2@2x.webp 2x`, width="922", height="1296")
-                  img(class="modal__picture", loading="lazy", src="./images/certificate-js-2@1x.png", srcset=`./images/certificate-js-2@1x.png 1x,
-                            ./images/certificate-js-2@2x.png 2x`, width="922", height="1296", alt="Сертификат школы HTML Academy удостоверяет, что Евтухова Екатерина Павловна успешно прошла курс и защитила дипломный проект, сертфикат подписан руководителем проекта Александром Першиным")
-              button(class="modal__button", type="button")
-                span(class="button button--icon-close", aria-hidden="true")
-                span(class="visually-hidden") Закрыть окно
-        li(class="subsection__courses-item course-card")
-          h4(class="course-card__title") HTML и CSS. Адаптивная вёрстка и автоматизация
-          p(class="course-card__caption")
-            time(datetime="2023-11-27") 27 ноября 2023
-            | &#32;-&#32;
-            time(datetime="2024-02-05") 5 февраля 2024
-          p(class="course-card__text") Закрепила понимание методологии БЭМ. Освоила адаптивную верстку с использованием SASS. Научилась грамотной работе с графикой и шрифтами. Использовала инструменты автоматизации для достижения хорошей производительности сайта.
-          div(class="course-card__buttons-wrapper")
-            a#link-htm-2(class="course-card__button", href="./images/certificate-html-2@1x.png", aria-haspopup="dialog", aria-controls="certificate-html-2", data-modal-id="certificate-html-2")
-              span(class="button button--icon-certificate", aria-hidden="true")
-              span(class="course-card__button-text") Сертификат
-            a(class="course-card__button", href="#project-cat-energy")
-              span(class="button button--icon-project", aria-hidden="true")
-              span(class="course-card__button-text") Дипломный проект
-            a(class="course-card__button", href="https://up.htmlacademy.ru/adaptive/30")
-              span(class="button button--icon-external-link", aria-hidden="true")
-              span(class="course-card__button-text") Страница курса
-          dialog#certificate-html-2(class="modal")
-            div(class="modal__wrapper")
-              div(class="modal__spinner", aria-hidden="true")
-              div(class="modal__picture-wrapper")
-                picture
-                  source(type="image/webp", srcset=`./images/certificate-html-2@1x.webp 1x,
-                            ./images/certificate-html-2@2x.webp 2x`, width="922", height="1296")
-                  img(class="modal__picture", loading="lazy", src="./images/certificate-html-2@1x.png", srcset=`./images/certificate-html-2@1x.png 1x,
-                            ./images/certificate-html-2@2x.png 2x`, width="922", height="1296", alt="Сертификат школы HTML Academy удостоверяет, что Евтухова Екатерина Павловна успешно прошла курс и защитила дипломный проект, сертфикат подписан руководителем проекта Александром Першиным")
-              button(class="modal__button", type="button")
-                span(class="button button--icon-close", aria-hidden="true")
-                span(class="visually-hidden") Закрыть окно
+        each course in courses
+          li(class="subsection__courses-item course-card")
+            h4(class="course-card__title")= course.name
+            p(class="course-card__caption")
+              time(datetime=course.dateStart.datetime)= course.dateStart.string
+              | &#32;-&#32;
+              time(datetime=course.dateEnd.datetime)= course.dateEnd.string
+            p(class="course-card__text")= course.descrption
+            div(class="course-card__buttons-wrapper")
+              a#link-js-1(class="course-card__button", href=`./images/${course.certificate.name}@1x.png`, aria-haspopup="dialog", aria-controls=course.certificate.name data-modal-id=course.certificate.name)
+                span(class="button button--icon-certificate", aria-hidden="true")
+                span(class="course-card__button-text") Сертификат
+              a(class="course-card__button", href=`#${course.diploma}`)
+                span(class="button button--icon-project", aria-hidden="true")
+                span(class="course-card__button-text") Дипломный проект
+              a(class="course-card__button", href=course.link)
+                span(class="button button--icon-external-link", aria-hidden="true")
+                span(class="course-card__button-text") Страница курса
+            dialog(class="modal", id=course.certificate.name)
+              div(class="modal__wrapper")
+                div(class="modal__spinner", aria-hidden="true")
+                div(class="modal__picture-wrapper")
+                  picture
+                    source(type="image/webp", srcset=`./images/${course.certificate.name}@1x.webp 1x,
+                              ./images/${course.certificate.name}@2x.webp 2x`, width="922", height="1296")
+                    img(class="modal__picture", loading="lazy", src=`./images/${course.certificate.name}@1x.png`, srcset=`./images/${course.certificate.name}@1x.png 1x,
+                              ./images/${course.certificate.name}@2x.png 2x`, width="922", height="1296", alt=course.certificate.text)
+                button(class="modal__button", type="button")
+                  span(class="button button--icon-close", aria-hidden="true")
+                  span(class="visually-hidden") Закрыть окно
+
   section(class="section__subsection subsection")
     h3(class="subsection__title subtitle container") Изученные методические материалы с отработкой на практических кейсах
     div(class="subsection__practice-list-wrapper")
       ul(class="subsection__practice-list container")
-        li(class="subsection__practice-item practice-card")
-          h4(class="practice-card__title") Вёрстка текстового содержимого страниц
-          p(class="practice-card__text") Освоила навык оформления текстового контента с учетом семантики. Поработала со сложными элементами: формулы, сноски, нумерация списка с прерыванием, денежные знаки, разбиение на колонки, таблицы, буквицы и красные строки, сложные обтекания текстом внешнего элемента и заключение текста в непрямоугольный шейп, скрытие не поместившегося текста и реализация кнопки “читать далее”.
-          div(class="practice-card__projects")
-            p(class="practice-card__caption") Учебные проекты
-            ul(class="practice-card__projects-list")
-              li(class="practice-card__projects-item")
-                a(class="practice-card__projects-link button button--icon-project", href="#project-blogick")
-                  span(class="visually-hidden") Проект "Blogick"
-              li(class="practice-card__projects-item")
-                a(class="practice-card__projects-link button button--icon-project", href="#project-onenews")
-                  span(class="visually-hidden") Проект "OneNews"
-              li(class="practice-card__projects-item")
-                a(class="practice-card__projects-link button button--icon-project", href="#project-science-blog")
-                  span(class="visually-hidden") Проект "Science blog"
-              li(class="practice-card__projects-item")
-                a(class="practice-card__projects-link button button--icon-project", href="#project-italian-chefs-blog")
-                  span(class="visually-hidden") Проект "Italian chef’s blog"
-        li(class="subsection__practice-item practice-card")
-          h4(class="practice-card__title") Вёрстка навигационных элементов интерфейса
-          p(class="practice-card__text") Укрепила понимание верстки и стилизации таких элементов навигации, как линейное и многоуровневое меню, выпадающее подменю, хлебные крошки, пагинация. Узнала тонкости работы со списками и ссылками.
-        li(class="subsection__practice-item practice-card")
-          h4(class="practice-card__title") Вёрстка карточных элементов интерфейса
-          p(class="practice-card__text") Закрепила навык оформления каталога товаров и его карточек с учетом доступности и гибкой сетки.
-          div(class="practice-card__projects")
-            p(class="practice-card__caption") Учебные проекты
-            ul(class="practice-card__projects-list")
-              li(class="practice-card__projects-item")
-                a(class="practice-card__projects-link button button--icon-project", href="#project-online-smartphones-store")
-                  span(class="visually-hidden") Проект "Online smartphones store"
-        li(class="subsection__practice-item practice-card")
-          h4(class="practice-card__title") Вёрстка многослойных элементов интерфейса
-          p(class="practice-card__text") Сформировала четкое понимание работы разных видов позиционирования, научилась создавать многослойность через grid-сетку. Отработала навык стилизации слайдеров, поп-апов, модальных окон, тултипов, липких и выпадающих элементов.
-          div(class="practice-card__projects")
-            p(class="practice-card__caption") Учебные проекты
-            ul(class="practice-card__projects-list")
-              li(class="practice-card__projects-item")
-                a(class="practice-card__projects-link button button--icon-project", href="#project-multilayer-exercises")
-                  span(class="visually-hidden") Проект "Multilayer exercises"
+        each practice in practices
+          li(class="subsection__practice-item practice-card")
+            h4(class="practice-card__title")= practice.name
+            p(class="practice-card__text")= practice.descrption
+            if practice.projects
+              div(class="practice-card__projects")
+                p(class="practice-card__caption") Учебные проекты
+                ul(class="practice-card__projects-list")
+                  each project in practice.projects
+                    li(class="practice-card__projects-item")
+                      a(class="practice-card__projects-link button button--icon-project", href=`#${project.id}`)
+                        span(class="visually-hidden")= project.name
+
     div(class="subsection__caption-wrapper container")
       p(class="subsection__caption") А также прошла 81% тренажеров от HTML Academy
       a#link-training(class="subsection__button button button--icon-certificate", href="./images/certificate-trainings@1x.png", aria-haspopup="dialog", aria-controls="certificate-trainings", data-modal-id="certificate-trainings")

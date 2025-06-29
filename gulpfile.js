@@ -51,11 +51,12 @@ export async function compilePug() {
   const skills = JSON.parse(fs.readFileSync(`${PATH_TO_SOURCE}data/skills.json`));
   const work = JSON.parse(fs.readFileSync(`${PATH_TO_SOURCE}data/work.json`));
   const {PROJECTS_DATA, typeName, stackName, } = await import(`${PATH_TO_DIST}data/projects-data.js`);
+  const { courses, practices } = await import(`${PATH_TO_DIST}data/learning-data.js`);
 
   return src(`${PATH_TO_SOURCE}pug/index.pug`)
     .pipe(pug({
       pretty: true,
-      locals: { sections, contacts, skills, work, projects: PROJECTS_DATA, typeName, stackName },
+      locals: { sections, contacts, skills, work, projects: PROJECTS_DATA, typeName, stackName, courses, practices },
     }))
     .pipe(dest(PATH_TO_DIST));
 }
