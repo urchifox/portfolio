@@ -1,0 +1,6 @@
+footer(class="page__footer footer")
+  ul(class="footer__contacts-list container")
+    each contact in contacts
+      li(class="footer__contacts-item")
+        a(class=`footer__contacts-link button button--icon-${contact.name}`, href=contact.link)
+          span(class="visually-hidden")=contact.text

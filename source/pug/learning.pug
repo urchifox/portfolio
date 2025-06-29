@@ -1,0 +1,70 @@
+section#learning(class="main__section section")
+  h2(class="section__title title container") Обучение
+  section(class="section__subsection subsection")
+    h3(class="subsection__title subtitle container") Пройденные курсы с групповым наставником и дипломным проектом
+    div(class="subsection__courses-list-wrapper")
+      ul(class="subsection__courses-list container")
+        each course in courses
+          li(class="subsection__courses-item course-card")
+            h4(class="course-card__title")= course.name
+            p(class="course-card__caption")
+              time(datetime=course.dateStart.datetime)= course.dateStart.string
+              | &#32;-&#32;
+              time(datetime=course.dateEnd.datetime)= course.dateEnd.string
+            p(class="course-card__text")= course.descrption
+            div(class="course-card__buttons-wrapper")
+              a#link-js-1(class="course-card__button", href=`./images/${course.certificate.name}@1x.png`, aria-haspopup="dialog", aria-controls=course.certificate.name data-modal-id=course.certificate.name)
+                span(class="button button--icon-certificate", aria-hidden="true")
+                span(class="course-card__button-text") Сертификат
+              a(class="course-card__button", href=`#${course.diploma}`)
+                span(class="button button--icon-project", aria-hidden="true")
+                span(class="course-card__button-text") Дипломный проект
+              a(class="course-card__button", href=course.link)
+                span(class="button button--icon-external-link", aria-hidden="true")
+                span(class="course-card__button-text") Страница курса
+            dialog(class="modal", id=course.certificate.name)
+              div(class="modal__wrapper")
+                div(class="modal__spinner", aria-hidden="true")
+                div(class="modal__picture-wrapper")
+                  picture
+                    source(type="image/webp", srcset=`./images/${course.certificate.name}@1x.webp 1x,
+                              ./images/${course.certificate.name}@2x.webp 2x`, width="922", height="1296")
+                    img(class="modal__picture", loading="lazy", src=`./images/${course.certificate.name}@1x.png`, srcset=`./images/${course.certificate.name}@1x.png 1x,
+                              ./images/${course.certificate.name}@2x.png 2x`, width="922", height="1296", alt=course.certificate.text)
+                button(class="modal__button", type="button")
+                  span(class="button button--icon-close", aria-hidden="true")
+                  span(class="visually-hidden") Закрыть окно
+
+  section(class="section__subsection subsection")
+    h3(class="subsection__title subtitle container") Изученные методические материалы с отработкой на практических кейсах
+    div(class="subsection__practice-list-wrapper")
+      ul(class="subsection__practice-list container")
+        each practice in practices
+          li(class="subsection__practice-item practice-card")
+            h4(class="practice-card__title")= practice.name
+            p(class="practice-card__text")= practice.descrption
+            if practice.projects
+              div(class="practice-card__projects")
+                p(class="practice-card__caption") Учебные проекты
+                ul(class="practice-card__projects-list")
+                  each project in practice.projects
+                    li(class="practice-card__projects-item")
+                      a(class="practice-card__projects-link button button--icon-project", href=`#${project.id}`)
+                        span(class="visually-hidden")= project.name
+
+    div(class="subsection__caption-wrapper container")
+      p(class="subsection__caption") А также прошла 81% тренажеров от HTML Academy
+      a#link-training(class="subsection__button button button--icon-certificate", href="./images/certificate-trainings@1x.png", aria-haspopup="dialog", aria-controls="certificate-trainings", data-modal-id="certificate-trainings")
+        span(class="visually-hidden") Подтверждение
+    dialog#certificate-trainings(class="modal")
+      div(class="modal__wrapper")
+        div(class="modal__spinner", aria-hidden="true")
+        div(class="modal__picture-wrapper")
+          picture
+            source(type="image/webp", srcset=`./images/certificate-trainings@1x.webp 1x,
+                      ./images/certificate-trainings@2x.webp 2x`, width="820", height="740")
+            img(class="modal__picture", loading="lazy", src="./images/certificate-trainings@1x.png", srcset=`./images/certificate-trainings@1x.jpg 1x,
+                      ./images/certificate-trainings@2x.jpg 2x`, width="820", height="740", alt="Скриншот из личного кабинеты Екатерины Евтуховой на сайте htmlacademy.ru, где показана статистика прохождения учебных тренажеров: пройдено 1183 из 1505")
+        button(class="modal__button", type="button")
+          span(class="button button--icon-close", aria-hidden="true")
+          span(class="visually-hidden") Закрыть окно

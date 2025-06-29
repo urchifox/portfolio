@@ -1,0 +1,13 @@
+section#skills(class="main__section section")
+  h2(class="section__title title container") Стек
+  div(class="section__subsection subsection")
+    div(class="subsection__skills-container")
+      ul(class="subsection__skills-list")
+        each skill in skills
+          li(class="subsection__skills-item")
+            div(class="subsection__skills-icon-wrapper")
+              each item in skill.items
+                p(class=`subsection__skills-icon subsection__skills-icon--icon-${item.name}`)
+                  span(class="visually-hidden")=item.text
+            p(class="subsection__skills-text")=skill.text
+

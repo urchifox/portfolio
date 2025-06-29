@@ -47,6 +47,7 @@
     "gulp-nunjucks": "6.0.0",
     "gulp-plumber": "1.2.1",
     "gulp-postcss": "10.0.0",
+    "gulp-pug": "5.0.0",
     "gulp-sass": "5.1.0",
     "gulp-sharp-responsive": "0.4.1",
     "gulp-stacksvg": "3.0.0",
@@ -58,7 +59,7 @@
     "sass": "1.70.0",
     "stylelint": "16.2.1",
     "stylelint-config-htmlacademy": "4.0.5",
-    "typescript": "^5.8.3",
+    "typescript": "5.8.3",
     "w3c-html-validator": "1.6.4"
   }
 }

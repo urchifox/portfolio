@@ -1,0 +1,16 @@
+mixin header(className)
+  header(class=className)
+    div(class="header__container container")
+      label(class="header__menu-toggle-wrapper")
+        span(class="visually-hidden") Открыть меню
+        input(class="header__menu-toggle button button--icon-menu", name="menu", type="checkbox")
+      nav(class="header__menu")
+        ul(class="header__menu-list")
+          each section in sections
+            li(class="header__menu-item")
+              a(class="header__menu-link", href=`#${section.name}`)= section.text
+
+      label(class="header__scheme-toggle scheme-toggle")
+        span(class="visually-hidden") Темная тема
+        input(class="scheme-toggle__control button", name="scheme", type="checkbox", role="switch")
+    div(class="header__scroll-indicator", aria-hidden="true")

@@ -1,0 +1,25 @@
+section#work(class="main__section section container")
+  h2(class="section__title title") Опыт работы
+  ul(class="section__career-list career-list")
+    each workItem in work
+      li(class="career-list__career-card career-card")
+        div(class="career-card__header")
+          h3(class="career-card__title")= workItem.title
+          p(class="career-card__company-description")
+            a(class="career-card__company-name", href=workItem.company.link)= workItem.company.name
+            span &thinsp;&#8212;&thinsp;#{workItem.company.description}
+        p(class="career-card__date") #{workItem.dateStart}&thinsp;&#8211;&thinsp;#{workItem.dateEnd}
+        div(class="career-card__column-wrapper")
+          div(class="career-card__column-item")
+            h4(class="career-card__subtitle") Задачи:
+            p(class="career-card__text")= workItem.tasks
+          if workItem.tools
+            div(class="career-card__column-item")
+              h4(class="career-card__subtitle") Использовала:
+              p(class="career-card__text")= workItem.tools
+        p(class="career-card__subtitle") Достижения:
+        ul(class="career-card__description-list career-card__column-wrapper")
+          each progress in workItem.progress
+            li(class="career-card__description-item career-card__column-item")= progress
+
+

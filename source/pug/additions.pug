@@ -1,0 +1,33 @@
+section#additions(class="main__section section container")
+  h2(class="section__title title") Дополнительно
+  div(class="section__wrapper section__wrapper--additions")
+    section(class="section__subsection additions-card")
+      h3(class="additions-card__title") Сайд-скиллы
+      button(class="additions-card__button", type="button") Раскрыть все
+      ul(class="additions-card__list")
+        each sideSkill in sideSkills
+          li(class="additions-card__item")
+            details(class="additions-card__dropdown")
+              summary(class="additions-card__summary")= sideSkill.name
+              div(class="additions-card__content")
+                div(class="additions-card__text-wrapper")
+                  each text in sideSkill.descrption
+                    p(class="additions-card__text")= text
+
+    section(class="section__subsection additions-card")
+      h3(class="additions-card__title") Софт-скиллы
+      button(class="additions-card__button", type="button") Раскрыть все
+      ul(class="additions-card__list")
+        each softSkill in softSkills
+          li(class="additions-card__item")
+            if softSkill.name
+              details(class="additions-card__dropdown")
+                summary(class="additions-card__summary")= softSkill.name
+                div(class="additions-card__content")
+                  div(class="additions-card__text-wrapper")
+                    each text in softSkill.descrption
+                      p(class="additions-card__text")= text
+            else
+              div(class="additions-card__text-wrapper")
+                each text in softSkill.descrption
+                  p(class="additions-card__text")= text

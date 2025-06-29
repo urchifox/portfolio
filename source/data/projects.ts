@@ -1,38 +1,28 @@
-export const typeName = {
+import { Stack, stackName } from "./stack";
+
+export const projectType = {
   diploma: 'Дипломный проект',
   trainig: 'Тренировка навыка',
   personal: 'Персональный проект',
 } as const;
-type TypeNameMap = typeof typeName;
-type TypeNameValue = TypeNameMap[keyof TypeNameMap];
+type ProjectTypeMap = typeof projectType;
 
-const stackName = {
-  html: 'html',
-  css: 'css',
-  sass: 'sass',
-  js: 'javascript',
-  ts: 'typescript',
-  bem: 'bem',
-} as const;
-type StackNameMap = typeof stackName;
-export type StackNameValue = StackNameMap[keyof StackNameMap];
-
-export type ProjectData = {
+export type Project = {
   id: string
   name: string
-  type: TypeNameValue
+  type: keyof ProjectTypeMap
   descrption: string
-  tools: Array<StackNameValue>
+  tools: Array<Stack>
   github: string
   webpage: string
   images: Array<string>
 }
 
-export const PROJECTS_DATA: Array<ProjectData> = [
+export const projects: Array<Project> = [
   {
     id: 'portfolio',
     name: 'Portfolio',
-    type: typeName.personal,
+    type: "personal",
     descrption: `Страница-портфолио, где я собрала и оформила главные свои навыки и наиболее интересные проекты. Для этого проекта я самостоятельно сформировала техзадание и создала макет в Figma для 3-х состояний сайта на экранах разного размера. В качестве критериев качества кода я придерживаюсь кодгайда школы HTML Academy. В некоторых случаях я сознательно отступила от части правил или изменила их.
     </br>Наиболее интересные и сложные задачи проекта:
     </br>- настройка и переключение цветовых тем: я взяла за основу реализацию Вадима Макеева, которую он разбирал в видео-роликах, но адаптировала под свой дизайн, слегка изменив логику скрипта;
@@ -46,7 +36,7 @@ export const PROJECTS_DATA: Array<ProjectData> = [
   {
     id: 'feature-support',
     name: 'Check feature support',
-    type: typeName.personal,
+    type: "personal",
     descrption: `Сайт-инструмент для проверки поддержки CSS-свойств в браузере, в котором он открыт. Проект вырос из рабочей задачи по поддержке дефолтных мобильных браузеров (например, Samsung Internet), для которых не было достоверной информации о поддержке CSS.
     </br>В рамках работы над этим проектом были реализованы:
     </br>- двойная проверка на базе CSS.supports и @supports с цветовой индикацией результата;
@@ -60,7 +50,7 @@ export const PROJECTS_DATA: Array<ProjectData> = [
   {
     id: 'project-cat-energy',
     name: 'Cat Energy',
-    type: typeName.diploma,
+    type: "diploma",
     descrption: `Главной задачей этого проекта было реализовать полностью адаптивный интерфейс с соблюдением принципа pixel perfect. В качестве исходных данных были даны макеты всех страниц для 3-х размеров экрана и стайлгайд для фокусных состояний. Сайт имеет три страницы: лендинг, каталог товаров и форму подбора заказа. Весь контент устойчив к замене картинок, а также к переполнению текстом и дополнительными элементами. Наиболее интересными для меня были задачи реализации мобильного меню (которое должно быть в потоке в случае отсутствия JS и открываться по клику в случае его наличия) и стилизации фона у блока hero (кот на большом экране увеличивается пропорционально размеру окна, но до определенного размера, чтобы не показывать обрезанный край картинки).
     </br>Проект сдан на 100 баллов с первой попытки.`,
     tools: [stackName.html, stackName.sass, stackName.js, stackName.bem],
@@ -71,7 +61,7 @@ export const PROJECTS_DATA: Array<ProjectData> = [
   {
     id: 'project-grafit-academy',
     name: 'Grafit Academy',
-    type: typeName.personal,
+    type: "personal",
     descrption: `Большой самостоятельный проект, на котором я отрабатывала полученные знания. Состоит из двух страниц - лендинг и каталог товаров. Наиболее интересные и сложные фичи проекта:
     </br>- перестроение сеток в каталоге товаров,
     </br>- переиспользуемый слайдер (специально не подключала его библиотекой, т.к. хотела разобраться с нативной реализацией),
@@ -89,7 +79,7 @@ export const PROJECTS_DATA: Array<ProjectData> = [
   {
     id: 'project-online-smartphones-store',
     name: 'Online smartphones store',
-    type: typeName.trainig,
+    type: "trainig",
     descrption: 'Небольшая тренировка реализации каталога товаров с карточками в двух состояниях. В качестве исходных данных был макет галереи и открытого модального окна. Я добавила в проект задачу по динамическому рендерингу элементов, упаковав информацию о товарах в объект JS. Дополнительно реализовала динамическую перерисовку части карточки (при смене выбора цвета или объема памяти будет меняться и название товара).',
     tools: [stackName.html, stackName.css, stackName.js, stackName.bem],
     github: 'https://github.com/urchifox/online-store',
@@ -99,7 +89,7 @@ export const PROJECTS_DATA: Array<ProjectData> = [
   {
     id: 'project-multilayer-exercises',
     name: 'Multilayer exercises',
-    type: typeName.trainig,
+    type: "trainig",
     descrption: 'Небольшое упражнение по верстке на основе заданного макета, где я попрактиковалась реализовывать многослойные элементы интерфейса: стики-хедер, сообщение о cookies и кнопку “наверх”.',
     tools: [stackName.html, stackName.css, stackName.js, stackName.bem],
     github: 'https://github.com/urchifox/multilayer-exercise',
@@ -109,7 +99,7 @@ export const PROJECTS_DATA: Array<ProjectData> = [
   {
     id: 'project-big-trip',
     name: 'Big Trip',
-    type: typeName.diploma,
+    type: "diploma",
     descrption: `SPA, написанное в ООП стиле с соблюдением архитектуры MVP.  В качестве исходных данных было дано ТЗ с требованиями к функционалу сайта и готовая верстка страницы во всех требуемых состояниях. Эту верстку я разделила на компоненты, которые интегрировала в JS код в качестве шаблонных строк. В итоге страница полностью отрисовывается динамически, в исходном html-файле присутствуют только контейнеры для компонентов и пара статичных элементов. Реализовано взаимодействие с сервером (методы CRUD). Для экранирования данных клиента использована библиотека “he”, а для работы с датами использованы библиотеки “flatpickr” и “dayjs”. Также при работе с этим проектом получила опыт работы с фреймворком (в данном случае с фреймворком от авторов курса).
 
     </br>Проект сдан на 100 баллов со второй попытки.`,
@@ -121,7 +111,7 @@ export const PROJECTS_DATA: Array<ProjectData> = [
   {
     id: 'project-kekstagram',
     name: 'Kekstagram',
-    type: typeName.diploma,
+    type: "diploma",
     descrption: `Динамический одностраничник, который получает данные о постах с сервера и отрисовывает их на странице с возможностью сортировки. Реализована обратная связь интерфейса - в случае возникновения ошибок соединения с сервером будут показаны сообщения об этом.
     В качестве исходных данных была готовая верстка страницы с шаблонами динамических элементов (в тегах template).
     Одной из отличительных особенностей моей реализации стало формирование отдельного модуля для хранения и экспорта результатов всех querySelector в формате объектов.
@@ -135,7 +125,7 @@ export const PROJECTS_DATA: Array<ProjectData> = [
   {
     id: 'project-italian-chefs-blog',
     name: 'Italian chef’s blog',
-    type: typeName.trainig,
+    type: "trainig",
     descrption: `Один из наиболее сложных проектов по верстке текстового контента на основе готового макета. Использована сложная типографика:
     </br>- буквицы,
     </br>- лигатуры,
@@ -151,7 +141,7 @@ export const PROJECTS_DATA: Array<ProjectData> = [
   {
     id: 'project-science-blog',
     name: 'Science blog',
-    type: typeName.trainig,
+    type: "trainig",
     descrption: `Верстка (по готовому макету) научной статьи с разнообразными текстовыми элементами:
     </br>- кликабельное содержание,
     </br>- таблицы,
@@ -168,7 +158,7 @@ export const PROJECTS_DATA: Array<ProjectData> = [
   {
     id: 'project-onenews',
     name: 'OneNews',
-    type: typeName.trainig,
+    type: "trainig",
     descrption: `Верстка (по готовому макету) статьи о финансах на новостном портале, где помимо стандартных для статей элементов также присутствуют:
     </br>- таблицы,
     </br>- список определений, оформленный как диаграмма,
@@ -184,7 +174,7 @@ export const PROJECTS_DATA: Array<ProjectData> = [
   {
     id: 'project-blogick',
     name: 'Blogick',
-    type: typeName.trainig,
+    type: "trainig",
     descrption: `Верстка (по готовому макету) статьи в блоге о путешествиях, где размечены и стилизованы классические текстовые элементы, такие как:
     </br>- заголовки,
     </br>- лид-блок,

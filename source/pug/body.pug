@@ -1,0 +1,14 @@
+include utils
+body(class="page__body")
+  include header
+  +header(getBlockClass('page', 'header'))
+
+  main(class="page__main main")
+    include about
+    include skills
+    include work
+    include projects
+    include learning
+    include additions
+
+  include footer.pug
