@@ -5,99 +5,29 @@ section#additions(class="main__section section container")
       h3(class="additions-card__title") Сайд-скиллы
       button(class="additions-card__button", type="button") Раскрыть все
       ul(class="additions-card__list")
-        li(class="additions-card__item")
-          details(class="additions-card__dropdown")
-            summary(class="additions-card__summary") Разработка no-code приложений
-            div(class="additions-card__content")
-              div(class="additions-card__text-wrapper")
-                p(class="additions-card__text")
-                  | Разработала персональные приложения на базе Google AppSheet:
-                  | приложение для ведения семейного раздельного бюджета с возможностью просмотра аналитики трат по категориям и с расчетом задолжностей партнеров;
-                  | мини-словарь армянского языка с ручным заполнением.
-        li(class="additions-card__item")
-          details(class="additions-card__dropdown")
-            summary(class="additions-card__summary") Опыт написания скриптов Google Apps Script
-            div(class="additions-card__content")
-              div(class="additions-card__text-wrapper")
-                p(class="additions-card__text") Написала набор скриптов на JavaScript + Google Apps Script для автоматизации работы с приложениями Google (выгрузка / загрузка отчетов и их обработка).
-                p(class="additions-card__text") Написала пользовательскую функцию по форматированию времени (из формата ЧЧ:ММ в десятичное число).
-        li(class="additions-card__item")
-          details(class="additions-card__dropdown")
-            summary(class="additions-card__summary") Организация, систематизация и документация процессов
-            div(class="additions-card__content")
-              div(class="additions-card__text-wrapper")
-                p(class="additions-card__text") Адаптировала и внедрила CRM-систему на базе Битрикс24 для онлайн-школы. Написала сопроводительную документацию для менеджеров (описание базовых инструментов портала и их адаптация под нужды отдела).
-                p(class="additions-card__text") Разработала пайплайн работы технического художника (подготовка графических файлов для последующей анимации или импорта в игровой движок). Подготовила инструкцию, провела обучение исполнителей и успешно делегировала дальнейший контроль над работой.
-                p(class="additions-card__text") Подготовила канбан-доску с автоматизацией, адаптированную под процессы продакшн-отдела.
-                p(class="additions-card__text") Написала стайл-гайд для разработки визуального контента мобильной игры.
-        li(class="additions-card__item")
-          details(class="additions-card__dropdown")
-            summary(class="additions-card__summary") Владение графическими редакторами
-            div(class="additions-card__content")
-              div(class="additions-card__text-wrapper")
-                p(class="additions-card__text") Adobe Photoshop на профессиональном уровне (как 2D-художник).
-                p(class="additions-card__text") Figma на уровне создания типовых макетов.
-        li(class="additions-card__item")
-          details(class="additions-card__dropdown")
-            summary(class="additions-card__summary") Знание колористики, композиции и основ  графического дизайна
-            div(class="additions-card__content")
-              div(class="additions-card__text-wrapper")
-                p(class="additions-card__text") Имею специальность “дизайнер архитектурной среды”, три года работала в арт-студии на позиции middle 2D художник. Хорошо чувствую композицию и имею развитый художественный вкус.
-        li(class="additions-card__item")
-          details(class="additions-card__dropdown")
-            summary(class="additions-card__summary") Английский язык уровня Upper-Intermediate
-            div(class="additions-card__content")
-              div(class="additions-card__text-wrapper")
-                p(class="additions-card__text") Свободно читаю техническую документацию и смотрю обучающие видео на английском языке.
+        each sideSkill in sideSkills
+          li(class="additions-card__item")
+            details(class="additions-card__dropdown")
+              summary(class="additions-card__summary")= sideSkill.name
+              div(class="additions-card__content")
+                div(class="additions-card__text-wrapper")
+                  each text in sideSkill.descrption
+                    p(class="additions-card__text")= text
+
     section(class="section__subsection additions-card")
       h3(class="additions-card__title") Софт-скиллы
       button(class="additions-card__button", type="button") Раскрыть все
       ul(class="additions-card__list")
-        li(class="additions-card__item")
-          details(class="additions-card__dropdown")
-            summary(class="additions-card__summary") Обучаемость
-            div(class="additions-card__content")
+        each softSkill in softSkills
+          li(class="additions-card__item")
+            if softSkill.name
+              details(class="additions-card__dropdown")
+                summary(class="additions-card__summary")= softSkill.name
+                div(class="additions-card__content")
+                  div(class="additions-card__text-wrapper")
+                    each text in softSkill.descrption
+                      p(class="additions-card__text")= text
+            else
               div(class="additions-card__text-wrapper")
-                p(class="additions-card__text") Инициативно и самостоятельно изучила основы и тонкости работы с платформой Битрикс24 и с Google приложениями (в т.ч. как писать скрипты на Apps Script).
-                p(class="additions-card__text") С нуля за год обучилась фронтенд-разработке.
-        li(class="additions-card__item")
-          details(class="additions-card__dropdown")
-            summary(class="additions-card__summary") Аналитическое мышление
-            div(class="additions-card__content")
-              div(class="additions-card__text-wrapper")
-                p(class="additions-card__text") Стараюсь рассмотреть разные варианты решения задачи и выбрать наиболее оптимальный.
-                p(class="additions-card__text") Даже для такой обыденной задачи, как выбор отеля, я составляю табличку с указанием важных для меня параметров (цена, расположение, условия проживания, рейтинги на разных сервисах). Для нечисловых параметров я использую балльную систему оценки. Дальнейшее автоматическое условное форматирование помогает выбрать наилучший вариант, основываясь на совокупности всех факторов.
-        li(class="additions-card__item")
-          details(class="additions-card__dropdown")
-            summary(class="additions-card__summary") Структуризация данных
-            div(class="additions-card__content")
-              div(class="additions-card__text-wrapper")
-                p(class="additions-card__text") Написала аналитическую таблицу (Google Spreadsheet) для аналитики доходов с продаж и успешности продуктов студии.
-                p(class="additions-card__text") Создала набор аналитических таблиц (Google Spreadsheet) для отслеживания окупаемости проектов на основе зарплат исполнителей, потраченных человеко-часов и полученной выручки.
-                p(class="additions-card__text") Разработала систему фильтрации и каталогизации продуктов компании, которая позволяет быстро находить необходимый товар (на базе Notion).
-        li(class="additions-card__item")
-          details(class="additions-card__dropdown")
-            summary(class="additions-card__summary") Самостоятельность и ответственность
-            div(class="additions-card__content")
-              div(class="additions-card__text-wrapper")
-                p(class="additions-card__text") Всегда сначала сама ищу ответ на вопрос, прежде чем обратиться за помощью.
-                p(class="additions-card__text") Если задача не решается - стараюсь найти альтернативные варианты ее решения.
-                p(class="additions-card__text") Тщательно оцениваю свою работу по всем критериям, прежде чем отдать ее на проверку.
-        li(class="additions-card__item")
-          details(class="additions-card__dropdown")
-            summary(class="additions-card__summary") Дисциплинированность
-            div(class="additions-card__content")
-              div(class="additions-card__text-wrapper")
-                p(class="additions-card__text") Около года занималась самообучением веб-разработке, уделяя на это регулярно четыре часа по будням и два часа по выходным (с заранее запланированными перерывами на отпуск).
-                p(class="additions-card__text") Раз в неделю на протяжении более трех лет занимаюсь английским с репетитором.
-                p(class="additions-card__text") Придерживаюсь одного и того же распорядка дня даже при возможности гибкого рабочего графика.
-                p(class="additions-card__text") Не откладываю задачи на потом, даже если они неинтересные.
-        li(class="additions-card__item")
-          details(class="additions-card__dropdown")
-            summary(class="additions-card__summary") Навык предоставления обратной связи
-            div(class="additions-card__content")
-              div(class="additions-card__text-wrapper")
-                p(class="additions-card__text") Была лид-художником на двух проектах (в задачи помимо фидбэка исполнителям входило оценка трудоемкости задач, их распределение между исполнителями и контроль качества иллюстраций).
-        li(class="additions-card__item")
-          div(class="additions-card__text-wrapper")
-            p(class="additions-card__text") А также целеустремленность, усидчивость и внимание к деталям.
+                each text in softSkill.descrption
+                  p(class="additions-card__text")= text
