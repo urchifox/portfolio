@@ -28,7 +28,7 @@ export const projects: Array<Project> = [
     </br>- настройка и переключение цветовых тем: я взяла за основу реализацию Вадима Макеева, которую он разбирал в видео-роликах, но адаптировала под свой дизайн, слегка изменив логику скрипта;
     </br>- использование относительных единиц измерения: все размеры шрифтов, а также расстояния между элементами привязаны к базовому размеру шрифта;
     </br>- работа с новыми для меня элементами: изучила нюансы работы тегов details и dialog.`,
-    tools: [stackName.html, stackName.sass, stackName.ts, stackName.bem],
+    tools: [stackName.pug, stackName.sass, stackName.ts, stackName.bem],
     github: 'https://github.com/urchifox/portfolio',
     webpage: 'https://urchifox.github.io/portfolio/',
     images: ['portfolio']
