@@ -4,7 +4,7 @@ type Contact = {
   link: string
 }
 
-export const Contacts: Array<Contact> = [
+export const contacts: Array<Contact> = [
   {
     name: "github",
     text: "Профиль на GitHub",
