@@ -19,8 +19,8 @@ section#projects(class="main__section section container")
             p(class="project-card__text")= project.descrption
             ul(class="project-card__stack-list")
               each tool in project.tools
-                li(class=`project-card__stack-item project-card__stack-item--icon-${tool}`)
-                  span(class="visually-hidden")= tool
+                li(class=`project-card__stack-item project-card__stack-item--icon-${tool.name}`)
+                  span(class="visually-hidden")= tool.text
             div(class="project-card__buttons-wrapper")
               a(class="project-card__button button button--icon-github" href=project.github)
                 span(class="visually-hidden") Проект на github
