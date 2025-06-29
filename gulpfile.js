@@ -50,7 +50,7 @@ export async function compilePug() {
   const { skills } = await import(`${PATH_TO_DIST}data/skills.js`);
   const { work } = await import(`${PATH_TO_DIST}data/work.js`);
   const { projects, projectType, stackName } = await import(`${PATH_TO_DIST}data/projects.js`);
-  const { courses, practices } = await import(`${PATH_TO_DIST}data/learning-data.js`);
+  const { courses, practices } = await import(`${PATH_TO_DIST}data/learning.js`);
   const { sideSkills, softSkills } = await import(`${PATH_TO_DIST}data/additions-data.js`);
 
   return src(`${PATH_TO_SOURCE}pug/index.pug`)
