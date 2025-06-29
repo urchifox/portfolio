@@ -50,7 +50,7 @@ export async function compilePug() {
   const contacts = JSON.parse(fs.readFileSync(`${PATH_TO_SOURCE}data/contacts.json`));
   const skills = JSON.parse(fs.readFileSync(`${PATH_TO_SOURCE}data/skills.json`));
   const work = JSON.parse(fs.readFileSync(`${PATH_TO_SOURCE}data/work.json`));
-  const {PROJECTS_DATA, typeName, stackName, } = await import(`${PATH_TO_DIST}scripts/projects-data.js`);
+  const {PROJECTS_DATA, typeName, stackName, } = await import(`${PATH_TO_DIST}data/projects-data.js`);
 
   return src(`${PATH_TO_SOURCE}pug/index.pug`)
     .pipe(pug({
@@ -94,6 +94,25 @@ export function processScripts () {
       target: browserslistToEsbuild(),
     }))
     .pipe(dest(`${PATH_TO_DIST}scripts`))
+    .pipe(server.stream());
+}
+
+export function processData () {
+  const gulpEsbuild = createGulpEsbuild({ incremental: isDevelopment });
+
+  return src(`${PATH_TO_SOURCE}data/*.{js,ts}`)
+    .pipe(gulpEsbuild({
+      tsconfig: 'tsconfig.json',
+      loader: { '.ts': 'ts' },
+      bundle: true,
+      format: 'esm',
+      // splitting: true,
+      platform: 'browser',
+      minify: !isDevelopment,
+      sourcemap: isDevelopment,
+      target: browserslistToEsbuild(),
+    }))
+    .pipe(dest(`${PATH_TO_DIST}data`))
     .pipe(server.stream());
 }
 
@@ -170,6 +189,7 @@ export function startServer () {
   watch(`${PATH_TO_SOURCE}pug/**/*.pug`, compilePug);
   watch(`${PATH_TO_SOURCE}**/*.{html,njk}`, series(processMarkup));
   watch(`${PATH_TO_SOURCE}styles/**/*.scss`, series(processStyles));
+  watch(`${PATH_TO_SOURCE}data/**/*.{js,ts}`, series(processData));
   watch(`${PATH_TO_SOURCE}scripts/**/*.{js,ts}`, series(processScripts));
   watch(`${PATH_TO_SOURCE}images/icons/**/*.svg`, series(createStack, reloadServer));
   watch(PATHS_TO_STATIC, series(reloadServer));
@@ -192,9 +212,10 @@ export function buildProd (done) {
   isDevelopment = false;
   series(
     removeBuild,
-    processScripts,
+    processData,
     parallel(
       compilePug,
+      processScripts,
       processMarkup,
       processStyles,
       createStack,
@@ -206,9 +227,10 @@ export function buildProd (done) {
 export function runDev (done) {
   series(
     removeBuild,
-    processScripts,
+    processData,
     parallel(
       compilePug,
+      processScripts,
       processMarkup,
       processStyles,
       createStack,

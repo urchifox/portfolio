@@ -17,5 +17,5 @@
     "strict": true,
     "noImplicitOverride": true,
   },
-  "include": ["./source/scripts"]
+  "include": ["./source/scripts", "source/data"]
 }

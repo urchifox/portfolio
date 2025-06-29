@@ -1,5 +1,5 @@
 import {isHtmlInputElement, queryElement, queryElements} from './utils.js';
-import {typeName, PROJECTS_DATA} from './projects-data.js';
+import {typeName, PROJECTS_DATA} from '../data/projects-data.js';
 
 const root = queryElement('.projects__list');
 const filtrationButtons = queryElements('input[name="filter"]');
