@@ -18,7 +18,6 @@ import { stacksvg } from 'gulp-stacksvg';
 import server from 'browser-sync';
 import bemlinter from 'gulp-html-bemlinter';
 import pug from 'gulp-pug';
-import fs from 'fs';
 
 const { src, dest, watch, series, parallel } = gulp;
 const sass = gulpSass(dartSass);
@@ -46,18 +45,30 @@ export function processMarkup () {
 }
 
 export async function compilePug() {
-  const {sections} = await import(`${PATH_TO_DIST}data/sections.js`);
-  const {contacts} = await import(`${PATH_TO_DIST}data/contacts.js`);
-  const {skills} = await import(`${PATH_TO_DIST}data/skills.js`);
-  const {work} = await import(`${PATH_TO_DIST}data/work.js`);
-  const {PROJECTS_DATA, typeName, stackName, } = await import(`${PATH_TO_DIST}data/projects-data.js`);
+  const { sections } = await import(`${PATH_TO_DIST}data/sections.js`);
+  const { contacts } = await import(`${PATH_TO_DIST}data/contacts.js`);
+  const { skills } = await import(`${PATH_TO_DIST}data/skills.js`);
+  const { work } = await import(`${PATH_TO_DIST}data/work.js`);
+  const { PROJECTS_DATA, typeName, stackName } = await import(`${PATH_TO_DIST}data/projects-data.js`);
   const { courses, practices } = await import(`${PATH_TO_DIST}data/learning-data.js`);
   const { sideSkills, softSkills } = await import(`${PATH_TO_DIST}data/additions-data.js`);
 
   return src(`${PATH_TO_SOURCE}pug/index.pug`)
     .pipe(pug({
       pretty: true,
-      locals: { sections, contacts, skills, work, projects: PROJECTS_DATA, typeName, stackName, courses, practices, sideSkills, softSkills },
+      locals: {
+        sections,
+        contacts,
+        skills,
+        work,
+        projects: PROJECTS_DATA,
+        typeName,
+        stackName,
+        courses,
+        practices,
+        sideSkills,
+        softSkills,
+      },
     }))
     .pipe(dest(PATH_TO_DIST));
 }
