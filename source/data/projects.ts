@@ -34,6 +34,17 @@ export const projects: Array<Project> = [
     images: ['portfolio']
   },
   {
+    id: 'sliding-lines',
+    name: 'Sliding Lines',
+    type: "personal",
+    descrption: `Минималистичная игра «Пятнашки», созданная как тренировочный проект для углублённой работы с React. Здесь я впервые применила подход CSS-in-JS с использованием библиотеки Emotion, что позволило гибко управлять стилями компонентов. Отдельное внимание я уделила анимациям элементов и плавным переходам между состояниями компонентов.
+    <br/>Игровая логика реализована самостоятельно: я разработала алгоритм рандомизироанной генерации уровней, который постепенно повышает сложность головоломки и тем самым сохраняет интерес пользователя.`,
+    tools: [stackName.ts, stackName.react, stackName.sass],
+    github: 'https://github.com/urchifox/sliding-lines',
+    webpage: 'https://urchifox.github.io/sliding-lines/',
+    images: ['sliding-lines']
+  },
+  {
     id: 'feature-support',
     name: 'Check feature support',
     type: "personal",
