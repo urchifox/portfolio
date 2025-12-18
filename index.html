@@ -100,15 +100,16 @@
                   <p class="subsection__skills-icon subsection__skills-icon--icon-css"><span class="visually-hidden">CSS</span></p>
                   <p class="subsection__skills-icon subsection__skills-icon--icon-sass"><span class="visually-hidden">Sass</span></p>
                 </div>
-                <p class="subsection__skills-text">Уверенно строю flex и grid сетки, оптимизирую работу с помощью кастомных свойств и переменных, умею строить адаптивные резиновые интерфейсы</p>
+                <p class="subsection__skills-text">Строю адаптивные резиновые интерфейсы, уверенно использую flex и grid сетки, оптимизирую работу с помощью кастомных свойств и переменных, владею подходами CSS Modules и CSS-in-JS</p>
               </li>
               <li class="subsection__skills-item">
                 <div class="subsection__skills-icon-wrapper">
                   <p class="subsection__skills-icon subsection__skills-icon--icon-javascript"><span class="visually-hidden">JavaScript</span></p>
                   <p class="subsection__skills-icon subsection__skills-icon--icon-typescript"><span class="visually-hidden">TypeScript</span></p>
+                  <p class="subsection__skills-icon subsection__skills-icon--icon-react"><span class="visually-hidden">React</span></p>
                   <p class="subsection__skills-icon subsection__skills-icon--icon-jquery"><span class="visually-hidden">jQuery</span></p>
                 </div>
-                <p class="subsection__skills-text">Уверенно пишу как на TypeScript, так и на ванильном JS, умею работать с асинхронными операциями, понимаю принципы работы различных алгоритмов, знакома с понятием “О” большое, думаю об алгоритмической сложности при написании кода</p>
+                <p class="subsection__skills-text">Уверенно пишу как на TypeScript, так и на ванильном JS, знакома с React, умею работать с асинхронными операциями, понимаю принципы работы различных алгоритмов, знакома с понятием “О” большое, думаю об алгоритмической сложности при написании кода</p>
               </li>
               <li class="subsection__skills-item">
                 <div class="subsection__skills-icon-wrapper">
@@ -254,6 +255,27 @@
                   <source type="image/webp" srcset="./images/cover-portfolio-small@1x.webp 1x, ./images/cover-portfolio-small@2x.webp 2x" width="689" height="387">
                   <source type="image/jpg" media="(min-width: 1200px)" srcset="./images/cover-portfolio-large@1x.jpg 1x, ./images/cover-portfolio-large@2x.jpg 2x" width="441" height="248">
                   <source type="image/jpg" media="(min-width: 760px)" srcset="./images/cover-portfolio-medium@1x.jpg 1x, ./images/cover-portfolio-medium@2x.jpg 2x" width="1096" height="616"><img class="project-card__picture" loading="lazy" src="./images/cover-portfolio-small@1x.jpg" srcset="./images/$cover-portfolio-small@2x.jpg 2x" width="689" height="387" alt="Скриншот страницы проекта">
+                </picture>
+              </div>
+            </li>
+            <li class="projects__item project-card" id="sliding-lines" data-type="personal">
+              <h3 class="project-card__title">Sliding Lines</h3>
+              <p class="project-card__caption">Персональный проект</p>
+              <p class="project-card__text">Минималистичная игра «Пятнашки», созданная как тренировочный проект для углублённой работы с React. Здесь я впервые применила подход CSS-in-JS с использованием библиотеки Emotion, что позволило гибко управлять стилями компонентов. Отдельное внимание я уделила анимациям элементов и плавным переходам между состояниями компонентов.
+    <br/>Игровая логика реализована самостоятельно: я разработала алгоритм рандомизироанной генерации уровней, который постепенно повышает сложность головоломки и тем самым сохраняет интерес пользователя.</p>
+              <ul class="project-card__stack-list">
+                <li class="project-card__stack-item project-card__stack-item--icon-typescript"><span class="visually-hidden">TypeScript</span></li>
+                <li class="project-card__stack-item project-card__stack-item--icon-react"><span class="visually-hidden">React</span></li>
+                <li class="project-card__stack-item project-card__stack-item--icon-sass"><span class="visually-hidden">Sass</span></li>
+              </ul>
+              <div class="project-card__buttons-wrapper"><a class="project-card__button button button--icon-github" href="https://github.com/urchifox/sliding-lines"><span class="visually-hidden">Проект на github</span></a><a class="project-card__button button button--icon-external-link" href="https://urchifox.github.io/sliding-lines/"><span class="visually-hidden">Публикация проекта</span></a></div>
+              <div class="project-card__slider">
+                <picture>
+                  <source type="image/webp" media="(min-width: 1200px)" srcset="./images/cover-sliding-lines-large@1x.webp 1x, ./images/cover-sliding-lines-large@2x.webp 2x" width="441" height="248">
+                  <source type="image/webp" media="(min-width: 760px)" srcset="./images/cover-sliding-lines-medium@1x.webp 1x, ./images/cover-sliding-lines-medium@2x.webp 2x" width="1096" height="616">
+                  <source type="image/webp" srcset="./images/cover-sliding-lines-small@1x.webp 1x, ./images/cover-sliding-lines-small@2x.webp 2x" width="689" height="387">
+                  <source type="image/jpg" media="(min-width: 1200px)" srcset="./images/cover-sliding-lines-large@1x.jpg 1x, ./images/cover-sliding-lines-large@2x.jpg 2x" width="441" height="248">
+                  <source type="image/jpg" media="(min-width: 760px)" srcset="./images/cover-sliding-lines-medium@1x.jpg 1x, ./images/cover-sliding-lines-medium@2x.jpg 2x" width="1096" height="616"><img class="project-card__picture" loading="lazy" src="./images/cover-sliding-lines-small@1x.jpg" srcset="./images/$cover-sliding-lines-small@2x.jpg 2x" width="689" height="387" alt="Скриншот страницы проекта">
                 </picture>
               </div>
             </li>
