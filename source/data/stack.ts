@@ -28,6 +28,10 @@ export const stackName: Record<string, Stack> = {
     name: "typescript",
     text: "TypeScript",
   },
+  react: {
+    name: "react",
+    text: "React",
+  },
   jq: {
     name: "jquery",
     text: "jQuery",
