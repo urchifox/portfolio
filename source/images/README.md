@@ -1,4 +1,4 @@
-# Папка для отимизированных изображений
+# Folder for optimized images
 
 ```shell
 └── source/
@@ -10,7 +10,7 @@
         └── logo.svg
 ```
 
-Отсюда файлы изображений при сборке без изменений попадают в `build/images/`:
+During the build, image files are copied unchanged from here into `build/images/`:
 
 ```shell
 └── build/

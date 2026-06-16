@@ -1,6 +1,6 @@
-# Папка для скриптов
+# Folder for scripts
 
-Простые сценарии можно написать в `index.js`, а также есть возможность создать модульную систему для несколько сценариев:
+You can write simple scripts in `index.js`, or create a modular system for several scripts:
 
 ```shell
 └── source/

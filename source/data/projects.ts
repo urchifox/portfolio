@@ -1,9 +1,9 @@
 import { Stack, stackName } from "./stack";
 
 export const projectType = {
-  diploma: 'Дипломный проект',
-  trainig: 'Тренировка навыка',
-  personal: 'Персональный проект',
+  diploma: 'Diploma project',
+  trainig: 'Practice project',
+  personal: 'Personal project',
 } as const;
 type ProjectTypeMap = typeof projectType;
 
@@ -23,11 +23,11 @@ export const projects: Array<Project> = [
     id: 'portfolio',
     name: 'Portfolio',
     type: "personal",
-    descrption: `Страница-портфолио, где я собрала и оформила главные свои навыки и наиболее интересные проекты. Для этого проекта я самостоятельно сформировала техзадание и создала макет в Figma для 3-х состояний сайта на экранах разного размера. В качестве критериев качества кода я придерживаюсь кодгайда школы HTML Academy. В некоторых случаях я сознательно отступила от части правил или изменила их.
-    <br/>Наиболее интересные и сложные задачи проекта:
-    <br/>- настройка и переключение цветовых тем: я взяла за основу реализацию Вадима Макеева, которую он разбирал в видео-роликах, но адаптировала под свой дизайн, слегка изменив логику скрипта;
-    <br/>- использование относительных единиц измерения: все размеры шрифтов, а также расстояния между элементами привязаны к базовому размеру шрифта;
-    <br/>- работа с новыми для меня элементами: изучила нюансы работы тегов details и dialog.`,
+    descrption: `Self-directed portfolio site: wrote the spec, designed three responsive breakpoints in Figma, and built the implementation according to the HTML Academy code guide.
+    <br/>Highlights:
+    <br/>- light/dark theme switching adapted from Vadim Makeev's approach;
+    <br/>- fluid typography and spacing with rem-based units;
+    <br/>- accessible patterns with native <code>details</code> and <code>dialog</code>.`,
     tools: [stackName.pug, stackName.sass, stackName.ts, stackName.bem],
     github: 'https://github.com/urchifox/portfolio',
     webpage: 'https://urchifox.github.io/portfolio/',
@@ -37,8 +37,8 @@ export const projects: Array<Project> = [
     id: 'sliding-lines',
     name: 'Sliding Lines',
     type: "personal",
-    descrption: `Минималистичная игра «Пятнашки», созданная как тренировочный проект для углублённой работы с React. Здесь я впервые применила подход CSS-in-JS с использованием библиотеки Emotion, что позволило гибко управлять стилями компонентов. Отдельное внимание я уделила анимациям элементов и плавным переходам между состояниями компонентов.
-    <br/>Игровая логика реализована самостоятельно: я разработала алгоритм рандомизироанной генерации уровней, который постепенно повышает сложность головоломки и тем самым сохраняет интерес пользователя.`,
+    descrption: `The sliding puzzle game built with React to deepen component and state management skills. Styled with Emotion (CSS-in-JS) and animated state transitions.
+    <br/>Implemented custom level generation that ramps difficulty to keep players engaged.`,
     tools: [stackName.ts, stackName.react, stackName.sass],
     github: 'https://github.com/urchifox/sliding-lines',
     webpage: 'https://urchifox.github.io/sliding-lines/',
@@ -48,11 +48,11 @@ export const projects: Array<Project> = [
     id: 'feature-support',
     name: 'Check feature support',
     type: "personal",
-    descrption: `Сайт-инструмент для проверки поддержки CSS-свойств в браузере, в котором он открыт. Проект вырос из рабочей задачи по поддержке дефолтных мобильных браузеров (например, Samsung Internet), для которых не было достоверной информации о поддержке CSS.
-    <br/>В рамках работы над этим проектом были реализованы:
-    <br/>- двойная проверка на базе CSS.supports и @supports с цветовой индикацией результата;
-    <br/>- отдельная логика для проверки поддержки единиц измерения и пользовательских свойств;
-    <br/>- минималистичный интерфейс для быстрого ввода CSS-свойств и мгновенного получения ответа.`,
+    descrption: `Browser tool born from production work on Samsung Internet and other mobile browsers with unclear CSS support data.
+    <br/>Features:
+    <br/>- dual checks via <code>CSS.supports</code> and <code>@supports</code> with color-coded output;
+    <br/>- dedicated checks for units and custom properties;
+    <br/>- minimal UI for instant property testing.`,
     tools: [stackName.html, stackName.sass, stackName.ts, stackName.bem],
     github: 'https://github.com/urchifox/check-feature-support',
     webpage: 'https://urchifox.github.io/check-feature-support/',
@@ -62,8 +62,9 @@ export const projects: Array<Project> = [
     id: 'project-cat-energy',
     name: 'Cat Energy',
     type: "diploma",
-    descrption: `Главной задачей этого проекта было реализовать полностью адаптивный интерфейс с соблюдением принципа pixel perfect. В качестве исходных данных были даны макеты всех страниц для 3-х размеров экрана и стайлгайд для фокусных состояний. Сайт имеет три страницы: лендинг, каталог товаров и форму подбора заказа. Весь контент устойчив к замене картинок, а также к переполнению текстом и дополнительными элементами. Наиболее интересными для меня были задачи реализации мобильного меню (которое должно быть в потоке в случае отсутствия JS и открываться по клику в случае его наличия) и стилизации фона у блока hero (кот на большом экране увеличивается пропорционально размеру окна, но до определенного размера, чтобы не показывать обрезанный край картинки).
-    <br/>Проект сдан на 100 баллов с первой попытки.`,
+    descrption: `Pixel-perfect adaptive diploma: landing, catalog, and order form across three breakpoints. Content stays stable under image swaps, text overflow, and layout stress.
+    <br/>Notable work: progressive mobile menu (in-flow without JS, interactive with JS) and a hero background that scales without exposing cropped edges.
+    <br/>Graduated with a perfect score on the first attempt.`,
     tools: [stackName.html, stackName.sass, stackName.js, stackName.bem],
     github: 'https://github.com/urchifox/cat-energy',
     webpage: 'https://urchifox.github.io/cat-energy/',
@@ -73,15 +74,9 @@ export const projects: Array<Project> = [
     id: 'project-grafit-academy',
     name: 'Grafit Academy',
     type: "personal",
-    descrption: `Большой самостоятельный проект, на котором я отрабатывала полученные знания. Состоит из двух страниц - лендинг и каталог товаров. Наиболее интересные и сложные фичи проекта:
-    <br/>- перестроение сеток в каталоге товаров,
-    <br/>- переиспользуемый слайдер (специально не подключала его библиотекой, т.к. хотела разобраться с нативной реализацией),
-    <br/>- динамический рендеринг (товары и работы художников),
-    <br/>- фильтрация и сортировка товаров,
-    <br/>- подключение библиотеки noUiSlider,
-    <br/>- работа с Local Storage (дисклеймер демонстрируется только при первом просмотре сайта, запоминается информация об избранных товарах и товарах в корзине, а также информация об авторизации),
-    <br/>- синхронизация информации о паке в каталоге, модалке и корзине (в т.ч. интерактивных элементов и их состояний).
-    <br/>Отдельно отмечу, что уже в финале работы с проектом я в качестве эксперимента добавила препроцессор Sass и автоматизированную сборку. Благодаря этому я получила опыт работы с легаси-кодом, ведь потребовалось адаптировать структуру проекта и часть кода.`,
+    descrption: `Two-page training project: landing and product catalog pages.
+    <br/>Key features: adaptive catalog grids, a native slider (no library), dynamic rendering, filtering and sorting, noUiSlider integration, Local Storage for cart and favorites, and synced state across catalog, modal, and cart.
+    <br/>Later migrated to Sass and an automated build - first experience refactoring toward a production setup.`,
     tools: [stackName.html, stackName.css, stackName.js, stackName.bem],
     github: 'https://github.com/urchifox/grafit-academy',
     webpage: 'https://urchifox.github.io/grafit-academy/',
@@ -91,7 +86,7 @@ export const projects: Array<Project> = [
     id: 'project-online-smartphones-store',
     name: 'Online smartphones store',
     type: "trainig",
-    descrption: 'Небольшая тренировка реализации каталога товаров с карточками в двух состояниях. В качестве исходных данных был макет галереи и открытого модального окна. Я добавила в проект задачу по динамическому рендерингу элементов, упаковав информацию о товарах в объект JS. Дополнительно реализовала динамическую перерисовку части карточки (при смене выбора цвета или объема памяти будет меняться и название товара).',
+    descrption: `Product catalog with gallery and modal states. Added JS-driven rendering and live card updates when color or storage options change.`,
     tools: [stackName.html, stackName.css, stackName.js, stackName.bem],
     github: 'https://github.com/urchifox/online-store',
     webpage: 'https://urchifox.github.io/online-store/',
@@ -101,7 +96,7 @@ export const projects: Array<Project> = [
     id: 'project-multilayer-exercises',
     name: 'Multilayer exercises',
     type: "trainig",
-    descrption: 'Небольшое упражнение по верстке на основе заданного макета, где я попрактиковалась реализовывать многослойные элементы интерфейса: стики-хедер, сообщение о cookies и кнопку “наверх”.',
+    descrption: `Layout exercise: sticky header, cookie banner, and back-to-top control on a provided mockup.`,
     tools: [stackName.html, stackName.css, stackName.js, stackName.bem],
     github: 'https://github.com/urchifox/multilayer-exercise',
     webpage: 'https://urchifox.github.io/multilayer-exercise/',
@@ -111,9 +106,8 @@ export const projects: Array<Project> = [
     id: 'project-big-trip',
     name: 'Big Trip',
     type: "diploma",
-    descrption: `SPA, написанное в ООП стиле с соблюдением архитектуры MVP.  В качестве исходных данных было дано ТЗ с требованиями к функционалу сайта и готовая верстка страницы во всех требуемых состояниях. Эту верстку я разделила на компоненты, которые интегрировала в JS код в качестве шаблонных строк. В итоге страница полностью отрисовывается динамически, в исходном html-файле присутствуют только контейнеры для компонентов и пара статичных элементов. Реализовано взаимодействие с сервером (методы CRUD). Для экранирования данных клиента использована библиотека “he”, а для работы с датами использованы библиотеки “flatpickr” и “dayjs”. Также при работе с этим проектом получила опыт работы с фреймворком (в данном случае с фреймворком от авторов курса).
-
-    <br/>Проект сдан на 100 баллов со второй попытки.`,
+    descrption: `MVP-architecture SPA in OOP JavaScript. Split provided markup into components rendered via template strings; HTML holds only mount points. Full CRUD over REST API with <code>he</code>, <code>flatpickr</code>, and <code>dayjs</code>.
+    <br/>Graduated with a perfect score on the second attempt.`,
     tools: [stackName.js],
     github: 'https://github.com/urchifox/big-trip',
     webpage: 'https://urchifox.github.io/big-trip/',
@@ -123,11 +117,8 @@ export const projects: Array<Project> = [
     id: 'project-kekstagram',
     name: 'Kekstagram',
     type: "diploma",
-    descrption: `Динамический одностраничник, который получает данные о постах с сервера и отрисовывает их на странице с возможностью сортировки. Реализована обратная связь интерфейса - в случае возникновения ошибок соединения с сервером будут показаны сообщения об этом.
-    В качестве исходных данных была готовая верстка страницы с шаблонами динамических элементов (в тегах template).
-    Одной из отличительных особенностей моей реализации стало формирование отдельного модуля для хранения и экспорта результатов всех querySelector в формате объектов.
-
-    <br/>Проект сдан на 100 баллов со второй попытки.`,
+    descrption: `Feed SPA that loads posts from an API, renders with sorting, and surfaces connection errors to the user. Centralized DOM query exports in a dedicated module.
+    <br/>Graduated with a perfect score on the second attempt.`,
     tools: [stackName.js],
     github: 'https://github.com/urchifox/kekstagram',
     webpage: 'https://urchifox.github.io/kekstagram/',
@@ -137,13 +128,7 @@ export const projects: Array<Project> = [
     id: 'project-italian-chefs-blog',
     name: 'Italian chef’s blog',
     type: "trainig",
-    descrption: `Один из наиболее сложных проектов по верстке текстового контента на основе готового макета. Использована сложная типографика:
-    <br/>- буквицы,
-    <br/>- лигатуры,
-    <br/>- врезки и обтекания сложной формы,
-    <br/>- поворот текста под углом,
-    <br/>- разделения текста по колонкам.
-    <br/>Помимо основных задач я уделила внимание интерактивным элементам и анимации их фокусных состояний.`,
+    descrption: `Editorial layout exercise with advanced typography: drop caps, ligatures, pull quotes, shaped wraps, rotated text, and columns — plus animated focus states.`,
     tools: [stackName.html, stackName.css, stackName.bem],
     github: 'https://github.com/urchifox/Italian-chefs-blog__article',
     webpage: 'https://urchifox.github.io/Italian-chefs-blog__article/',
@@ -153,14 +138,7 @@ export const projects: Array<Project> = [
     id: 'project-science-blog',
     name: 'Science blog',
     type: "trainig",
-    descrption: `Верстка (по готовому макету) научной статьи с разнообразными текстовыми элементами:
-    <br/>- кликабельное содержание,
-    <br/>- таблицы,
-    <br/>- формулы,
-    <br/>- деление текста на колонки,
-    <br/>- сноски с кнопкой возврата,
-    <br/>- многоуровневый нумерованный список.
-    <br/>Также здесь есть карточки других статей с реализацией скрытия текста и кнопкой “читать дальше” для перехода на статью. Дополнительно я поставила и решила задачу по оживлению элемента "поиск" на чистом css: при клике на слово "поиск" соответствующее поле ввода выезжает на центр шапки.`,
+    descrption: `Scientific article layout: table of contents, tables, formulas, columns, footnotes, and nested lists. Article cards with truncated previews. Bonus: pure CSS search field that expands into the header on click.`,
     tools: [stackName.html, stackName.css, stackName.bem,],
     github: 'https://github.com/urchifox/SCIENCE__article_carbohydrates',
     webpage: 'https://urchifox.github.io/SCIENCE__article_carbohydrates/',
@@ -170,13 +148,7 @@ export const projects: Array<Project> = [
     id: 'project-onenews',
     name: 'OneNews',
     type: "trainig",
-    descrption: `Верстка (по готовому макету) статьи о финансах на новостном портале, где помимо стандартных для статей элементов также присутствуют:
-    <br/>- таблицы,
-    <br/>- список определений, оформленный как диаграмма,
-    <br/>- многоуровневый нумерованный список,
-    <br/>- формулы,
-    <br/>- блоки, вынесенные вне основного контента,
-    <br/>- карточка другой статьи с реализацией скрытия текста и кнопкой “читать дальше” для перехода на статью.`,
+    descrption: `Finance article layout with tables, a diagram-style definition list, nested lists, formulas, aside blocks, and a related-article card with a "read more" pattern.`,
     tools: [stackName.html, stackName.css, stackName.bem],
     github: 'https://github.com/urchifox/OneNews__article_credits',
     webpage: 'https://urchifox.github.io/OneNews__article_credits/',
@@ -186,14 +158,7 @@ export const projects: Array<Project> = [
     id: 'project-blogick',
     name: 'Blogick',
     type: "trainig",
-    descrption: `Верстка (по готовому макету) статьи в блоге о путешествиях, где размечены и стилизованы классические текстовые элементы, такие как:
-    <br/>- заголовки,
-    <br/>- лид-блок,
-    <br/>- мета-информация о статье,
-    <br/>- хлебные-крошки,
-    <br/>- цитаты,
-    <br/>- упорядоченный список с прерывающейся нумерацией.
-    <br/>Помимо этого страница включает в себя обтекаемые элементы и вынесенные вне основного контента блоки.`,
+    descrption: `Travel article layout covering headings, lead, meta, breadcrumbs, quotes, interrupted list numbering, floats, and aside blocks.`,
     tools: [stackName.html, stackName.css, stackName.bem],
     github: 'https://github.com/urchifox/Blogick__article_Georgia',
     webpage: 'https://urchifox.github.io/Blogick__article_Georgia/',

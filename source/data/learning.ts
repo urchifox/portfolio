@@ -9,58 +9,58 @@ type Course = {
 }
 export const courses: Array<Course> = [
   {
-    name: "JavaScript. Профессиональная разработка веб-интерфейсов",
+    name: "JavaScript. Professional Development of Web Interfaces",
     dateStart: {
       datetime: "2023-06-06",
-      string: "6 июня"
+      string: "June 6"
     },
     dateEnd: {
       datetime: "2023-08-07",
-      string: "7 августа 2023"
+      string: "August 7, 2023"
     },
-    descrption: "Изучила синтаксис языка, базовые конструкции, взаимодействие с DOM, асинхронные запросы к серверу и встраивание сторонних библиотек. И все это с соблюдением принципов DRY и KISS.",
+    descrption: "I studied language syntax, basic constructs, DOM interaction, asynchronous server requests, and integrating third-party libraries — all while following DRY and KISS principles.",
     certificate: {
       name: "certificate-js-1",
-      text: "Сертификат школы HTML Academy удостоверяет, что Евтухова Екатерина Павловна успешно прошла курс и защитила дипломный проект, сертфикат подписан руководителем проекта Александром Першиным"
+      text: "Certificate confirming that Ekaterina Evtukhova completed the workshop and defended the graduation project; the certificate is signed by the project manager Alexander Pershin"
     },
     diploma: "project-kekstagram",
-    link: "https://up.htmlacademy.ru/javascript/29"
+    link: "https://htmlacademy.ru/intensive/javascript"
   },
   {
-    name: "JavaScript. Архитектура клиентских приложений",
+    name: "JavaScript. Architecture of Front-end Applications",
     dateStart: {
       datetime: "2023-08-07",
-      string: "7 августа"
+      string: "August 7"
     },
     dateEnd: {
       datetime: "2023-10-09",
-      string: "9 октября 2023"
+      string: "October 9, 2023"
     },
-    descrption: "Погрузилась в углубленное изучение языка в ООП стиле. Научилась разделять интерфейс на компоненты и построила SPA в паттерне MVP. Освоила взаимодействие с сервером по протоколу HTTP, реализуя методы CRUD с помощью REST API.",
+    descrption: "I dove into an in-depth study of the language in OOP style. I learned to split the interface into components and built an SPA using the MVP pattern. I mastered server interaction over HTTP, implementing CRUD methods with a REST API.",
     certificate: {
       name: "certificate-js-2",
-      text: "Сертификат школы HTML Academy удостоверяет, что Евтухова Екатерина Павловна успешно прошла курс и защитила дипломный проект, сертфикат подписан руководителем проекта Александром Першиным"
+      text: "Certificate confirming that Ekaterina Evtukhova completed the workshop and defended the graduation project; the certificate is signed by the project manager Alexander Pershin"
     },
     diploma: "project-big-trip",
-    link: "https://up.htmlacademy.ru/ecmascript/21"
+    link: "https://htmlacademy.ru/intensive/ecmascript"
   },
   {
-    name: "HTML и CSS. Адаптивная вёрстка и автоматизация",
+    name: "HTML and CSS. Adaptive Website Coding and Automation",
     dateStart: {
       datetime: "2023-11-27",
-      string: "27 ноября 2023"
+      string: "November 27, 2023"
     },
     dateEnd: {
       datetime: "2024-02-05",
-      string: "5 февраля 2024"
+      string: "February 5, 2024"
     },
-    descrption: "Закрепила понимание методологии БЭМ. Освоила адаптивную верстку с использованием SASS. Научилась грамотной работе с графикой и шрифтами. Использовала инструменты автоматизации для достижения хорошей производительности сайта.",
+    descrption: "I reinforced my understanding of the BEM methodology. I mastered adaptive layout with SASS. I learned to work properly with graphics and fonts. I used automation tools to achieve good site performance.",
     certificate: {
       name: "certificate-html-2",
-      text: "Сертификат школы HTML Academy удостоверяет, что Евтухова Екатерина Павловна успешно прошла курс и защитила дипломный проект, сертфикат подписан руководителем проекта Александром Першиным"
+      text: "Certificate confirming that Ekaterina Evtukhova completed the workshop and defended the graduation project; the certificate is signed by the project manager Alexander Pershin"
     },
     diploma: "project-cat-energy",
-    link: "https://up.htmlacademy.ru/adaptive/30"
+    link: "https://htmlacademy.ru/intensive/adaptive"
   },
 ]
 
@@ -74,47 +74,47 @@ type Practice = {
 }
 export const practices: Array<Practice> = [
   {
-    name: "Вёрстка текстового содержимого страниц",
-    descrption: "Освоила навык оформления текстового контента с учетом семантики. Поработала со сложными элементами: формулы, сноски, нумерация списка с прерыванием, денежные знаки, разбиение на колонки, таблицы, буквицы и красные строки, сложные обтекания текстом внешнего элемента и заключение текста в непрямоугольный шейп, скрытие не поместившегося текста и реализация кнопки “читать далее”.",
+    name: "Layout of page text content",
+    descrption: "Long-form content: formulas, footnotes, interrupted lists, columns, tables, drop caps, shaped wraps, overflow truncation, and read-more patterns.",
     projects: [
       {
-        name: "Проект \"Blogick\"",
+        name: "Project \"Blogick\"",
         id: "project-blogick",
       },
       {
-        name: "Проект \"OneNews\"",
+        name: "Project \"OneNews\"",
         id: "project-onenews",
       },
       {
-        name: "Проект \"Science blog\"",
+        name: "Project \"Science blog\"",
         id: "project-science-blog",
       },
       {
-        name: "Проект \"Italian chef’s blog\"",
+        name: "Project \"Italian chef’s blog\"",
         id: "project-italian-chefs-blog",
       },
     ]
   },
   {
-    name: "Вёрстка навигационных элементов интерфейса",
-    descrption: "Укрепила понимание верстки и стилизации таких элементов навигации, как линейное и многоуровневое меню, выпадающее подменю, хлебные крошки, пагинация. Узнала тонкости работы со списками и ссылками.",
+    name: "Layout of interface navigation elements",
+    descrption: "Linear and nested menus, dropdowns, breadcrumbs, and pagination with accessible list and link markup.",
   },
   {
-    name: "Вёрстка карточных элементов интерфейса",
-    descrption: "Закрепила навык оформления каталога товаров и его карточек с учетом доступности и гибкой сетки.",
+    name: "Layout of card interface elements",
+    descrption: "Product catalogs and cards with flexible grids and accessibility in mind.",
     projects: [
       {
-        name: "Проект \"Online smartphones store\"",
+        name: "Project \"Online smartphones store\"",
         id: "project-online-smartphones-store",
       }
     ]
   },
   {
-    name: "Вёрстка многослойных элементов интерфейса",
-    descrption: "Сформировала четкое понимание работы разных видов позиционирования, научилась создавать многослойность через grid-сетку. Отработала навык стилизации слайдеров, поп-апов, модальных окон, тултипов, липких и выпадающих элементов.",
+    name: "Layout of multilayer interface elements",
+    descrption: "Positioning, grid layering, sliders, modals, tooltips, sticky elements, and dropdowns.",
     projects: [
       {
-        name: "Проект \"Multilayer exercises\"",
+        name: "Project \"Multilayer exercises\"",
         id: "project-multilayer-exercises",
       }
     ]

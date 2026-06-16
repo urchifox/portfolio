@@ -7,22 +7,22 @@ type Contact = {
 export const contacts: Array<Contact> = [
   {
     name: "github",
-    text: "Профиль на GitHub",
+    text: "GitHub profile",
     link: "https://github.com/urchifox",
   },
   {
     name: "whatsapp",
-    text: "Написать в WhatsApp",
+    text: "Contact via WhatsApp",
     link: "https://api.whatsapp.com/send?phone=79601143943",
   },
   {
     name: "telegram",
-    text: "Написать в Telegram",
+    text: "Contact via Telegram",
     link: "https://t.me/urchifox",
   },
   {
     name: "gmail",
-    text: "Написать на почту",
+    text: "Send an email",
     link: "mailto:uchifox@gmail.com",
   },
 ];

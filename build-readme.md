@@ -1,125 +1,125 @@
-# Сборка для HTML-курсов в HTML Academy
+# Build for HTML courses at HTML Academy
 
-Сборка работает на gulp 4 версии
+The build runs on gulp version 4
 
-## Начало
+## Getting started
 
-Для работы с репозиторием на вашем компьютере потребуется _Git_ и _Node.js_. Перед началом работы убедитесь, что все программы работают. Для этого в терминале введите:
+To work with the repository on your computer, you will need _Git_ and _Node.js_. Before you start, make sure both programs work. To do this, run the following in the terminal:
 
-- для _Git_
+- for _Git_
 
   ```shell
   git --version
   ```
 
-  _Git_ примерно ответит
+  _Git_ should respond roughly with
 
   ```shell
   git version 2.42.0.windows.1
   ```
 
-  ![проверка версии git](assets/git.png)
+  ![git version check](assets/git.png)
 
-  версия не важна. Главное, что git отреагировал и написал ответ
+  the exact version does not matter. The important thing is that git responded with output
 
-- для _Node.js_
+- for _Node.js_
 
   ```shell
   node -v
   ```
 
-  _Node.js_ примерно ответит
+  _Node.js_ should respond roughly with
 
   ```shell
   v18.18.0
   ```
 
-  ![проверка версии node.js](assets/node.png)
+  ![node.js version check](assets/node.png)
 
-  важно, чтобы была действующая LTS версия (первое число — чётное), то есть не ниже 20.9 или не ниже 18.18.
+  it is important to have a current LTS version (the first number is even), that is, not lower than 20.9 or not lower than 18.18.
 
-## Установка
+## Installation
 
-1. Клонируйте репозиторий:
+1. Clone the repository:
 
     ```shell
     git clone git@github.com:htmlacademy/html2-basic-template.git
     ```
 
-2. Установите зависимости проекта:
+2. Install project dependencies:
 
     ```shell
     npm ci
     ```
 
-3. Начните работу (должен запуститься браузер):
+3. Start working (the browser should launch):
 
     ```shell
     npm start
     ```
 
-## Структура папок
+## Folder structure
 
-В каждой папке есть `README.md` файл, который имеет более полное описание по работе с папкой
+Each folder has a `README.md` file with a more detailed description of how to work with that folder
 
 ```shell
-├── .github/                      # Специальная папка для github
-│   └── workflows/                # Автоматизация для github actions
-│       ├── check.yml             # Запускает линтеры на Гитхабе
-│       └── gh-pages.yml          # Публикует проект и создаёт ссылку на проект
-├── raw/                          # Папка для «сырых» файлов (игнорируются гитом)
-│   └── images/                   # Папка для оригиналов картинок
-│       └── icons/                # Папка для оригиналов svg-иконок
-├── source/                       # Исходники проекта
-│   ├── favicons/                 # Папка для фавиконок (кроме favicon.ico)
-│   ├── fonts/                    # Папка для шрифтов
-│   ├── images/                   # Папка для оптимизированных картинок
-│   │   └── icons/                # Папка для оптимизированных svg-иконок для преобразования их в спрайт (stack)
-│   ├── scripts/                  # Скрипты
-│   │   └── index.js              # Главный скрипт
-│   ├── styles/                   # Папка для препроцессорных файлов sass
-│   │   ├── blocks/               # Стили БЭМ-блоков
-│   │   │   └── header.scss       # Стили для конкретного БЭМ-блока
-│   │   ├── global                # Файл для подключения стилей библиотек из папки
-│   │   │   ├── fonts.scss        # Подключение шрифтов к проекту
-│   │   │   ├── global.scss       # Глобальные стили, которые касаются всего проекта
-│   │   │   └── variables.scss    # Переменные для всего проекта
-│   │   └── styles.scss           # Основной стилевой файл с импортами всех остальных
-│   ├── vendor                    # Папка для сторонних бибилотек
-│   └── index.html                # HTML-файл для главной страницы
-├── .editorconfig                 # Настройки форматирования текстовых файлов
-├── .eslintrc                     # Правила для eslint
-├── .gitignore                    # Настройки игнорирования файлов для git
-├── .linthtmlrc                   # Правила для linthtml
-├── .stylelintrc                  # Правила для stylelint
-├── gulpfile.js                   # Автоматизация для Gulp
-├── package.json                  # Зависимости проекта, скрипты, настройки проекта
-├── package-lock.json             # Зависимости проекта
-└── README.md                     # Документация
+├── .github/                      # Special folder for GitHub
+│   └── workflows/                # Automation for GitHub Actions
+│       ├── check.yml             # Runs linters on GitHub
+│       └── gh-pages.yml          # Publishes the project and creates a project link
+├── raw/                          # Folder for raw files (ignored by git)
+│   └── images/                   # Folder for original images
+│       └── icons/                # Folder for original SVG icons
+├── source/                       # Project source files
+│   ├── favicons/                 # Folder for favicons (except favicon.ico)
+│   ├── fonts/                    # Folder for fonts
+│   ├── images/                   # Folder for optimized images
+│   │   └── icons/                # Folder for optimized SVG icons converted into a sprite (stack)
+│   ├── scripts/                  # Scripts
+│   │   └── index.js              # Main script
+│   ├── styles/                   # Folder for Sass preprocessor files
+│   │   ├── blocks/               # BEM block styles
+│   │   │   └── header.scss       # Styles for a specific BEM block
+│   │   ├── global                # Files for connecting library styles from the folder
+│   │   │   ├── fonts.scss        # Connecting fonts to the project
+│   │   │   ├── global.scss       # Global styles that apply to the whole project
+│   │   │   └── variables.scss    # Variables for the whole project
+│   │   └── styles.scss           # Main stylesheet with imports of all others
+│   ├── vendor                    # Folder for third-party libraries
+│   └── index.html                # HTML file for the main page
+├── .editorconfig                 # Text file formatting settings
+├── .eslintrc                     # Rules for eslint
+├── .gitignore                    # Git ignore settings
+├── .linthtmlrc                   # Rules for linthtml
+├── .stylelintrc                  # Rules for stylelint
+├── gulpfile.js                   # Gulp automation
+├── package.json                  # Project dependencies, scripts, and settings
+├── package-lock.json             # Project dependencies
+└── README.md                     # Documentation
 ```
 
-## Основные команды
+## Main commands
 
-- `npm start` - запускает сборку с сервером для разработки проекта
-- `npm run build` - создаёт папку `build` с оптимизированными файлами для продакшена
+- `npm start` — starts the build with a development server
+- `npm run build` — creates the `build` folder with optimized production files
 
-## Дополнительные команды
+## Additional commands
 
-- `npm run preview` - позволяет посмотреть результат работы prod-версии сборки
-- `npm run lint` - запускает все проверки (занимает длительное время):
-  - `npm run lint:spaces` - проверяет отступы с помощью editorConfig
-  - `npm run lint:markup` - проверяет HTML-разметку через W3C-валидатор
-  - `npm run lint:html` - проверяет разметку по правилам linthtml
-  - `npm run lint:bem` - проверяет правильное использование БЭМ в разметке
-  - `npm run lint:styles` - проверяет проект на совместимость с stylelint
-  - `npm run lint:scripts` - проверяет скрипты по правилам eslint
-- `npm run optimize` - запускает все оптимизации изображений (занимает длительное время):
-  - `npm run optimize:raster` - оптимизирует растровые изображения из `raw/images/` в `source/images/`
-  - `npm run optimize:vector` - оптимизирует векторные изображения из `raw/images/` в `source/images/`
+- `npm run preview` — lets you preview the production build result
+- `npm run lint` — runs all checks (takes a long time):
+  - `npm run lint:spaces` — checks indentation with editorConfig
+  - `npm run lint:markup` — checks HTML markup with the W3C validator
+  - `npm run lint:html` — checks markup against linthtml rules
+  - `npm run lint:bem` — checks correct BEM usage in markup
+  - `npm run lint:styles` — checks the project against stylelint
+  - `npm run lint:scripts` — checks scripts against eslint rules
+- `npm run optimize` — runs all image optimizations (takes a long time):
+  - `npm run optimize:raster` — optimizes raster images from `raw/images/` into `source/images/`
+  - `npm run optimize:vector` — optimizes vector images from `raw/images/` into `source/images/`
 
-## Работа с разметкой
+## Working with markup
 
-Все HTML-файлы с разметкой складывайте в папку `source/`.
+Place all HTML markup files in the `source/` folder.
 
 ```shell
 └── source/
@@ -128,7 +128,7 @@
     └──  form.html
 ```
 
-Из папки `source/` сборка переносит файлы в папку `build/`.
+The build copies files from `source/` into the `build/` folder.
 
 ```shell
 └── build/
@@ -137,9 +137,9 @@
     └──  form.html
 ```
 
-## Работа со стилями
+## Working with styles
 
-Все стили находятся в папке `source/styles/`.
+All styles are in the `source/styles/` folder.
 
 ```shell
 └── source/
@@ -153,7 +153,7 @@
         └── styles.scss
 ```
 
-Все БЭМ-блоки и остальные препроцессорные файлы подключайте в `source/styles/styles.scss`.
+Connect all BEM blocks and other preprocessor files in `source/styles/styles.scss`.
 
 ```scss
 /* GLOBAL */
@@ -165,9 +165,9 @@
 @import "./blocks/header.scss";
 ```
 
-БЭМ-блоки импортируйте в секцию `/* BLOCKS */`.
+Import BEM blocks in the `/* BLOCKS */` section.
 
-Все препроцессорные файлы сборка обработает и превратит в `styles.css`. Файл `styles.css` сборка перенесёт в
+The build processes all preprocessor files and turns them into `styles.css`. The build then copies `styles.css` into
 
 ```shell
 └── build/
@@ -175,26 +175,26 @@
         └── styles.css
 ```
 
-## Работа с графикой
+## Working with graphics
 
-### Растр
+### Raster
 
-Абсолютно всю растровую графику с двухкратной плотностью из макета складывайте в `raw/images/`. Здесь графика игнорируется гитом.
+Place all raster graphics at double density from the mockup in `raw/images/`. Graphics here are ignored by git.
 
-После того как добавите графику сразу запускайте команду `npm run optimize:raster` (или просто `npm run optimize`) для оптимизации графики и создания `.webp`-версии. Команду нужно запускать один раз при появлении новой графики в проекте.
+After adding graphics, immediately run `npm run optimize:raster` (or simply `npm run optimize`) to optimize the graphics and create `.webp` versions. Run the command once whenever new graphics appear in the project.
 
-Новая оптимизированная графика с разной плотностью и суффиксами плотности в именах файлов появится в `source/images`. Эту, уже оптимизированную графику нужно коммитить.
+New optimized graphics at different densities with density suffixes in file names will appear in `source/images`. Commit this already optimized graphics.
 
-### Вектор
+### Vector
 
-Контентную векторную графику (логотип, графики, иллюстрации) также складывайте в `raw/images/`. Запуск команды `npm run optimize:vector` (или просто `npm run optimize`) поместит оптимизированные копии этих svg-файлов в `source/images/`
+Also place content vector graphics (logo, charts, illustrations) in `raw/images/`. Running `npm run optimize:vector` (or simply `npm run optimize`) will place optimized copies of these SVG files in `source/images/`
 
 ```shell
 └── raw/
     └── images/
 ```
 
-Векторную графику для спрайта (иконки) складывайте в `raw/images/icons/`.
+Place vector graphics for the sprite (icons) in `raw/images/icons/`.
 
 ```shell
 └── raw/
@@ -202,7 +202,7 @@
         └── icons/
 ```
 
-Запуск команды `npm run optimize:vector` поместит оптимизированные копии этих svg-файлов в `source/images/icons/`.
+Running `npm run optimize:vector` will place optimized copies of these SVG files in `source/images/icons/`.
 
 ```shell
 └── source/
@@ -210,13 +210,13 @@
         └── icons/
 ```
 
-При сборке автоматизация перенесёт всю графику из `source/images/` в `build/images/`, а из иконок в `source/images/icons/` создаст спрайт `build/images/icons/stack.svg`.
+During the build, automation copies all graphics from `source/images/` into `build/images/`, and creates the sprite `build/images/icons/stack.svg` from icons in `source/images/icons/`.
 
 ```shell
 └── build/
     └── images/
-        ├── icons/                # папка для спрайта
-        │   └── stack.svg         # спрайт
+        ├── icons/                # folder for the sprite
+        │   └── stack.svg         # sprite
         ├── bg.jpg
         ├── bg.webp
         ├── hero.png
@@ -224,11 +224,11 @@
         └── logo.svg
 ```
 
-### Фавиконки
+### Favicons
 
-Варианты фавиконок форматов PNG и SVG следует размещать в `source/favicons/`.
+Place PNG and SVG favicon variants in `source/favicons/`.
 
-Файлы `favicon.ico` и `manifest.webmanifest` — в `source/`:
+Place `favicon.ico` and `manifest.webmanifest` in `source/`:
 
 ```shell
 └── source/
@@ -241,9 +241,9 @@
     └── manifest.webmanifest
 ```
 
-## Работа со шрифтами
+## Working with fonts
 
-Все шрифтовые файлы лежат в `source/fonts/`. Сборка переносит их в `build/fonts/`.
+All font files are in `source/fonts/`. The build copies them into `build/fonts/`.
 
 ```shell
 └── build/
@@ -253,9 +253,9 @@
 
 ```
 
-## Работа со скриптами
+## Working with scripts
 
-Все скрипты лежат в `source/scripts/`.
+All scripts are in `source/scripts/`.
 
 ```shell
 └── source/
@@ -264,7 +264,7 @@
         └── modal.js
 ```
 
-Сборка переносит их в `build/scripts/`.
+The build copies them into `build/scripts/`.
 
 ```shell
 └── build/
@@ -273,13 +273,13 @@
         └── modal.js
 ```
 
-## Работа со сторонними библиотеками
+## Working with third-party libraries
 
-Для удобства внесения сторонних библиотек в ваш проект, вы можете использовать папку `source/vendor/`. В этой папке вы можете размещать любые файлы, связанные с внешними библиотеками.
+To make it easier to add third-party libraries to your project, you can use the `source/vendor/` folder. You can place any files related to external libraries in this folder.
 
-Например, предположим, что вы хотите добавить в проект библиотеку, которая включает в себя как стилевой файл `library.css`, так и скрипты `library.js`. Чтобы интегрировать их в ваш проект, следуйте этим шагам:
+For example, suppose you want to add a library that includes both a stylesheet `library.css` and scripts `library.js`. To integrate them into your project, follow these steps:
 
-Положите файлы библиотеки в папку `source/vendor/`, как показано ниже:
+Place the library files in the `source/vendor/` folder as shown below:
 
 ```shell
 └── source/
@@ -288,7 +288,7 @@
         └── library.js
 ```
 
-Если у вас есть несколько библиотек с разными файлами, вы можете группировать файлы одной библиотеки в ее собственную подпапку. Например:
+If you have several libraries with different files, you can group the files of one library in its own subfolder. For example:
 
 ```shell
 └── source/
@@ -298,7 +298,7 @@
             └── library.js
 ```
 
-При сборке вашего проекта, все файлы из папки `source/vendor/` будут включены в папку `build/vendor/`, сохраняя их структуру. Например:
+When your project is built, all files from `source/vendor/` are copied into `build/vendor/` while preserving their structure. For example:
 
 ```shell
 └── build/
@@ -308,4 +308,4 @@
             └── library.js
 ```
 
-Таким образом, вы можете удобно организовать и внедрить сторонние библиотеки в ваш проект, сохраняя их структуру в папке `source/vendor/`.
+This way, you can conveniently organize and integrate third-party libraries into your project while keeping their structure in the `source/vendor/` folder.

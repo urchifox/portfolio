@@ -7,21 +7,21 @@ type Skill = {
 
 export const skills: Array<Skill> = [
   {
-    text: "Пишу валидную семантическую разметку, знаю базовые правила доступного интерфейса, умею валидировать формы",
+    text: "Write valid semantic markup and build accessible interfaces",
     items: [
       stackName.html,
       stackName.pug,
     ],
   },
   {
-    text: "Строю адаптивные резиновые интерфейсы, уверенно использую flex и grid сетки, оптимизирую работу с помощью кастомных свойств и переменных, владею подходами CSS Modules и CSS-in-JS",
+    text: "Build adaptive responsive interfaces, use flex and grid layouts, optimize style systems with custom properties and variables, work with CSS Modules and CSS-in-JS",
     items: [
       stackName.css,
       stackName.sass,
     ],
   },
   {
-    text: "Уверенно пишу как на TypeScript, так и на ванильном JS, знакома с React, умею работать с асинхронными операциями, понимаю принципы работы различных алгоритмов, знакома с понятием “О” большое, думаю об алгоритмической сложности при написании кода",
+    text: "Write confidently in both TypeScript and vanilla JS, am familiar with React, work with asynchronous operations, understand how various algorithms work, know Big O notation, and consider algorithmic complexity when writing code",
     items: [
       stackName.js,
       stackName.ts,
@@ -30,20 +30,20 @@ export const skills: Array<Skill> = [
     ],
   },
   {
-    text: "Умею работать с системой контроля версий GIT, знаю основные команды по работе с репозиторием, как работать в ветках и форках",
+    text: "Work with the GIT version control system, know the main repository commands, and how to work with branches and forks",
     items: [
       stackName.git,
       stackName.github,
     ],
   },
   {
-    text: "Умею делить интерфейс на переиспользуемые и независимые компоненты.",
+    text: "Split interfaces into reusable and independent components.",
     items: [
       stackName.bem,
     ],
   },
   {
-    text: "Имею опыт работы на проектах с настроенной автоматизацией (vite, webpack, gulp) и использованием npm-пакетов",
+    text: "Experienced with configured build tools (vite, webpack, gulp) and npm packages",
     items: [
       stackName.vite,
       stackName.webpack,
