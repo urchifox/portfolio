@@ -51,6 +51,7 @@
   text-align: left;
   word-break: break-word;
 
+  transition: color $transition-basic;
   cursor: pointer;
 
   &:hover {
@@ -79,6 +80,7 @@
 
 .projects__filters-count {
   color: var(--color-text-secondary);
+  transition: color $transition-basic;
 
   :where(:disabled, :active, :hover) > & {
     color: inherit;

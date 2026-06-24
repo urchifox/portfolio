@@ -60,6 +60,7 @@
 .career-card__company-name {
   font-weight: $font-weight-bold;
   color: var(--color-interactive-basic);
+  transition: color $transition-basic;
 
   &:hover {
     color: var(--color-interactive-secondary);
