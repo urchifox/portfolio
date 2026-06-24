@@ -1,5 +1,9 @@
 {
   "root": true,
+  "ignorePatterns": [
+    "build/**",
+    "vendor/**"
+  ],
   "parserOptions": {
     "ecmaVersion": 2022,
     "sourceType": "module"
