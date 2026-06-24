@@ -1,4 +1,4 @@
-# Папка для глобальных стилей
+# Folder for global styles
 
 _fonts.scss_
 ```scss

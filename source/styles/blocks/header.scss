@@ -64,7 +64,7 @@
     grid-column: 1 / -1;
     grid-row: 2 / 3;
 
-    // TODO добавить анимацию выдвигания меню при клике на кнопку
+    // TODO add slide-out menu animation on button click
     :has(.header__menu-toggle:not(:checked)) & {
       display: none;
     }

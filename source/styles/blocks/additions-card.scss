@@ -10,7 +10,7 @@
   gap: $font-size-xxs;
   align-items: center;
 
-  background-color: var(--color-text-secondary);
+  background-color: var(--color-background-secondary);
 }
 
 .additions-card__title {
@@ -45,6 +45,7 @@
   word-break: break-word;
 
   background-color: transparent;
+  transition: color $transition-basic;
   cursor: pointer;
 
   &:hover {

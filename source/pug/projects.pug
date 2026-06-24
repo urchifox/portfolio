@@ -1,8 +1,8 @@
 section#projects(class="main__section section container")
-  h2(class="section__title title") Проекты
+  h2(class="section__title title") Projects
   div(class="section__subsection subsection projects ")
     ul(class="projects__filters-list")
-      each filter, index in [{all: "Все проекты"}, {diploma: "Дипломные проекты"}, {trainig: "Тренировки навыков"}, {personal: "Личные проекты"}]
+      each filter, index in [{all: "All projects"}, {diploma: "Diploma projects"}, {trainig: "Practice projects"}, {personal: "Personal projects"}]
         - const key = Object.keys(filter)[0]
         - const value = filter[key]
         li(class="projects__filters-item")
@@ -23,9 +23,9 @@ section#projects(class="main__section section container")
                   span(class="visually-hidden")= tool.text
             div(class="project-card__buttons-wrapper")
               a(class="project-card__button button button--icon-github" href=project.github)
-                span(class="visually-hidden") Проект на github
+                span(class="visually-hidden") Project on GitHub
               a(class="project-card__button button button--icon-external-link" href=project.webpage)
-                span(class="visually-hidden") Публикация проекта
+                span(class="visually-hidden") Live demo
             div(class="project-card__slider")
               for image in project.images
                   picture
@@ -48,4 +48,4 @@ section#projects(class="main__section section container")
                       src=`./images/cover-${image}-small@1x.jpg`,
                       srcset=`./images/$cover-${image}-small@2x.jpg 2x`,
                       width="689" height="387",
-                      alt="Скриншот страницы проекта")
+                      alt="Screenshot of the live-demo")

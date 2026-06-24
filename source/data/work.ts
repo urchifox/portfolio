@@ -2,7 +2,7 @@ import { companies, CompanyInfo } from "./companies";
 
 type WorkItem = {
   title: string;
-  company: CompanyInfo
+  company: CompanyInfo;
   dateStart: string;
   dateEnd: string;
   tasks: string;
@@ -12,43 +12,46 @@ type WorkItem = {
 
 export const work: Array<WorkItem> = [
   {
-    title: "Frontend разработчик",
+    title: "Frontend developer",
     company: companies.websovet,
-    dateStart: "Май 2024",
-    dateEnd: "по настящее время",
-    tasks: "Реализация функционала игр и их интерфейсов, обеспечение кроссбраузерной и кроссплатформенной совместимости.",
-    tools: "TypeScript, Phaser, Vite.",
+    dateStart: "May 2024",
+    dateEnd: "present",
+    tasks:
+      "Build and maintain browser games in a shared codebase across 18 projects. Review code, contribute to architecture, deliver responsive UI with cross-browser and cross-platform compatibility, and implement complex UI animations.",
+    tools: "TypeScript, Phaser, HTML, CSS, Vite.",
     progress: [
-      "Самостоятельно разработала три игры (жанры idle, рулетка и рикошет) и одну игру в жанре merge в паре с другим разработчиком. В настоящее время разрабатываю игру в жанре tile-matching.",
-      "Разработала мету — раздел приложения, в котором игрок тратит заработанные ресурсы для продвижения по сюжету.",
-      "Реализовала систему смены скинов игры для сборки игр с разным визуальным контентом.",
-      "Разработала графический редактор уровней и редактор конфигурации игровых объектов с сохранением данных в JSON-формате.",
+      "Shipped 5 browser games from concept to production release.",
+      "Built a meta-game layer that drives long-term player engagement.",
+      "Created a skinning system for releasing branded game variants through build-time configuration.",
+      "Designed an internal web-based level editor enabling content managers to create and manage game levels.",
+      "Collaborated closely with the UI/UX designer, contributing to interface design decisions and building reusable UI component libraries, improving consistency and maintainability.",
     ],
   },
   {
-    title: "Zero-code разработчик",
+    title: "Zero-code developer",
     company: companies.grafit,
-    dateStart: "Январь 2022",
-    dateEnd: "Июнь 2024",
-    tasks: "Разработка, оптимизация и автоматизация рабочих процессов.",
-    tools: "Google Sheets, AppScript, AppSheet,  Notion, Битрикс24.",
+    dateStart: "January 2022",
+    dateEnd: "May 2024",
+    tasks:
+      "Designed and integrated tools to optimize and automate business processes.",
+    tools: "Google Sheets, AppScript, AppSheet, Notion, Bitrix24.",
     progress: [
-      "Внедрила и адаптировала CRM-систему, сопроводила ее документацией для менеджеров.",
-      "Разработала аналитическую таблицу для оценки успешности продуктов студии.",
-      "Создала набор аналитических таблиц для анализа окупаемости проектов на основе затрат и выручки.",
-      "Разработала систему фильтрации и каталогизации продуктов компании.",
+      "Customized and implemented an HR CRM that improved recruitment and onboarding visibility.",
+      "Built an analytics tool for evaluating profitability using project tracking and payroll data.",
+      "Developed a product cataloging system and a data storage structure enabling fast product search and filtering for internal use.",
     ],
   },
   {
-    title: "Middle / Lead 2D-художник",
+    title: "Middle / Lead 2D artist",
     company: companies.grafit,
-    dateStart: "Февраль 2019",
-    dateEnd: "Декабрь 2021",
-    tasks: "Создание арт-контента для видео-игр, на отдельных проектах контроль качества и доведение других работ до финального результата.",
-    tools: "",
+    dateStart: "February 2019",
+    dateEnd: "December 2021",
+    tasks:
+      "Created art content for games, conducted quality control, and delivered final polish.",
+    tools: "Adobe Photoshop",
     progress: [
-      "Написала стайл-гайд для разработки визуального контента мобильной игры.",
-      "Разработала пайплайн подготовки иллюстраций под анимацию или импорт в движок, провела обучение исполнителей и успешно делегировала дальнейший контроль над работой.",
+      "Led a team of up to 7 artists, providing feedback, ensuring visual consistency, and defining style guidelines for the project.",
+      "Developed and documented a pipeline for 2D animation asset preparation, trained a team of 5, and subsequently delegated quality control responsibilities.",
     ],
   },
 ];

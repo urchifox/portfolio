@@ -1,17 +1,17 @@
-# Папка для оригиналов изображений
+# Folder for original images
 
-Сюда нужно скидывать неоптимизированные:
+Place unoptimized files here:
 
-1. контентные `svg` (не иконки), например логотип.
-2. `png` и `jpg` двойной плотности пикселей.
+1. content `svg` files (not icons), for example a logo.
+2. double-density `png` and `jpg` files.
 
-Для каждого растрового изображения в этой папке запуск команды `npm run optimize` создат в `source/images`:
+For each raster image in this folder, running `npm run optimize` creates files in `source/images`:
 
-- оптимизированную копию с суффиксом `@2x`,
-- оптимизированную уменьшенную в 2 раза копию с суффиксом `@1x`,
-- копию в прогрессивном формате `webp` с суффиксом `@2x`,
-- уменьшенную в 2 раза копию в формате `webp` с суффиксом `@1x`.
+- an optimized copy with the `@2x` suffix,
+- an optimized copy scaled down by 2x with the `@1x` suffix,
+- a progressive `webp` copy with the `@2x` suffix,
+- a `webp` copy scaled down by 2x with the `@1x` suffix.
 
-Эта же команда создаст оптимизированную копию каждого векторного изображения. Или можно запускать отдельно для растра `npm run optimize:raster` и отдельно для вектора `npm run optimize:vector`.
+The same command also creates an optimized copy of each vector image. You can also run raster optimization separately with `npm run optimize:raster` and vector optimization with `npm run optimize:vector`.
 
-После оптимизации оригиналы можно удалить, чтобы повторный запуск для новых изображений не генерировал заново уже имеющиеся файлы.
+After optimization, you can delete the originals so rerunning the command for new images does not regenerate files that already exist.

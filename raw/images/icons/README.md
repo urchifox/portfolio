@@ -1,3 +1,3 @@
-# Папка для оригиналов иконок
+# Folder for original icons
 
-Сюда нужно скидывать неоптимизированные svg-иконки. Для каждой из них запуск команды `npm run optimize:vector` создат в `source/images/icons` оптимизированную копию.
+Place unoptimized SVG icons here. For each one, running `npm run optimize:vector` creates an optimized copy in `source/images/icons`.

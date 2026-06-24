@@ -1,4 +1,4 @@
-# Папка для оптимизированных векторных иконок
+# Folder for optimized vector icons
 
 ```shell
 └── source/
@@ -9,11 +9,11 @@
             └── yt.svg
 ```
 
-Находящиеся здесь иконки станут одним спрайтом:
+Icons placed here are combined into a single sprite:
 
 ```shell
 └── build/
     └── images/
-        └── icons/                # папка для спрайта
-            └── stack.svg         # спрайт
+        └── icons/                # folder for the sprite
+            └── stack.svg         # sprite
 ```

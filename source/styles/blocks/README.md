@@ -1,4 +1,4 @@
-# Папка для стилей БЭМ-блоков
+# Folder for BEM block styles
 
 _header.scss_
 

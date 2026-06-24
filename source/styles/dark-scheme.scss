@@ -1,16 +1,16 @@
 :root {
-  --color-background-basic: var(--color-basic-dark);
-  --color-background-secondary: var(--color-basic-medium-dark);
-  --color-background-accent: var(--color-basic-medium-light);
+  --color-background-basic: hsl(255, 20%, 25%);
+  --color-background-secondary: hsl(225, 25%, 45%);
+  --color-background-accent: hsl(225, 35%, 65%);
 
-  --color-text-basic: var(--color-basic-light);
-  --color-text-secondary: var(--color-basic-medium);
-  --color-text-accent: var(--color-accent-medium-light);
+  --color-text-basic: hsl(255, 100%, 98%);
+  --color-text-secondary: hsl(225, 33%, 73%);
+  --color-text-accent: hsl(275, 33%, 70%);
 
-  --color-interactive-basic: var(--color-accent-medium);
-  --color-interactive-secondary: var(--color-accent-medium-dark);
-  --color-interactive-accent: var(--color-accent-medium-dark);
-  --color-interactive-disabled: var(--color-basic-medium-dark);
+  --color-interactive-basic: hsl(275, 64%, 71%);
+  --color-interactive-secondary: hsl(275, 90%, 81%);
+  --color-interactive-accent: hsl(275, 100%, 90%);
+  --color-interactive-disabled: hsl(225, 26%, 59%);
 
   color-scheme: dark;
 }

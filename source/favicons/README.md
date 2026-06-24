@@ -1,11 +1,11 @@
-# Папка для фавиконок
+# Folder for favicons
 
-Здесь должны находиться все необходимые варианты фавиконок, кроме `favicon.ico`, который должен быть в `source/`.
+All required favicon variants should be placed here, except for `favicon.ico`, which should be in `source/`.
 
 ```shell
 └── source/
     └── favicons/
-        ├── 180.png   # для старых iPhone
+        ├── 180.png   # for older iPhones
         ├── 192.png
         ├── 512.png
         └── icon.svg

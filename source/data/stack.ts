@@ -38,7 +38,7 @@ export const stackName: Record<string, Stack> = {
   },
   bem: {
     name: "bem",
-    text: "БЭМ",
+    text: "BEM",
   },
   git: {
     name: "git",

@@ -1,9 +1,10 @@
-# Папка для стилей, скриптов, картинок и других папок от сторонних библиотек
-Для удобства внесения сторонних библиотек в ваш проект, вы можете использовать папку vendor. В этой папке вы можете размещать любые файлы, связанные с внешними библиотеками.
+# Folder for styles, scripts, images, and other files from third-party libraries
 
-Например, предположим, что вы хотите добавить в проект библиотеку, которая включает в себя как стилевой файл library.css, так и скрипты library.js. Чтобы интегрировать их в ваш проект, следуйте этим шагам:
+To make it easier to add third-party libraries to your project, you can use the vendor folder. You can place any files related to external libraries in this folder.
 
-Положите файлы библиотеки в папку vendor, как показано ниже:
+For example, suppose you want to add a library that includes both a stylesheet `library.css` and scripts `library.js`. To integrate them into your project, follow these steps:
+
+Place the library files in the vendor folder as shown below:
 
 ```bash
 ├── source/
@@ -12,7 +13,8 @@
 │        └── library.js
 ```
 
-Если у вас есть несколько библиотек с разными файлами, вы можете группировать файлы одной библиотеки в ее собственную подпапку. Например:
+If you have several libraries with different files, you can group the files of one library in its own subfolder. For example:
+
 ```bash
 ├── source/
 │   └── vendor/
@@ -21,7 +23,8 @@
 │             └── library.js
 ```
 
-При сборке вашего проекта, все файлы из папки vendor будут включены в папку build, сохраняя их структуру. Например:
+When your project is built, all files from the vendor folder are copied into the build folder while preserving their structure. For example:
+
 ```bash
 ├── build/
 │   └── vendor/
@@ -30,4 +33,4 @@
 │             └── library.js
 ```
 
-Таким образом, вы можете удобно организовать и внедрить сторонние библиотеки в ваш проект, сохраняя их структуру в папке vendor.
+This way, you can conveniently organize and integrate third-party libraries into your project while keeping their structure in the vendor folder.

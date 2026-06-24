@@ -1,8 +1,8 @@
 import { isHtmlButtonElement, isHtmlDetailsElement, isHtmlElement, queryElements } from "./utils";
 
 const ButtonText = {
-  CLOSED: 'Раскрыть все',
-  OPENED: 'Свернуть все',
+  CLOSED: 'Expand all',
+  OPENED: 'Collapse all',
 } as const;
 
 const ContentClass = {

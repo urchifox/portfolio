@@ -1,103 +1,103 @@
 # CV & Porfolio
 
-## О проекте
+## About the project
 
-*Находится в активной разработке*
+*Under active development*
 
-Это полностью самостоятельный проект-портфолио, написанный с целью дополнить мое резюме и сгруппировать информацию о моем опыте в одном месте. Для этого проекта я  сформировала техзадание и создала макет в Figma для 3-х состояний сайта на экранах разного размера.
+This is a fully independent portfolio project created to supplement my resume and gather information about my experience in one place. For this project I wrote the technical specification and created a Figma mockup for three site states across different screen sizes.
 
-В качестве критериев качества кода я придерживаюсь кодгайда школы [HTML Academy](https://htmlacademy.ru/) (критерии защиты дипломных проектов на курсах школы и линтеры). В некоторых случаях я сознательно отступила от части правил или изменила их. Так например:
-- соблюдаю порядок нестинга, предложенный [Сергеем Артемовым](https://github.com/firefoxic), где разрешено вкладывать в псевдо-классы и в бэм-модификаторы другие модификаторы, но только предыдущие по списку:
-  1. все общие свойства самой сущности
-  2. @media только со свойствами самой сущности
+As code quality criteria I follow the [HTML Academy](https://htmlacademy.ru/) code guide (diploma project defense criteria from the school's courses and linters). In some cases I deliberately deviated from or adjusted certain rules. For example:
+- I follow the nesting order proposed by [Sergey Artemov](https://github.com/firefoxic), where it is allowed to nest other modifiers inside pseudo-classes and BEM modifiers, but only those that come earlier in the list:
+  1. all common properties of the element itself
+  2. @media only with properties of the element itself
   3. &:pseudo-classes
   4. &--bem_modifiers
   5. &:pseudo-elements
 
-- использую замыкание стилей, основываясь на идее [Вадима Макеева](https://github.com/pepelsbey), где стили для каждого размера экрана пишутся в отдельном media-выражении (а не переопределяются каскадом);
+- I use style encapsulation based on [Vadim Makeev's](https://github.com/pepelsbey) idea, where styles for each screen size are written in a separate media query (rather than overridden through the cascade);
 
-- придерживаюсь следующего порядка стилей:
-  1. Позиционирование
-  2. Блочная модель
-  3. Типографика
-  4. Оформление
-  5. Анимация
-  6. Разное
+- I follow this order of style properties:
+  1. Positioning
+  2. Box model
+  3. Typography
+  4. Visual styling
+  5. Animation
+  6. Miscellaneous
 
-### Наиболее интересные и сложные задачи проекта
-- **Настройка и переключение цветовых тем** - я взяла за основу реализацию [Вадима Макеева](https://github.com/pepelsbey), которую он разбирал в видео-роликах ([часть 1](https://www.youtube.com/watch?v=Qwuyeo7iuNY), [часть 2](https://www.youtube.com/watch?v=8LFbS78a4Rw&t=1082s)), но адаптировала под свой дизайн, слегка изменив логику скрипта.
-- **Использование относительных единиц измерения** - все размеры шрифтов, а также расстояния между элементами привязаны к базовому размеру шрифта.
-- **Работа с новыми для меня элементами** - изучила нюансы работы тегов details и dialog.
+### Most interesting and challenging project tasks
+- **Theme setup and switching** — I based my implementation on [Vadim Makeev's](https://github.com/pepelsbey) approach from his video tutorials ([part 1](https://www.youtube.com/watch?v=Qwuyeo7iuNY), [part 2](https://www.youtube.com/watch?v=8LFbS78a4Rw&t=1082s)), but adapted it to my design and slightly changed the script logic.
+- **Using relative units** — all font sizes and spacing between elements are tied to the base font size.
+- **Working with new elements** — I learned the nuances of the details and dialog tags.
 
-## Структура папок
+## Folder structure
 
-В каждой папке есть `README.md` файл, который имеет более полное описание по работе с папкой
+Each folder has a `README.md` file with a more detailed description of how to work with that folder
 
 ```shell
-├── .github/                      # Специальная папка для github
-│   └── workflows/                # Автоматизация для github actions
-│       ├── check.yml             # Запускает линтеры на Гитхабе
-│       └── gh-pages.yml          # Публикует проект и создаёт ссылку на проект
-├── raw/                          # Папка для «сырых» файлов (игнорируются гитом)
-│   └── images/                   # Папка для оригиналов картинок
-│       └── icons/                # Папка для оригиналов svg-иконок
-├── source/                       # Исходники проекта
-│   ├── favicons/                 # Папка для фавиконок (кроме favicon.ico)
-│   ├── fonts/                    # Папка для шрифтов
-│   ├── images/                   # Папка для оптимизированных картинок
-│   │   └── icons/                # Папка для оптимизированных svg-иконок для преобразования их в спрайт (stack)
-│   ├── scripts/                  # Скрипты
-│   │   └── index.js              # Главный скрипт
-│   ├── styles/                   # Папка для препроцессорных файлов sass
-│   │   ├── blocks/               # Стили БЭМ-блоков
-│   │   │   └── header.scss       # Стили для конкретного БЭМ-блока
-│   │   ├── global                # Файл для подключения стилей библиотек из папки
-│   │   │   ├── fonts.scss        # Подключение шрифтов к проекту
-│   │   │   ├── global.scss       # Глобальные стили, которые касаются всего проекта
-│   │   │   └── variables.scss    # Переменные для всего проекта
-│   │   └── styles.scss           # Основной стилевой файл с импортами всех остальных
-│   ├── vendor                    # Папка для сторонних бибилотек
-│   └── index.html                # HTML-файл для главной страницы
-├── .editorconfig                 # Настройки форматирования текстовых файлов
-├── .eslintrc                     # Правила для eslint
-├── .gitignore                    # Настройки игнорирования файлов для git
-├── .linthtmlrc                   # Правила для linthtml
-├── .stylelintrc                  # Правила для stylelint
-├── gulpfile.js                   # Автоматизация для Gulp
-├── package.json                  # Зависимости проекта, скрипты, настройки проекта
-├── package-lock.json             # Зависимости проекта
-└── README.md                     # Документация
+├── .github/                      # Special folder for GitHub
+│   └── workflows/                # Automation for GitHub Actions
+│       ├── check.yml             # Runs linters on GitHub
+│       └── gh-pages.yml          # Publishes the project and creates a project link
+├── raw/                          # Folder for raw files (ignored by git)
+│   └── images/                   # Folder for original images
+│       └── icons/                # Folder for original SVG icons
+├── source/                       # Project source files
+│   ├── favicons/                 # Folder for favicons (except favicon.ico)
+│   ├── fonts/                    # Folder for fonts
+│   ├── images/                   # Folder for optimized images
+│   │   └── icons/                # Folder for optimized SVG icons converted into a sprite (stack)
+│   ├── scripts/                  # Scripts
+│   │   └── index.js              # Main script
+│   ├── styles/                   # Folder for Sass preprocessor files
+│   │   ├── blocks/               # BEM block styles
+│   │   │   └── header.scss       # Styles for a specific BEM block
+│   │   ├── global                # Files for connecting library styles from the folder
+│   │   │   ├── fonts.scss        # Connecting fonts to the project
+│   │   │   ├── global.scss       # Global styles that apply to the whole project
+│   │   │   └── variables.scss    # Variables for the whole project
+│   │   └── styles.scss           # Main stylesheet with imports of all others
+│   ├── vendor                    # Folder for third-party libraries
+│   └── index.html                # HTML file for the main page
+├── .editorconfig                 # Text file formatting settings
+├── .eslintrc                     # Rules for eslint
+├── .gitignore                    # Git ignore settings
+├── .linthtmlrc                   # Rules for linthtml
+├── .stylelintrc                  # Rules for stylelint
+├── gulpfile.js                   # Gulp automation
+├── package.json                  # Project dependencies, scripts, and settings
+├── package-lock.json             # Project dependencies
+└── README.md                     # Documentation
 ```
-## О сборке
+## About the build
 
-Сборка работает на gulp 4 версии.
+The build runs on gulp version 4.
 
-### Основные команды
+### Main commands
 
-- `npm start` - запускает сборку с сервером для разработки проекта
-- `npm run build` - создаёт папку `build` с оптимизированными файлами для продакшена
+- `npm start` — starts the build with a development server
+- `npm run build` — creates the `build` folder with optimized production files
 
-### Дополнительные команды
+### Additional commands
 
-- `npm run preview` - позволяет посмотреть результат работы prod-версии сборки
-- `npm run lint` - запускает все проверки (занимает длительное время):
-  - `npm run lint:spaces` - проверяет отступы с помощью editorConfig
-  - `npm run lint:markup` - проверяет HTML-разметку через W3C-валидатор
-  - `npm run lint:html` - проверяет разметку по правилам linthtml
-  - `npm run lint:bem` - проверяет правильное использование БЭМ в разметке
-  - `npm run lint:styles` - проверяет проект на совместимость с stylelint
-  - `npm run lint:scripts` - проверяет скрипты по правилам eslint
-- `npm run optimize` - запускает все оптимизации изображений (занимает длительное время):
-  - `npm run optimize:raster` - оптимизирует растровые изображения из `raw/images/` в `source/images/`
-  - `npm run optimize:vector` - оптимизирует векторные изображения из `raw/images/` в `source/images/`
+- `npm run preview` — lets you preview the production build result
+- `npm run lint` — runs all checks (takes a long time):
+  - `npm run lint:spaces` — checks indentation with editorConfig
+  - `npm run lint:markup` — checks HTML markup with the W3C validator
+  - `npm run lint:html` — checks markup against linthtml rules
+  - `npm run lint:bem` — checks correct BEM usage in markup
+  - `npm run lint:styles` — checks the project against stylelint
+  - `npm run lint:scripts` — checks scripts against eslint rules
+- `npm run optimize` — runs all image optimizations (takes a long time):
+  - `npm run optimize:raster` — optimizes raster images from `raw/images/` into `source/images/`
+  - `npm run optimize:vector` — optimizes vector images from `raw/images/` into `source/images/`
 
-## Что планируется в дальнейшем
-- Проработать анимации, как интерактивные, так и параллакс-эффекты при скролле.
-- В карточках проектов сделать слайдер со скриншотами сайтов.
-- Подключить библиотеку для проверки орфографии и расстановки типографических символов (например, неразрывных пробелов).
-- Подключить пакет для автоматического форматирования порядка стилей.
+## Planned next steps
+- Improve animations, both interactive ones and parallax effects on scroll.
+- Add a screenshot slider to project cards.
+- Integrate a library for spell checking and typographic symbols (for example, non-breaking spaces).
+- Add a package for automatic style property ordering.
 
-## Права и источники
-Все векторные изображения взяты из библиотеки [Google Fonts](https://fonts.google.com/icons).
-Все шрифты взяты из библиотеки [Google Fonts](https://fonts.google.com/).
-Сборка взята из [репозитория HTML Academy](https://github.com/htmlacademy/html2-basic-template).
+## Rights and sources
+All vector images are taken from the [Google Fonts](https://fonts.google.com/icons) library.
+All fonts are taken from the [Google Fonts](https://fonts.google.com/) library.
+The build is taken from the [HTML Academy repository](https://github.com/htmlacademy/html2-basic-template).

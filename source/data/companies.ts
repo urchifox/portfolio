@@ -8,11 +8,11 @@ export const companies: Record<string, CompanyInfo> = {
   websovet: {
     name: "Websovet",
     link: "https://websovet.ru/gamedev",
-    description: "студия разработки casual-игр"
+    description: "browser games studio"
   },
   grafit: {
     name: "Grafit",
     link: "https://www.grafitart.com/",
-    description: "аутсорс арт-студия"
+    description: "game art outsourcing studio"
   },
 }

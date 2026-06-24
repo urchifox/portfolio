@@ -1,5 +1,5 @@
 section#work(class="main__section section container")
-  h2(class="section__title title") Опыт работы
+  h2(class="section__title title") Work experience
   ul(class="section__career-list career-list")
     each workItem in work
       li(class="career-list__career-card career-card")
@@ -11,13 +11,13 @@ section#work(class="main__section section container")
         p(class="career-card__date") #{workItem.dateStart}&thinsp;&#8211;&thinsp;#{workItem.dateEnd}
         div(class="career-card__column-wrapper")
           div(class="career-card__column-item")
-            h4(class="career-card__subtitle") Задачи:
+            h4(class="career-card__subtitle") Responsibilities:
             p(class="career-card__text")= workItem.tasks
           if workItem.tools
             div(class="career-card__column-item")
-              h4(class="career-card__subtitle") Использовала:
+              h4(class="career-card__subtitle") Tools used:
               p(class="career-card__text")= workItem.tools
-        p(class="career-card__subtitle") Достижения:
+        p(class="career-card__subtitle") Achievements:
         ul(class="career-card__description-list career-card__column-wrapper")
           each progress in workItem.progress
             li(class="career-card__description-item career-card__column-item")= progress

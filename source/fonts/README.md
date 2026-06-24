@@ -1,4 +1,4 @@
-# Папка для шрифтов
+# Folder for fonts
 
 ```shell
 └── source/
@@ -7,7 +7,7 @@
         └── pt-sans-700.woff2
 ```
 
-Если в проекте используется несколько шрифтов, то для каждого семейства можно использовать отдельную папку:
+If the project uses several fonts, you can use a separate folder for each family:
 
 ```shell
 └── source/

@@ -6,26 +6,26 @@ type Section = {
 export const sections: Array<Section> = [
   {
     name: "about",
-    text: "Обо мне",
+    text: "About",
   },
   {
     name: "skills",
-    text: "Стек",
+    text: "Stack",
   },
   {
     name: "work",
-    text: "Опыт",
+    text: "Experience",
   },
   {
     name: "projects",
-    text: "Проекты",
+    text: "Projects",
   },
   {
     name: "learning",
-    text: "Обучение",
+    text: "Education",
   },
   {
     name: "additions",
-    text: "Дополнительно",
+    text: "Beyond code",
   },
 ];
