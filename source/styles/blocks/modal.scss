@@ -46,8 +46,8 @@
   height: 50px;
   border-radius: 50%;
   background:
-    radial-gradient(farthest-side, var(--color-accent-medium) 94%, rgba(0, 0, 0, 0)) top/8px 8px no-repeat,
-    conic-gradient(rgba(0, 0, 0, 0) 30%, var(--color-accent-medium));
+    radial-gradient(farthest-side, var(--color-interactive-basic) 94%, rgba(0, 0, 0, 0)) top/8px 8px no-repeat,
+    conic-gradient(rgba(0, 0, 0, 0) 30%, var(--color-interactive-basic));
   mask-image: radial-gradient(farthest-side, rgba(0, 0, 0, 0) calc(100% - 8px), rgb(0, 0, 0) 0);
   animation: spinner 1s infinite linear;
 }
