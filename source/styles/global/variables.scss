@@ -43,19 +43,6 @@ $border-standard: 1px solid var(--color-background-secondary);
 $shadow-standard: 0 0 $font-size-xxs 1px var(--color-background-secondary);
 
 :root {
-  // COLORS
-  --color-basic-dark: hsl(255, 25%, 40%);
-  --color-basic-medium-dark: hsl(225, 26%, 59%);
-  --color-basic-medium: hsl(225, 33%, 73%);
-  --color-basic-medium-light: hsl(225, 44%, 86%);
-  --color-basic-light: hsl(255, 100%, 98%);
-
-  --color-accent-dark: hsl(275, 33%, 49%);
-  --color-accent-medium-dark: hsl(275, 47%, 62%);
-  --color-accent-medium: hsl(275, 64%, 71%);
-  --color-accent-medium-light: hsl(275, 90%, 81%);
-  --color-accent-light: hsl(275, 100%, 90%);
-
   color-scheme: light dark;
 
   // ELEMENTS SIZES
