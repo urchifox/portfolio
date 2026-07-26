@@ -1,12 +1,12 @@
 type Additional = {
   name?: string
-  descrption: Array<string>
+  description: Array<string>
 }
 
 export const sideSkills: Array<Additional> = [
   {
     name: "No-code development",
-    descrption: [
+    description: [
       "Built personal apps in Google AppSheet:",
       "- shared family budget tracker with category analytics and debt balancing;",
       "- Armenian vocabulary mini-dictionary with manual entry.",
@@ -14,14 +14,14 @@ export const sideSkills: Array<Additional> = [
   },
   {
     name: "Google Apps Script",
-    descrption: [
+    description: [
       "Automated Google Workspace workflows: report export/import and processing pipelines.",
       "Authored a custom time-formatting function (HH:MM to decimal hours).",
     ]
   },
   {
     name: "Process organization, systematization, and documentation",
-    descrption: [
+    description: [
       "Deployed Bitrix24 CRM for an online school with manager onboarding docs.",
       "Defined a technical-art pipeline for animation and engine import; trained the team and handed off QA.",
       "Set up an automated kanban board for production workflows.",
@@ -30,20 +30,20 @@ export const sideSkills: Array<Additional> = [
   },
   {
     name: "Design tools",
-    descrption: [
+    description: [
       "Adobe Photoshop — professional 2D art workflow.",
       "Figma — mockups for typical UI screens.",
     ]
   },
   {
     name: "Visual fundamentals",
-    descrption: [
+    description: [
       "Degree in environmental design; three years as a mid-level 2D artist with strong strong sense of composition and developed artistic taste.",
     ]
   },
   {
     name: "Upper-Intermediate English proficiency",
-    descrption: [
+    description: [
       "Comfortable with technical docs and English-language learning content.",
     ]
   },
@@ -52,28 +52,28 @@ export const sideSkills: Array<Additional> = [
 export const softSkills: Array<Additional> = [
   {
     name: "Fast learner",
-    descrption: [
+    description: [
       "Self-taught Bitrix24 and Google apps (including writing Apps Script scripts).",
       "Learned frontend development from scratch in one year.",
     ]
   },
   {
     name: "Analytical thinking",
-    descrption: [
+    description: [
       "Consider multiple solutions to find the most optimal.",
       "Even for tasks like hotel selection, I build a spreadsheet comparing key factors with point-based scoring and conditional formatting to identify the best choice.",
     ]
   },
   {
     name: "Data structuring",
-    descrption: [
+    description: [
       "Built analytics spreadsheets (Google Sheets) for revenue, performance, and project ROI tracking (salaries, hours, revenue).",
       "Created a Notion-based product catalog and filtering system for easy item lookup.",
     ]
   },
   {
     name: "Ownership",
-    descrption: [
+    description: [
       "Researches independently before escalating.",
       "Explores alternatives when the first approach stalls.",
       "Self-reviews against requirements before handoff.",
@@ -81,7 +81,7 @@ export const softSkills: Array<Additional> = [
   },
   {
     name: "Discipline",
-    descrption: [
+    description: [
       "One year of structured self-study: 4 hours on weekdays, 2 on weekends.",
       "Weekly English tutoring for 3+ years.",
       "Consistent routine regardless of flexible hours.",
@@ -89,12 +89,12 @@ export const softSkills: Array<Additional> = [
   },
   {
     name: "Team leadership",
-    descrption: [
+    description: [
       "Lead artist on two projects: estimates, task distribution, art direction, and quality control.",
     ]
   },
   {
-    descrption: [
+    description: [
       "Also goal-driven, persistent, and detail-focused.",
     ]
   }

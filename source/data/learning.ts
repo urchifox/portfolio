@@ -2,7 +2,7 @@ type Course = {
   name: string
   dateStart: { datetime: string, string: string }
   dateEnd: { datetime: string, string: string }
-  descrption: string
+  description: string
   certificate: {name: string, text: string}
   diploma: string
   link: string
@@ -18,7 +18,7 @@ export const courses: Array<Course> = [
       datetime: "2023-08-07",
       string: "August 7, 2023"
     },
-    descrption: "I studied language syntax, basic constructs, DOM interaction, asynchronous server requests, and integrating third-party libraries — all while following DRY and KISS principles.",
+    description: "I studied language syntax, basic constructs, DOM interaction, asynchronous server requests, and integrating third-party libraries — all while following DRY and KISS principles.",
     certificate: {
       name: "certificate-js-1",
       text: "Certificate confirming that Ekaterina Evtukhova completed the workshop and defended the graduation project; the certificate is signed by the project manager Alexander Pershin"
@@ -36,7 +36,7 @@ export const courses: Array<Course> = [
       datetime: "2023-10-09",
       string: "October 9, 2023"
     },
-    descrption: "I dove into an in-depth study of the language in OOP style. I learned to split the interface into components and built an SPA using the MVP pattern. I mastered server interaction over HTTP, implementing CRUD methods with a REST API.",
+    description: "I dove into an in-depth study of the language in OOP style. I learned to split the interface into components and built an SPA using the MVP pattern. I mastered server interaction over HTTP, implementing CRUD methods with a REST API.",
     certificate: {
       name: "certificate-js-2",
       text: "Certificate confirming that Ekaterina Evtukhova completed the workshop and defended the graduation project; the certificate is signed by the project manager Alexander Pershin"
@@ -54,7 +54,7 @@ export const courses: Array<Course> = [
       datetime: "2024-02-05",
       string: "February 5, 2024"
     },
-    descrption: "I reinforced my understanding of the BEM methodology. I mastered adaptive layout with SASS. I learned to work properly with graphics and fonts. I used automation tools to achieve good site performance.",
+    description: "I reinforced my understanding of the BEM methodology. I mastered adaptive layout with SASS. I learned to work properly with graphics and fonts. I used automation tools to achieve good site performance.",
     certificate: {
       name: "certificate-html-2",
       text: "Certificate confirming that Ekaterina Evtukhova completed the workshop and defended the graduation project; the certificate is signed by the project manager Alexander Pershin"
@@ -66,7 +66,7 @@ export const courses: Array<Course> = [
 
 type Practice = {
   name: string
-  descrption: string
+  description: string
   projects?: Array<{
     name: string
     id: string
@@ -75,7 +75,7 @@ type Practice = {
 export const practices: Array<Practice> = [
   {
     name: "Layout of page text content",
-    descrption: "Long-form content: formulas, footnotes, interrupted lists, columns, tables, drop caps, shaped wraps, overflow truncation, and read-more patterns.",
+    description: "Long-form content: formulas, footnotes, interrupted lists, columns, tables, drop caps, shaped wraps, overflow truncation, and read-more patterns.",
     projects: [
       {
         name: "Project \"Blogick\"",
@@ -97,11 +97,11 @@ export const practices: Array<Practice> = [
   },
   {
     name: "Layout of interface navigation elements",
-    descrption: "Linear and nested menus, dropdowns, breadcrumbs, and pagination with accessible list and link markup.",
+    description: "Linear and nested menus, dropdowns, breadcrumbs, and pagination with accessible list and link markup.",
   },
   {
     name: "Layout of card interface elements",
-    descrption: "Product catalogs and cards with flexible grids and accessibility in mind.",
+    description: "Product catalogs and cards with flexible grids and accessibility in mind.",
     projects: [
       {
         name: "Project \"Online smartphones store\"",
@@ -111,7 +111,7 @@ export const practices: Array<Practice> = [
   },
   {
     name: "Layout of multilayer interface elements",
-    descrption: "Positioning, grid layering, sliders, modals, tooltips, sticky elements, and dropdowns.",
+    description: "Positioning, grid layering, sliders, modals, tooltips, sticky elements, and dropdowns.",
     projects: [
       {
         name: "Project \"Multilayer exercises\"",
