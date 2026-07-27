@@ -76,10 +76,10 @@
           </div>
           <p class="section__text">Built and released 5 browser games from scratch using TypeScript and Phaser. Strong experience in creating accessible and responsive layouts. Skilled in designing polished UI animations and motion effects. Sharp visual instincts backed by a professional background in 2D game art.</p>
           <ul class="section__contacts-list">
-            <li class="section__contacts-item"><a class="section__contacts-link button button--icon-github" href="https://github.com/urchifox"><span class="visually-hidden">contact.text</span></a></li>
-            <li class="section__contacts-item"><a class="section__contacts-link button button--icon-whatsapp" href="https://api.whatsapp.com/send?phone=79601143943"><span class="visually-hidden">contact.text</span></a></li>
-            <li class="section__contacts-item"><a class="section__contacts-link button button--icon-telegram" href="https://t.me/urchifox"><span class="visually-hidden">contact.text</span></a></li>
-            <li class="section__contacts-item"><a class="section__contacts-link button button--icon-gmail" href="mailto:uchifox@gmail.com"><span class="visually-hidden">contact.text</span></a></li>
+            <li class="section__contacts-item"><a class="section__contacts-link button button--icon-github" href="https://github.com/urchifox"><span class="visually-hidden">GitHub profile</span></a></li>
+            <li class="section__contacts-item"><a class="section__contacts-link button button--icon-whatsapp" href="https://api.whatsapp.com/send?phone=79601143943"><span class="visually-hidden">Contact via WhatsApp</span></a></li>
+            <li class="section__contacts-item"><a class="section__contacts-link button button--icon-telegram" href="https://t.me/urchifox"><span class="visually-hidden">Contact via Telegram</span></a></li>
+            <li class="section__contacts-item"><a class="section__contacts-link button button--icon-gmail" href="mailto:uchifox@gmail.com"><span class="visually-hidden">Send an email</span></a></li>
           </ul>
         </div>
       </section>
@@ -227,7 +227,7 @@
             </li>
             <li class="projects__filters-item">
               <label class="projects__filters-label">
-                <input class="visually-hidden" id="trainig" value="trainig" name="filter" type="radio"><span class="projects__filters-text">Practice projects</span><span class="projects__filters-count" data-type="trainig">(?)</span>
+                <input class="visually-hidden" id="training" value="training" name="filter" type="radio"><span class="projects__filters-text">Practice projects</span><span class="projects__filters-count" data-type="training">(?)</span>
               </label>
             </li>
             <li class="projects__filters-item">
@@ -258,7 +258,28 @@
                   <source type="image/webp" media="(min-width: 760px)" srcset="./images/cover-portfolio-medium@1x.webp 1x, ./images/cover-portfolio-medium@2x.webp 2x" width="1096" height="616">
                   <source type="image/webp" srcset="./images/cover-portfolio-small@1x.webp 1x, ./images/cover-portfolio-small@2x.webp 2x" width="689" height="387">
                   <source type="image/jpg" media="(min-width: 1200px)" srcset="./images/cover-portfolio-large@1x.jpg 1x, ./images/cover-portfolio-large@2x.jpg 2x" width="441" height="248">
-                  <source type="image/jpg" media="(min-width: 760px)" srcset="./images/cover-portfolio-medium@1x.jpg 1x, ./images/cover-portfolio-medium@2x.jpg 2x" width="1096" height="616"><img class="project-card__picture" loading="lazy" src="./images/cover-portfolio-small@1x.jpg" srcset="./images/$cover-portfolio-small@2x.jpg 2x" width="689" height="387" alt="Screenshot of the live-demo">
+                  <source type="image/jpg" media="(min-width: 760px)" srcset="./images/cover-portfolio-medium@1x.jpg 1x, ./images/cover-portfolio-medium@2x.jpg 2x" width="1096" height="616"><img class="project-card__picture" loading="lazy" src="./images/cover-portfolio-small@1x.jpg" srcset="./images/cover-portfolio-small@2x.jpg 2x" width="689" height="387" alt="Screenshot of the live-demo">
+                </picture>
+              </div>
+            </li>
+            <li class="projects__item project-card" id="blast-game" data-type="personal">
+              <h3 class="project-card__title">Blast Game</h3>
+              <p class="project-card__caption">Personal project</p>
+              <p class="project-card__text">Blast Game is a browser-based puzzle game built with TypeScript and rendered with Phaser, where the player clears groups of matching tiles, uses boosters, and tries to reach the target score within a limited number of moves. The project is structured with an object-oriented approach, using classes to model the board, tiles, game rules, progress, and level flow. Its architecture follows SOLID-style principles through clear separation of concerns, dependency injection, and abstraction of the rendering layer behind interfaces.</p>
+              <ul class="project-card__stack-list">
+                <li class="project-card__stack-item project-card__stack-item--icon-typescript"><span class="visually-hidden">TypeScript</span></li>
+                <li class="project-card__stack-item project-card__stack-item--icon-css"><span class="visually-hidden">CSS</span></li>
+                <li class="project-card__stack-item project-card__stack-item--icon-html"><span class="visually-hidden">HTML</span></li>
+                <li class="project-card__stack-item project-card__stack-item--icon-bem"><span class="visually-hidden">BEM</span></li>
+              </ul>
+              <div class="project-card__buttons-wrapper"><a class="project-card__button button button--icon-github" href="https://github.com/urchifox/blast-game"><span class="visually-hidden">Project on GitHub</span></a><a class="project-card__button button button--icon-external-link" href="https://urchifox.github.io/blast-game/"><span class="visually-hidden">Live demo</span></a></div>
+              <div class="project-card__slider">
+                <picture>
+                  <source type="image/webp" media="(min-width: 1200px)" srcset="./images/cover-blast-large@1x.webp 1x, ./images/cover-blast-large@2x.webp 2x" width="441" height="248">
+                  <source type="image/webp" media="(min-width: 760px)" srcset="./images/cover-blast-medium@1x.webp 1x, ./images/cover-blast-medium@2x.webp 2x" width="1096" height="616">
+                  <source type="image/webp" srcset="./images/cover-blast-small@1x.webp 1x, ./images/cover-blast-small@2x.webp 2x" width="689" height="387">
+                  <source type="image/jpg" media="(min-width: 1200px)" srcset="./images/cover-blast-large@1x.jpg 1x, ./images/cover-blast-large@2x.jpg 2x" width="441" height="248">
+                  <source type="image/jpg" media="(min-width: 760px)" srcset="./images/cover-blast-medium@1x.jpg 1x, ./images/cover-blast-medium@2x.jpg 2x" width="1096" height="616"><img class="project-card__picture" loading="lazy" src="./images/cover-blast-small@1x.jpg" srcset="./images/cover-blast-small@2x.jpg 2x" width="689" height="387" alt="Screenshot of the live-demo">
                 </picture>
               </div>
             </li>
@@ -279,7 +300,7 @@
                   <source type="image/webp" media="(min-width: 760px)" srcset="./images/cover-sliding-lines-medium@1x.webp 1x, ./images/cover-sliding-lines-medium@2x.webp 2x" width="1096" height="616">
                   <source type="image/webp" srcset="./images/cover-sliding-lines-small@1x.webp 1x, ./images/cover-sliding-lines-small@2x.webp 2x" width="689" height="387">
                   <source type="image/jpg" media="(min-width: 1200px)" srcset="./images/cover-sliding-lines-large@1x.jpg 1x, ./images/cover-sliding-lines-large@2x.jpg 2x" width="441" height="248">
-                  <source type="image/jpg" media="(min-width: 760px)" srcset="./images/cover-sliding-lines-medium@1x.jpg 1x, ./images/cover-sliding-lines-medium@2x.jpg 2x" width="1096" height="616"><img class="project-card__picture" loading="lazy" src="./images/cover-sliding-lines-small@1x.jpg" srcset="./images/$cover-sliding-lines-small@2x.jpg 2x" width="689" height="387" alt="Screenshot of the live-demo">
+                  <source type="image/jpg" media="(min-width: 760px)" srcset="./images/cover-sliding-lines-medium@1x.jpg 1x, ./images/cover-sliding-lines-medium@2x.jpg 2x" width="1096" height="616"><img class="project-card__picture" loading="lazy" src="./images/cover-sliding-lines-small@1x.jpg" srcset="./images/cover-sliding-lines-small@2x.jpg 2x" width="689" height="387" alt="Screenshot of the live-demo">
                 </picture>
               </div>
             </li>
@@ -304,7 +325,7 @@
                   <source type="image/webp" media="(min-width: 760px)" srcset="./images/cover-feature-support-medium@1x.webp 1x, ./images/cover-feature-support-medium@2x.webp 2x" width="1096" height="616">
                   <source type="image/webp" srcset="./images/cover-feature-support-small@1x.webp 1x, ./images/cover-feature-support-small@2x.webp 2x" width="689" height="387">
                   <source type="image/jpg" media="(min-width: 1200px)" srcset="./images/cover-feature-support-large@1x.jpg 1x, ./images/cover-feature-support-large@2x.jpg 2x" width="441" height="248">
-                  <source type="image/jpg" media="(min-width: 760px)" srcset="./images/cover-feature-support-medium@1x.jpg 1x, ./images/cover-feature-support-medium@2x.jpg 2x" width="1096" height="616"><img class="project-card__picture" loading="lazy" src="./images/cover-feature-support-small@1x.jpg" srcset="./images/$cover-feature-support-small@2x.jpg 2x" width="689" height="387" alt="Screenshot of the live-demo">
+                  <source type="image/jpg" media="(min-width: 760px)" srcset="./images/cover-feature-support-medium@1x.jpg 1x, ./images/cover-feature-support-medium@2x.jpg 2x" width="1096" height="616"><img class="project-card__picture" loading="lazy" src="./images/cover-feature-support-small@1x.jpg" srcset="./images/cover-feature-support-small@2x.jpg 2x" width="689" height="387" alt="Screenshot of the live-demo">
                 </picture>
               </div>
             </li>
@@ -327,7 +348,7 @@
                   <source type="image/webp" media="(min-width: 760px)" srcset="./images/cover-cat-energy-medium@1x.webp 1x, ./images/cover-cat-energy-medium@2x.webp 2x" width="1096" height="616">
                   <source type="image/webp" srcset="./images/cover-cat-energy-small@1x.webp 1x, ./images/cover-cat-energy-small@2x.webp 2x" width="689" height="387">
                   <source type="image/jpg" media="(min-width: 1200px)" srcset="./images/cover-cat-energy-large@1x.jpg 1x, ./images/cover-cat-energy-large@2x.jpg 2x" width="441" height="248">
-                  <source type="image/jpg" media="(min-width: 760px)" srcset="./images/cover-cat-energy-medium@1x.jpg 1x, ./images/cover-cat-energy-medium@2x.jpg 2x" width="1096" height="616"><img class="project-card__picture" loading="lazy" src="./images/cover-cat-energy-small@1x.jpg" srcset="./images/$cover-cat-energy-small@2x.jpg 2x" width="689" height="387" alt="Screenshot of the live-demo">
+                  <source type="image/jpg" media="(min-width: 760px)" srcset="./images/cover-cat-energy-medium@1x.jpg 1x, ./images/cover-cat-energy-medium@2x.jpg 2x" width="1096" height="616"><img class="project-card__picture" loading="lazy" src="./images/cover-cat-energy-small@1x.jpg" srcset="./images/cover-cat-energy-small@2x.jpg 2x" width="689" height="387" alt="Screenshot of the live-demo">
                 </picture>
               </div>
             </li>
@@ -350,11 +371,11 @@
                   <source type="image/webp" media="(min-width: 760px)" srcset="./images/cover-grafit-academy-medium@1x.webp 1x, ./images/cover-grafit-academy-medium@2x.webp 2x" width="1096" height="616">
                   <source type="image/webp" srcset="./images/cover-grafit-academy-small@1x.webp 1x, ./images/cover-grafit-academy-small@2x.webp 2x" width="689" height="387">
                   <source type="image/jpg" media="(min-width: 1200px)" srcset="./images/cover-grafit-academy-large@1x.jpg 1x, ./images/cover-grafit-academy-large@2x.jpg 2x" width="441" height="248">
-                  <source type="image/jpg" media="(min-width: 760px)" srcset="./images/cover-grafit-academy-medium@1x.jpg 1x, ./images/cover-grafit-academy-medium@2x.jpg 2x" width="1096" height="616"><img class="project-card__picture" loading="lazy" src="./images/cover-grafit-academy-small@1x.jpg" srcset="./images/$cover-grafit-academy-small@2x.jpg 2x" width="689" height="387" alt="Screenshot of the live-demo">
+                  <source type="image/jpg" media="(min-width: 760px)" srcset="./images/cover-grafit-academy-medium@1x.jpg 1x, ./images/cover-grafit-academy-medium@2x.jpg 2x" width="1096" height="616"><img class="project-card__picture" loading="lazy" src="./images/cover-grafit-academy-small@1x.jpg" srcset="./images/cover-grafit-academy-small@2x.jpg 2x" width="689" height="387" alt="Screenshot of the live-demo">
                 </picture>
               </div>
             </li>
-            <li class="projects__item project-card" id="project-online-smartphones-store" data-type="trainig">
+            <li class="projects__item project-card" id="project-online-smartphones-store" data-type="training">
               <h3 class="project-card__title">Online smartphones store</h3>
               <p class="project-card__caption">Practice project</p>
               <p class="project-card__text">Product catalog with gallery and modal states. Added JS-driven rendering and live card updates when color or storage options change.</p>
@@ -371,11 +392,11 @@
                   <source type="image/webp" media="(min-width: 760px)" srcset="./images/cover-online-smartphones-store-medium@1x.webp 1x, ./images/cover-online-smartphones-store-medium@2x.webp 2x" width="1096" height="616">
                   <source type="image/webp" srcset="./images/cover-online-smartphones-store-small@1x.webp 1x, ./images/cover-online-smartphones-store-small@2x.webp 2x" width="689" height="387">
                   <source type="image/jpg" media="(min-width: 1200px)" srcset="./images/cover-online-smartphones-store-large@1x.jpg 1x, ./images/cover-online-smartphones-store-large@2x.jpg 2x" width="441" height="248">
-                  <source type="image/jpg" media="(min-width: 760px)" srcset="./images/cover-online-smartphones-store-medium@1x.jpg 1x, ./images/cover-online-smartphones-store-medium@2x.jpg 2x" width="1096" height="616"><img class="project-card__picture" loading="lazy" src="./images/cover-online-smartphones-store-small@1x.jpg" srcset="./images/$cover-online-smartphones-store-small@2x.jpg 2x" width="689" height="387" alt="Screenshot of the live-demo">
+                  <source type="image/jpg" media="(min-width: 760px)" srcset="./images/cover-online-smartphones-store-medium@1x.jpg 1x, ./images/cover-online-smartphones-store-medium@2x.jpg 2x" width="1096" height="616"><img class="project-card__picture" loading="lazy" src="./images/cover-online-smartphones-store-small@1x.jpg" srcset="./images/cover-online-smartphones-store-small@2x.jpg 2x" width="689" height="387" alt="Screenshot of the live-demo">
                 </picture>
               </div>
             </li>
-            <li class="projects__item project-card" id="project-multilayer-exercises" data-type="trainig">
+            <li class="projects__item project-card" id="project-multilayer-exercises" data-type="training">
               <h3 class="project-card__title">Multilayer exercises</h3>
               <p class="project-card__caption">Practice project</p>
               <p class="project-card__text">Layout exercise: sticky header, cookie banner, and back-to-top control on a provided mockup.</p>
@@ -392,7 +413,7 @@
                   <source type="image/webp" media="(min-width: 760px)" srcset="./images/cover-multilayer-exercises-medium@1x.webp 1x, ./images/cover-multilayer-exercises-medium@2x.webp 2x" width="1096" height="616">
                   <source type="image/webp" srcset="./images/cover-multilayer-exercises-small@1x.webp 1x, ./images/cover-multilayer-exercises-small@2x.webp 2x" width="689" height="387">
                   <source type="image/jpg" media="(min-width: 1200px)" srcset="./images/cover-multilayer-exercises-large@1x.jpg 1x, ./images/cover-multilayer-exercises-large@2x.jpg 2x" width="441" height="248">
-                  <source type="image/jpg" media="(min-width: 760px)" srcset="./images/cover-multilayer-exercises-medium@1x.jpg 1x, ./images/cover-multilayer-exercises-medium@2x.jpg 2x" width="1096" height="616"><img class="project-card__picture" loading="lazy" src="./images/cover-multilayer-exercises-small@1x.jpg" srcset="./images/$cover-multilayer-exercises-small@2x.jpg 2x" width="689" height="387" alt="Screenshot of the live-demo">
+                  <source type="image/jpg" media="(min-width: 760px)" srcset="./images/cover-multilayer-exercises-medium@1x.jpg 1x, ./images/cover-multilayer-exercises-medium@2x.jpg 2x" width="1096" height="616"><img class="project-card__picture" loading="lazy" src="./images/cover-multilayer-exercises-small@1x.jpg" srcset="./images/cover-multilayer-exercises-small@2x.jpg 2x" width="689" height="387" alt="Screenshot of the live-demo">
                 </picture>
               </div>
             </li>
@@ -411,7 +432,7 @@
                   <source type="image/webp" media="(min-width: 760px)" srcset="./images/cover-big-trip-medium@1x.webp 1x, ./images/cover-big-trip-medium@2x.webp 2x" width="1096" height="616">
                   <source type="image/webp" srcset="./images/cover-big-trip-small@1x.webp 1x, ./images/cover-big-trip-small@2x.webp 2x" width="689" height="387">
                   <source type="image/jpg" media="(min-width: 1200px)" srcset="./images/cover-big-trip-large@1x.jpg 1x, ./images/cover-big-trip-large@2x.jpg 2x" width="441" height="248">
-                  <source type="image/jpg" media="(min-width: 760px)" srcset="./images/cover-big-trip-medium@1x.jpg 1x, ./images/cover-big-trip-medium@2x.jpg 2x" width="1096" height="616"><img class="project-card__picture" loading="lazy" src="./images/cover-big-trip-small@1x.jpg" srcset="./images/$cover-big-trip-small@2x.jpg 2x" width="689" height="387" alt="Screenshot of the live-demo">
+                  <source type="image/jpg" media="(min-width: 760px)" srcset="./images/cover-big-trip-medium@1x.jpg 1x, ./images/cover-big-trip-medium@2x.jpg 2x" width="1096" height="616"><img class="project-card__picture" loading="lazy" src="./images/cover-big-trip-small@1x.jpg" srcset="./images/cover-big-trip-small@2x.jpg 2x" width="689" height="387" alt="Screenshot of the live-demo">
                 </picture>
               </div>
             </li>
@@ -430,11 +451,11 @@
                   <source type="image/webp" media="(min-width: 760px)" srcset="./images/cover-kekstagram-medium@1x.webp 1x, ./images/cover-kekstagram-medium@2x.webp 2x" width="1096" height="616">
                   <source type="image/webp" srcset="./images/cover-kekstagram-small@1x.webp 1x, ./images/cover-kekstagram-small@2x.webp 2x" width="689" height="387">
                   <source type="image/jpg" media="(min-width: 1200px)" srcset="./images/cover-kekstagram-large@1x.jpg 1x, ./images/cover-kekstagram-large@2x.jpg 2x" width="441" height="248">
-                  <source type="image/jpg" media="(min-width: 760px)" srcset="./images/cover-kekstagram-medium@1x.jpg 1x, ./images/cover-kekstagram-medium@2x.jpg 2x" width="1096" height="616"><img class="project-card__picture" loading="lazy" src="./images/cover-kekstagram-small@1x.jpg" srcset="./images/$cover-kekstagram-small@2x.jpg 2x" width="689" height="387" alt="Screenshot of the live-demo">
+                  <source type="image/jpg" media="(min-width: 760px)" srcset="./images/cover-kekstagram-medium@1x.jpg 1x, ./images/cover-kekstagram-medium@2x.jpg 2x" width="1096" height="616"><img class="project-card__picture" loading="lazy" src="./images/cover-kekstagram-small@1x.jpg" srcset="./images/cover-kekstagram-small@2x.jpg 2x" width="689" height="387" alt="Screenshot of the live-demo">
                 </picture>
               </div>
             </li>
-            <li class="projects__item project-card" id="project-italian-chefs-blog" data-type="trainig">
+            <li class="projects__item project-card" id="project-italian-chefs-blog" data-type="training">
               <h3 class="project-card__title">Italian chef’s blog</h3>
               <p class="project-card__caption">Practice project</p>
               <p class="project-card__text">Editorial layout exercise with advanced typography: drop caps, ligatures, pull quotes, shaped wraps, rotated text, and columns — plus animated focus states.</p>
@@ -450,11 +471,11 @@
                   <source type="image/webp" media="(min-width: 760px)" srcset="./images/cover-italian-chefs-blog-medium@1x.webp 1x, ./images/cover-italian-chefs-blog-medium@2x.webp 2x" width="1096" height="616">
                   <source type="image/webp" srcset="./images/cover-italian-chefs-blog-small@1x.webp 1x, ./images/cover-italian-chefs-blog-small@2x.webp 2x" width="689" height="387">
                   <source type="image/jpg" media="(min-width: 1200px)" srcset="./images/cover-italian-chefs-blog-large@1x.jpg 1x, ./images/cover-italian-chefs-blog-large@2x.jpg 2x" width="441" height="248">
-                  <source type="image/jpg" media="(min-width: 760px)" srcset="./images/cover-italian-chefs-blog-medium@1x.jpg 1x, ./images/cover-italian-chefs-blog-medium@2x.jpg 2x" width="1096" height="616"><img class="project-card__picture" loading="lazy" src="./images/cover-italian-chefs-blog-small@1x.jpg" srcset="./images/$cover-italian-chefs-blog-small@2x.jpg 2x" width="689" height="387" alt="Screenshot of the live-demo">
+                  <source type="image/jpg" media="(min-width: 760px)" srcset="./images/cover-italian-chefs-blog-medium@1x.jpg 1x, ./images/cover-italian-chefs-blog-medium@2x.jpg 2x" width="1096" height="616"><img class="project-card__picture" loading="lazy" src="./images/cover-italian-chefs-blog-small@1x.jpg" srcset="./images/cover-italian-chefs-blog-small@2x.jpg 2x" width="689" height="387" alt="Screenshot of the live-demo">
                 </picture>
               </div>
             </li>
-            <li class="projects__item project-card" id="project-science-blog" data-type="trainig">
+            <li class="projects__item project-card" id="project-science-blog" data-type="training">
               <h3 class="project-card__title">Science blog</h3>
               <p class="project-card__caption">Practice project</p>
               <p class="project-card__text">Scientific article layout: table of contents, tables, formulas, columns, footnotes, and nested lists. Article cards with truncated previews. Bonus: pure CSS search field that expands into the header on click.</p>
@@ -470,11 +491,11 @@
                   <source type="image/webp" media="(min-width: 760px)" srcset="./images/cover-science-blog-medium@1x.webp 1x, ./images/cover-science-blog-medium@2x.webp 2x" width="1096" height="616">
                   <source type="image/webp" srcset="./images/cover-science-blog-small@1x.webp 1x, ./images/cover-science-blog-small@2x.webp 2x" width="689" height="387">
                   <source type="image/jpg" media="(min-width: 1200px)" srcset="./images/cover-science-blog-large@1x.jpg 1x, ./images/cover-science-blog-large@2x.jpg 2x" width="441" height="248">
-                  <source type="image/jpg" media="(min-width: 760px)" srcset="./images/cover-science-blog-medium@1x.jpg 1x, ./images/cover-science-blog-medium@2x.jpg 2x" width="1096" height="616"><img class="project-card__picture" loading="lazy" src="./images/cover-science-blog-small@1x.jpg" srcset="./images/$cover-science-blog-small@2x.jpg 2x" width="689" height="387" alt="Screenshot of the live-demo">
+                  <source type="image/jpg" media="(min-width: 760px)" srcset="./images/cover-science-blog-medium@1x.jpg 1x, ./images/cover-science-blog-medium@2x.jpg 2x" width="1096" height="616"><img class="project-card__picture" loading="lazy" src="./images/cover-science-blog-small@1x.jpg" srcset="./images/cover-science-blog-small@2x.jpg 2x" width="689" height="387" alt="Screenshot of the live-demo">
                 </picture>
               </div>
             </li>
-            <li class="projects__item project-card" id="project-onenews" data-type="trainig">
+            <li class="projects__item project-card" id="project-onenews" data-type="training">
               <h3 class="project-card__title">OneNews</h3>
               <p class="project-card__caption">Practice project</p>
               <p class="project-card__text">Finance article layout with tables, a diagram-style definition list, nested lists, formulas, aside blocks, and a related-article card with a "read more" pattern.</p>
@@ -490,11 +511,11 @@
                   <source type="image/webp" media="(min-width: 760px)" srcset="./images/cover-onenews-medium@1x.webp 1x, ./images/cover-onenews-medium@2x.webp 2x" width="1096" height="616">
                   <source type="image/webp" srcset="./images/cover-onenews-small@1x.webp 1x, ./images/cover-onenews-small@2x.webp 2x" width="689" height="387">
                   <source type="image/jpg" media="(min-width: 1200px)" srcset="./images/cover-onenews-large@1x.jpg 1x, ./images/cover-onenews-large@2x.jpg 2x" width="441" height="248">
-                  <source type="image/jpg" media="(min-width: 760px)" srcset="./images/cover-onenews-medium@1x.jpg 1x, ./images/cover-onenews-medium@2x.jpg 2x" width="1096" height="616"><img class="project-card__picture" loading="lazy" src="./images/cover-onenews-small@1x.jpg" srcset="./images/$cover-onenews-small@2x.jpg 2x" width="689" height="387" alt="Screenshot of the live-demo">
+                  <source type="image/jpg" media="(min-width: 760px)" srcset="./images/cover-onenews-medium@1x.jpg 1x, ./images/cover-onenews-medium@2x.jpg 2x" width="1096" height="616"><img class="project-card__picture" loading="lazy" src="./images/cover-onenews-small@1x.jpg" srcset="./images/cover-onenews-small@2x.jpg 2x" width="689" height="387" alt="Screenshot of the live-demo">
                 </picture>
               </div>
             </li>
-            <li class="projects__item project-card" id="project-blogick" data-type="trainig">
+            <li class="projects__item project-card" id="project-blogick" data-type="training">
               <h3 class="project-card__title">Blogick</h3>
               <p class="project-card__caption">Practice project</p>
               <p class="project-card__text">Travel article layout covering headings, lead, meta, breadcrumbs, quotes, interrupted list numbering, floats, and aside blocks.</p>
@@ -510,7 +531,7 @@
                   <source type="image/webp" media="(min-width: 760px)" srcset="./images/cover-blogick-medium@1x.webp 1x, ./images/cover-blogick-medium@2x.webp 2x" width="1096" height="616">
                   <source type="image/webp" srcset="./images/cover-blogick-small@1x.webp 1x, ./images/cover-blogick-small@2x.webp 2x" width="689" height="387">
                   <source type="image/jpg" media="(min-width: 1200px)" srcset="./images/cover-blogick-large@1x.jpg 1x, ./images/cover-blogick-large@2x.jpg 2x" width="441" height="248">
-                  <source type="image/jpg" media="(min-width: 760px)" srcset="./images/cover-blogick-medium@1x.jpg 1x, ./images/cover-blogick-medium@2x.jpg 2x" width="1096" height="616"><img class="project-card__picture" loading="lazy" src="./images/cover-blogick-small@1x.jpg" srcset="./images/$cover-blogick-small@2x.jpg 2x" width="689" height="387" alt="Screenshot of the live-demo">
+                  <source type="image/jpg" media="(min-width: 760px)" srcset="./images/cover-blogick-medium@1x.jpg 1x, ./images/cover-blogick-medium@2x.jpg 2x" width="1096" height="616"><img class="project-card__picture" loading="lazy" src="./images/cover-blogick-small@1x.jpg" srcset="./images/cover-blogick-small@2x.jpg 2x" width="689" height="387" alt="Screenshot of the live-demo">
                 </picture>
               </div>
             </li>
