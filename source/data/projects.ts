@@ -34,6 +34,16 @@ export const projects: Array<Project> = [
     images: ['portfolio']
   },
   {
+    id: 'blast-game',
+    name: 'Blast Game',
+    type: "personal",
+    description: `Blast Game is a browser-based puzzle game built with TypeScript and rendered with Phaser, where the player clears groups of matching tiles, uses boosters, and tries to reach the target score within a limited number of moves. The project is structured with an object-oriented approach, using classes to model the board, tiles, game rules, progress, and level flow. Its architecture follows SOLID-style principles through clear separation of concerns, dependency injection, and abstraction of the rendering layer behind interfaces.`,
+    tools: [stackName.ts, stackName.css, stackName.html, stackName.bem],
+    github: 'https://github.com/urchifox/blast-game',
+    webpage: 'https://urchifox.github.io/blast-game/',
+    images: ['blast']
+  },
+  {
     id: 'sliding-lines',
     name: 'Sliding Lines',
     type: "personal",
