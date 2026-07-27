@@ -11,7 +11,7 @@ section#learning(class="main__section section")
               time(datetime=course.dateStart.datetime)= course.dateStart.string
               | &#32;-&#32;
               time(datetime=course.dateEnd.datetime)= course.dateEnd.string
-            p(class="course-card__text")= course.descrption
+            p(class="course-card__text")= course.description
             div(class="course-card__buttons-wrapper")
               a(class="course-card__button", id=`link-${course.certificate.name}`, href=`./images/${course.certificate.name}@1x.png`, aria-haspopup="dialog", aria-controls=course.certificate.name data-modal-id=course.certificate.name)
                 span(class="button button--icon-certificate", aria-hidden="true")
@@ -42,7 +42,7 @@ section#learning(class="main__section section")
         each practice in practices
           li(class="subsection__practice-item practice-card")
             h4(class="practice-card__title")= practice.name
-            p(class="practice-card__text")= practice.descrption
+            p(class="practice-card__text")= practice.description
             if practice.projects
               div(class="practice-card__projects")
                 p(class="practice-card__caption") Related projects

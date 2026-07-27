@@ -2,7 +2,7 @@ section#projects(class="main__section section container")
   h2(class="section__title title") Projects
   div(class="section__subsection subsection projects ")
     ul(class="projects__filters-list")
-      each filter, index in [{all: "All projects"}, {diploma: "Diploma projects"}, {trainig: "Practice projects"}, {personal: "Personal projects"}]
+      each filter, index in [{all: "All projects"}, {diploma: "Diploma projects"}, {training: "Practice projects"}, {personal: "Personal projects"}]
         - const key = Object.keys(filter)[0]
         - const value = filter[key]
         li(class="projects__filters-item")
@@ -16,7 +16,7 @@ section#projects(class="main__section section container")
           li(class="projects__item project-card" id=project.id data-type= project.type)
             h3(class="project-card__title")= project.name
             p(class="project-card__caption")= projectType[project.type]
-            p(class="project-card__text")!= project.descrption
+            p(class="project-card__text")!= project.description
             ul(class="project-card__stack-list")
               each tool in project.tools
                 li(class=`project-card__stack-item project-card__stack-item--icon-${tool.name}`)
@@ -46,6 +46,6 @@ section#projects(class="main__section section container")
                       width="1096" height="616")
                     img(class="project-card__picture", loading="lazy",
                       src=`./images/cover-${image}-small@1x.jpg`,
-                      srcset=`./images/$cover-${image}-small@2x.jpg 2x`,
+                      srcset=`./images/cover-${image}-small@2x.jpg 2x`,
                       width="689" height="387",
                       alt="Screenshot of the live-demo")

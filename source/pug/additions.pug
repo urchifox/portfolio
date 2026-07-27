@@ -11,7 +11,7 @@ section#additions(class="main__section section container")
               summary(class="additions-card__summary")= sideSkill.name
               div(class="additions-card__content")
                 div(class="additions-card__text-wrapper")
-                  each text in sideSkill.descrption
+                  each text in sideSkill.description
                     p(class="additions-card__text")= text
 
     section(class="section__subsection additions-card")
@@ -25,9 +25,9 @@ section#additions(class="main__section section container")
                 summary(class="additions-card__summary")= softSkill.name
                 div(class="additions-card__content")
                   div(class="additions-card__text-wrapper")
-                    each text in softSkill.descrption
+                    each text in softSkill.description
                       p(class="additions-card__text")= text
             else
               div(class="additions-card__text-wrapper")
-                each text in softSkill.descrption
+                each text in softSkill.description
                   p(class="additions-card__text")= text

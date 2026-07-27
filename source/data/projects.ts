@@ -2,7 +2,7 @@ import { Stack, stackName } from "./stack";
 
 export const projectType = {
   diploma: 'Diploma project',
-  trainig: 'Practice project',
+  training: 'Practice project',
   personal: 'Personal project',
 } as const;
 type ProjectTypeMap = typeof projectType;
@@ -11,7 +11,7 @@ export type Project = {
   id: string
   name: string
   type: keyof ProjectTypeMap
-  descrption: string
+  description: string
   tools: Array<Stack>
   github: string
   webpage: string
@@ -23,7 +23,7 @@ export const projects: Array<Project> = [
     id: 'portfolio',
     name: 'Portfolio',
     type: "personal",
-    descrption: `Self-directed portfolio site: wrote the spec, designed three responsive breakpoints in Figma, and built the implementation according to the HTML Academy code guide.
+    description: `Self-directed portfolio site: wrote the spec, designed three responsive breakpoints in Figma, and built the implementation according to the HTML Academy code guide.
     <br/>Highlights:
     <br/>- light/dark theme switching adapted from Vadim Makeev's approach;
     <br/>- fluid typography and spacing with rem-based units;
@@ -34,10 +34,20 @@ export const projects: Array<Project> = [
     images: ['portfolio']
   },
   {
+    id: 'blast-game',
+    name: 'Blast Game',
+    type: "personal",
+    description: `Blast Game is a browser-based puzzle game built with TypeScript and rendered with Phaser, where the player clears groups of matching tiles, uses boosters, and tries to reach the target score within a limited number of moves. The project is structured with an object-oriented approach, using classes to model the board, tiles, game rules, progress, and level flow. Its architecture follows SOLID-style principles through clear separation of concerns, dependency injection, and abstraction of the rendering layer behind interfaces.`,
+    tools: [stackName.ts, stackName.css, stackName.html, stackName.bem],
+    github: 'https://github.com/urchifox/blast-game',
+    webpage: 'https://urchifox.github.io/blast-game/',
+    images: ['blast']
+  },
+  {
     id: 'sliding-lines',
     name: 'Sliding Lines',
     type: "personal",
-    descrption: `The sliding puzzle game built with React to deepen component and state management skills. Styled with Emotion (CSS-in-JS) and animated state transitions.
+    description: `The sliding puzzle game built with React to deepen component and state management skills. Styled with Emotion (CSS-in-JS) and animated state transitions.
     <br/>Implemented custom level generation that ramps difficulty to keep players engaged.`,
     tools: [stackName.ts, stackName.react, stackName.sass],
     github: 'https://github.com/urchifox/sliding-lines',
@@ -48,7 +58,7 @@ export const projects: Array<Project> = [
     id: 'feature-support',
     name: 'Check feature support',
     type: "personal",
-    descrption: `Browser tool born from production work on Samsung Internet and other mobile browsers with unclear CSS support data.
+    description: `Browser tool born from production work on Samsung Internet and other mobile browsers with unclear CSS support data.
     <br/>Features:
     <br/>- dual checks via <code>CSS.supports</code> and <code>@supports</code> with color-coded output;
     <br/>- dedicated checks for units and custom properties;
@@ -62,7 +72,7 @@ export const projects: Array<Project> = [
     id: 'project-cat-energy',
     name: 'Cat Energy',
     type: "diploma",
-    descrption: `Pixel-perfect adaptive diploma: landing, catalog, and order form across three breakpoints. Content stays stable under image swaps, text overflow, and layout stress.
+    description: `Pixel-perfect adaptive diploma: landing, catalog, and order form across three breakpoints. Content stays stable under image swaps, text overflow, and layout stress.
     <br/>Notable work: progressive mobile menu (in-flow without JS, interactive with JS) and a hero background that scales without exposing cropped edges.
     <br/>Graduated with a perfect score on the first attempt.`,
     tools: [stackName.html, stackName.sass, stackName.js, stackName.bem],
@@ -74,7 +84,7 @@ export const projects: Array<Project> = [
     id: 'project-grafit-academy',
     name: 'Grafit Academy',
     type: "personal",
-    descrption: `Two-page training project: landing and product catalog pages.
+    description: `Two-page training project: landing and product catalog pages.
     <br/>Key features: adaptive catalog grids, a native slider (no library), dynamic rendering, filtering and sorting, noUiSlider integration, Local Storage for cart and favorites, and synced state across catalog, modal, and cart.
     <br/>Later migrated to Sass and an automated build - first experience refactoring toward a production setup.`,
     tools: [stackName.html, stackName.css, stackName.js, stackName.bem],
@@ -85,8 +95,8 @@ export const projects: Array<Project> = [
   {
     id: 'project-online-smartphones-store',
     name: 'Online smartphones store',
-    type: "trainig",
-    descrption: `Product catalog with gallery and modal states. Added JS-driven rendering and live card updates when color or storage options change.`,
+    type: "training",
+    description: `Product catalog with gallery and modal states. Added JS-driven rendering and live card updates when color or storage options change.`,
     tools: [stackName.html, stackName.css, stackName.js, stackName.bem],
     github: 'https://github.com/urchifox/online-store',
     webpage: 'https://urchifox.github.io/online-store/',
@@ -95,8 +105,8 @@ export const projects: Array<Project> = [
   {
     id: 'project-multilayer-exercises',
     name: 'Multilayer exercises',
-    type: "trainig",
-    descrption: `Layout exercise: sticky header, cookie banner, and back-to-top control on a provided mockup.`,
+    type: "training",
+    description: `Layout exercise: sticky header, cookie banner, and back-to-top control on a provided mockup.`,
     tools: [stackName.html, stackName.css, stackName.js, stackName.bem],
     github: 'https://github.com/urchifox/multilayer-exercise',
     webpage: 'https://urchifox.github.io/multilayer-exercise/',
@@ -106,7 +116,7 @@ export const projects: Array<Project> = [
     id: 'project-big-trip',
     name: 'Big Trip',
     type: "diploma",
-    descrption: `MVP-architecture SPA in OOP JavaScript. Split provided markup into components rendered via template strings; HTML holds only mount points. Full CRUD over REST API with <code>he</code>, <code>flatpickr</code>, and <code>dayjs</code>.
+    description: `MVP-architecture SPA in OOP JavaScript. Split provided markup into components rendered via template strings; HTML holds only mount points. Full CRUD over REST API with <code>he</code>, <code>flatpickr</code>, and <code>dayjs</code>.
     <br/>Graduated with a perfect score on the second attempt.`,
     tools: [stackName.js],
     github: 'https://github.com/urchifox/big-trip',
@@ -117,7 +127,7 @@ export const projects: Array<Project> = [
     id: 'project-kekstagram',
     name: 'Kekstagram',
     type: "diploma",
-    descrption: `Feed SPA that loads posts from an API, renders with sorting, and surfaces connection errors to the user. Centralized DOM query exports in a dedicated module.
+    description: `Feed SPA that loads posts from an API, renders with sorting, and surfaces connection errors to the user. Centralized DOM query exports in a dedicated module.
     <br/>Graduated with a perfect score on the second attempt.`,
     tools: [stackName.js],
     github: 'https://github.com/urchifox/kekstagram',
@@ -127,8 +137,8 @@ export const projects: Array<Project> = [
   {
     id: 'project-italian-chefs-blog',
     name: 'Italian chef’s blog',
-    type: "trainig",
-    descrption: `Editorial layout exercise with advanced typography: drop caps, ligatures, pull quotes, shaped wraps, rotated text, and columns — plus animated focus states.`,
+    type: "training",
+    description: `Editorial layout exercise with advanced typography: drop caps, ligatures, pull quotes, shaped wraps, rotated text, and columns — plus animated focus states.`,
     tools: [stackName.html, stackName.css, stackName.bem],
     github: 'https://github.com/urchifox/Italian-chefs-blog__article',
     webpage: 'https://urchifox.github.io/Italian-chefs-blog__article/',
@@ -137,8 +147,8 @@ export const projects: Array<Project> = [
   {
     id: 'project-science-blog',
     name: 'Science blog',
-    type: "trainig",
-    descrption: `Scientific article layout: table of contents, tables, formulas, columns, footnotes, and nested lists. Article cards with truncated previews. Bonus: pure CSS search field that expands into the header on click.`,
+    type: "training",
+    description: `Scientific article layout: table of contents, tables, formulas, columns, footnotes, and nested lists. Article cards with truncated previews. Bonus: pure CSS search field that expands into the header on click.`,
     tools: [stackName.html, stackName.css, stackName.bem,],
     github: 'https://github.com/urchifox/SCIENCE__article_carbohydrates',
     webpage: 'https://urchifox.github.io/SCIENCE__article_carbohydrates/',
@@ -147,8 +157,8 @@ export const projects: Array<Project> = [
   {
     id: 'project-onenews',
     name: 'OneNews',
-    type: "trainig",
-    descrption: `Finance article layout with tables, a diagram-style definition list, nested lists, formulas, aside blocks, and a related-article card with a "read more" pattern.`,
+    type: "training",
+    description: `Finance article layout with tables, a diagram-style definition list, nested lists, formulas, aside blocks, and a related-article card with a "read more" pattern.`,
     tools: [stackName.html, stackName.css, stackName.bem],
     github: 'https://github.com/urchifox/OneNews__article_credits',
     webpage: 'https://urchifox.github.io/OneNews__article_credits/',
@@ -157,8 +167,8 @@ export const projects: Array<Project> = [
   {
     id: 'project-blogick',
     name: 'Blogick',
-    type: "trainig",
-    descrption: `Travel article layout covering headings, lead, meta, breadcrumbs, quotes, interrupted list numbering, floats, and aside blocks.`,
+    type: "training",
+    description: `Travel article layout covering headings, lead, meta, breadcrumbs, quotes, interrupted list numbering, floats, and aside blocks.`,
     tools: [stackName.html, stackName.css, stackName.bem],
     github: 'https://github.com/urchifox/Blogick__article_Georgia',
     webpage: 'https://urchifox.github.io/Blogick__article_Georgia/',
