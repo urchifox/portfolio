@@ -21,11 +21,12 @@ export const skills: Array<Skill> = [
     ],
   },
   {
-    text: "Write confidently in both TypeScript and vanilla JS, am familiar with React, work with asynchronous operations, understand how various algorithms work, know Big O notation, and consider algorithmic complexity when writing code",
+    text: "Write confidently in both TypeScript and vanilla JS, am familiar with React and Redux Toolkit, work with asynchronous operations, understand how various algorithms work, know Big O notation, and consider algorithmic complexity when writing code",
     items: [
       stackName.js,
       stackName.ts,
       stackName.react,
+      stackName.redux,
       stackName.jq,
     ],
   },

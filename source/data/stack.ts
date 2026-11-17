@@ -32,6 +32,10 @@ export const stackName: Record<string, Stack> = {
     name: "react",
     text: "React",
   },
+  redux: {
+    name: "redux",
+    text: "Redux",
+  },
   jq: {
     name: "jquery",
     text: "jQuery",

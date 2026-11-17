@@ -49,7 +49,7 @@ export const projects: Array<Project> = [
     type: "personal",
     description: `The sliding puzzle game built with React to deepen component and state management skills. Styled with Emotion (CSS-in-JS) and animated state transitions.
     <br/>Implemented custom level generation that ramps difficulty to keep players engaged.`,
-    tools: [stackName.ts, stackName.react, stackName.sass],
+    tools: [stackName.ts, stackName.react, stackName.redux, stackName.sass],
     github: 'https://github.com/urchifox/sliding-lines',
     webpage: 'https://urchifox.github.io/sliding-lines/',
     images: ['sliding-lines']
