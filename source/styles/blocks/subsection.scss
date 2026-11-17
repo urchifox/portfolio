@@ -136,8 +136,16 @@
     --icon-url: url("./../../images/icons/stack.svg#react");
   }
 
+  &--icon-redux {
+    --icon-url: url("./../../images/icons/stack.svg#redux");
+  }
+
   &--icon-jquery {
     --icon-url: url("./../../images/icons/stack.svg#jquery");
+  }
+
+  &--icon-vitest {
+    --icon-url: url("./../../images/icons/stack.svg#vitest");
   }
 
   &--icon-git {

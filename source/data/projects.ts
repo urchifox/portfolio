@@ -1,27 +1,27 @@
 import { Stack, stackName } from "./stack";
 
 export const projectType = {
-  diploma: 'Diploma project',
-  training: 'Practice project',
-  personal: 'Personal project',
+  diploma: "Diploma project",
+  training: "Practice project",
+  personal: "Personal project",
 } as const;
 type ProjectTypeMap = typeof projectType;
 
 export type Project = {
-  id: string
-  name: string
-  type: keyof ProjectTypeMap
-  description: string
-  tools: Array<Stack>
-  github: string
-  webpage: string
-  images: Array<string>
-}
+  id: string;
+  name: string;
+  type: keyof ProjectTypeMap;
+  description: string;
+  tools: Array<Stack>;
+  github: string;
+  webpage: string;
+  images: Array<string>;
+};
 
 export const projects: Array<Project> = [
   {
-    id: 'portfolio',
-    name: 'Portfolio',
+    id: "portfolio",
+    name: "Portfolio",
     type: "personal",
     description: `Self-directed portfolio site: wrote the spec, designed three responsive breakpoints in Figma, and built the implementation according to the HTML Academy code guide.
     <br/>Highlights:
@@ -29,34 +29,44 @@ export const projects: Array<Project> = [
     <br/>- fluid typography and spacing with rem-based units;
     <br/>- accessible patterns with native <code>details</code> and <code>dialog</code>.`,
     tools: [stackName.pug, stackName.sass, stackName.ts, stackName.bem],
-    github: 'https://github.com/urchifox/portfolio',
-    webpage: 'https://urchifox.github.io/portfolio/',
-    images: ['portfolio']
+    github: "https://github.com/urchifox/portfolio",
+    webpage: "https://urchifox.github.io/portfolio/",
+    images: ["portfolio"],
   },
   {
-    id: 'blast-game',
-    name: 'Blast Game',
+    id: "spin-the-wheel",
+    name: "Spin the Wheel",
+    type: "personal",
+    description: `Spin the Wheel is a responsive, embeddable promo widget for gaming and casino sites, built with TypeScript, HTML, and CSS and animated with the Web Animations API, including support for "prefers-reduced-motion". The component is split into focused modules for orchestration, DOM handling, pure geometry math, label fitting, animation, and spin lifecycle, which keeps each part easy to reason about and test. Prize outcomes are never decided on the client: an injected "Authorizer" interface commits the result on the backend and the component only animates it, so the single-spin rule can't be bypassed from the browser, and a mock adapter lets the demo run without a server.`,
+    tools: [stackName.ts, stackName.css, stackName.html, stackName.bem],
+    github: "https://github.com/urchifox/spin-the-wheel",
+    webpage: "https://urchifox.github.io/spin-the-wheel/",
+    images: ["spin-the-wheel"],
+  },
+  {
+    id: "blast-game",
+    name: "Blast Game",
     type: "personal",
     description: `Blast Game is a browser-based puzzle game built with TypeScript and rendered with Phaser, where the player clears groups of matching tiles, uses boosters, and tries to reach the target score within a limited number of moves. The project is structured with an object-oriented approach, using classes to model the board, tiles, game rules, progress, and level flow. Its architecture follows SOLID-style principles through clear separation of concerns, dependency injection, and abstraction of the rendering layer behind interfaces.`,
-    tools: [stackName.ts, stackName.css, stackName.html, stackName.bem],
+    tools: [stackName.ts, stackName.css, stackName.html, stackName.vitest, stackName.bem],
     github: 'https://github.com/urchifox/blast-game',
     webpage: 'https://urchifox.github.io/blast-game/',
     images: ['blast']
   },
   {
-    id: 'sliding-lines',
-    name: 'Sliding Lines',
+    id: "sliding-lines",
+    name: "Sliding Lines",
     type: "personal",
     description: `The sliding puzzle game built with React to deepen component and state management skills. Styled with Emotion (CSS-in-JS) and animated state transitions.
     <br/>Implemented custom level generation that ramps difficulty to keep players engaged.`,
-    tools: [stackName.ts, stackName.react, stackName.sass],
+    tools: [stackName.ts, stackName.react, stackName.redux, stackName.vitest, stackName.sass],
     github: 'https://github.com/urchifox/sliding-lines',
     webpage: 'https://urchifox.github.io/sliding-lines/',
     images: ['sliding-lines']
   },
   {
-    id: 'feature-support',
-    name: 'Check feature support',
+    id: "feature-support",
+    name: "Check feature support",
     type: "personal",
     description: `Browser tool born from production work on Samsung Internet and other mobile browsers with unclear CSS support data.
     <br/>Features:
@@ -64,114 +74,114 @@ export const projects: Array<Project> = [
     <br/>- dedicated checks for units and custom properties;
     <br/>- minimal UI for instant property testing.`,
     tools: [stackName.html, stackName.sass, stackName.ts, stackName.bem],
-    github: 'https://github.com/urchifox/check-feature-support',
-    webpage: 'https://urchifox.github.io/check-feature-support/',
-    images: ['feature-support']
+    github: "https://github.com/urchifox/check-feature-support",
+    webpage: "https://urchifox.github.io/check-feature-support/",
+    images: ["feature-support"],
   },
   {
-    id: 'project-cat-energy',
-    name: 'Cat Energy',
+    id: "project-cat-energy",
+    name: "Cat Energy",
     type: "diploma",
     description: `Pixel-perfect adaptive diploma: landing, catalog, and order form across three breakpoints. Content stays stable under image swaps, text overflow, and layout stress.
     <br/>Notable work: progressive mobile menu (in-flow without JS, interactive with JS) and a hero background that scales without exposing cropped edges.
     <br/>Graduated with a perfect score on the first attempt.`,
     tools: [stackName.html, stackName.sass, stackName.js, stackName.bem],
-    github: 'https://github.com/urchifox/cat-energy',
-    webpage: 'https://urchifox.github.io/cat-energy/',
-    images: ['cat-energy']
+    github: "https://github.com/urchifox/cat-energy",
+    webpage: "https://urchifox.github.io/cat-energy/",
+    images: ["cat-energy"],
   },
   {
-    id: 'project-grafit-academy',
-    name: 'Grafit Academy',
+    id: "project-grafit-academy",
+    name: "Grafit Academy",
     type: "personal",
     description: `Two-page training project: landing and product catalog pages.
     <br/>Key features: adaptive catalog grids, a native slider (no library), dynamic rendering, filtering and sorting, noUiSlider integration, Local Storage for cart and favorites, and synced state across catalog, modal, and cart.
     <br/>Later migrated to Sass and an automated build - first experience refactoring toward a production setup.`,
     tools: [stackName.html, stackName.css, stackName.js, stackName.bem],
-    github: 'https://github.com/urchifox/grafit-academy',
-    webpage: 'https://urchifox.github.io/grafit-academy/',
-    images: ['grafit-academy']
+    github: "https://github.com/urchifox/grafit-academy",
+    webpage: "https://urchifox.github.io/grafit-academy/",
+    images: ["grafit-academy"],
   },
   {
-    id: 'project-online-smartphones-store',
-    name: 'Online smartphones store',
+    id: "project-online-smartphones-store",
+    name: "Online smartphones store",
     type: "training",
     description: `Product catalog with gallery and modal states. Added JS-driven rendering and live card updates when color or storage options change.`,
     tools: [stackName.html, stackName.css, stackName.js, stackName.bem],
-    github: 'https://github.com/urchifox/online-store',
-    webpage: 'https://urchifox.github.io/online-store/',
-    images: ['online-smartphones-store']
+    github: "https://github.com/urchifox/online-store",
+    webpage: "https://urchifox.github.io/online-store/",
+    images: ["online-smartphones-store"],
   },
   {
-    id: 'project-multilayer-exercises',
-    name: 'Multilayer exercises',
+    id: "project-multilayer-exercises",
+    name: "Multilayer exercises",
     type: "training",
     description: `Layout exercise: sticky header, cookie banner, and back-to-top control on a provided mockup.`,
     tools: [stackName.html, stackName.css, stackName.js, stackName.bem],
-    github: 'https://github.com/urchifox/multilayer-exercise',
-    webpage: 'https://urchifox.github.io/multilayer-exercise/',
-    images: ['multilayer-exercises']
+    github: "https://github.com/urchifox/multilayer-exercise",
+    webpage: "https://urchifox.github.io/multilayer-exercise/",
+    images: ["multilayer-exercises"],
   },
   {
-    id: 'project-big-trip',
-    name: 'Big Trip',
+    id: "project-big-trip",
+    name: "Big Trip",
     type: "diploma",
     description: `MVP-architecture SPA in OOP JavaScript. Split provided markup into components rendered via template strings; HTML holds only mount points. Full CRUD over REST API with <code>he</code>, <code>flatpickr</code>, and <code>dayjs</code>.
     <br/>Graduated with a perfect score on the second attempt.`,
     tools: [stackName.js],
-    github: 'https://github.com/urchifox/big-trip',
-    webpage: 'https://urchifox.github.io/big-trip/',
-    images: ['big-trip']
+    github: "https://github.com/urchifox/big-trip",
+    webpage: "https://urchifox.github.io/big-trip/",
+    images: ["big-trip"],
   },
   {
-    id: 'project-kekstagram',
-    name: 'Kekstagram',
+    id: "project-kekstagram",
+    name: "Kekstagram",
     type: "diploma",
     description: `Feed SPA that loads posts from an API, renders with sorting, and surfaces connection errors to the user. Centralized DOM query exports in a dedicated module.
     <br/>Graduated with a perfect score on the second attempt.`,
     tools: [stackName.js],
-    github: 'https://github.com/urchifox/kekstagram',
-    webpage: 'https://urchifox.github.io/kekstagram/',
-    images: ['kekstagram']
+    github: "https://github.com/urchifox/kekstagram",
+    webpage: "https://urchifox.github.io/kekstagram/",
+    images: ["kekstagram"],
   },
   {
-    id: 'project-italian-chefs-blog',
-    name: 'Italian chef’s blog',
+    id: "project-italian-chefs-blog",
+    name: "Italian chef’s blog",
     type: "training",
     description: `Editorial layout exercise with advanced typography: drop caps, ligatures, pull quotes, shaped wraps, rotated text, and columns — plus animated focus states.`,
     tools: [stackName.html, stackName.css, stackName.bem],
-    github: 'https://github.com/urchifox/Italian-chefs-blog__article',
-    webpage: 'https://urchifox.github.io/Italian-chefs-blog__article/',
-    images: ['italian-chefs-blog']
+    github: "https://github.com/urchifox/Italian-chefs-blog__article",
+    webpage: "https://urchifox.github.io/Italian-chefs-blog__article/",
+    images: ["italian-chefs-blog"],
   },
   {
-    id: 'project-science-blog',
-    name: 'Science blog',
+    id: "project-science-blog",
+    name: "Science blog",
     type: "training",
     description: `Scientific article layout: table of contents, tables, formulas, columns, footnotes, and nested lists. Article cards with truncated previews. Bonus: pure CSS search field that expands into the header on click.`,
-    tools: [stackName.html, stackName.css, stackName.bem,],
-    github: 'https://github.com/urchifox/SCIENCE__article_carbohydrates',
-    webpage: 'https://urchifox.github.io/SCIENCE__article_carbohydrates/',
-    images: ['science-blog']
+    tools: [stackName.html, stackName.css, stackName.bem],
+    github: "https://github.com/urchifox/SCIENCE__article_carbohydrates",
+    webpage: "https://urchifox.github.io/SCIENCE__article_carbohydrates/",
+    images: ["science-blog"],
   },
   {
-    id: 'project-onenews',
-    name: 'OneNews',
+    id: "project-onenews",
+    name: "OneNews",
     type: "training",
     description: `Finance article layout with tables, a diagram-style definition list, nested lists, formulas, aside blocks, and a related-article card with a "read more" pattern.`,
     tools: [stackName.html, stackName.css, stackName.bem],
-    github: 'https://github.com/urchifox/OneNews__article_credits',
-    webpage: 'https://urchifox.github.io/OneNews__article_credits/',
-    images: ['onenews']
+    github: "https://github.com/urchifox/OneNews__article_credits",
+    webpage: "https://urchifox.github.io/OneNews__article_credits/",
+    images: ["onenews"],
   },
   {
-    id: 'project-blogick',
-    name: 'Blogick',
+    id: "project-blogick",
+    name: "Blogick",
     type: "training",
     description: `Travel article layout covering headings, lead, meta, breadcrumbs, quotes, interrupted list numbering, floats, and aside blocks.`,
     tools: [stackName.html, stackName.css, stackName.bem],
-    github: 'https://github.com/urchifox/Blogick__article_Georgia',
-    webpage: 'https://urchifox.github.io/Blogick__article_Georgia/',
-    images: ['blogick']
+    github: "https://github.com/urchifox/Blogick__article_Georgia",
+    webpage: "https://urchifox.github.io/Blogick__article_Georgia/",
+    images: ["blogick"],
   },
 ];

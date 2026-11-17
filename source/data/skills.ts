@@ -21,12 +21,30 @@ export const skills: Array<Skill> = [
     ],
   },
   {
-    text: "Write confidently in both TypeScript and vanilla JS, am familiar with React, work with asynchronous operations, understand how various algorithms work, know Big O notation, and consider algorithmic complexity when writing code",
+    text: "Write confidently in both TypeScript and vanilla JS, can deal with legacy jQuery, work with asynchronous operations, understand how various algorithms work, know Big O notation, and consider algorithmic complexity when writing code",
     items: [
       stackName.js,
       stackName.ts,
-      stackName.react,
       stackName.jq,
+    ],
+  },
+  {
+    text: "Build SPAs with React and Redux Toolkit",
+    items: [
+      stackName.react,
+      stackName.redux,
+    ],
+  },
+  {
+    text: "Use Clean Architecture principles to write test-covered code using Vitest",
+    items: [
+      stackName.vitest,
+    ],
+  },
+  {
+    text: "Split interfaces into reusable and independent components.",
+    items: [
+      stackName.bem,
     ],
   },
   {
@@ -34,12 +52,6 @@ export const skills: Array<Skill> = [
     items: [
       stackName.git,
       stackName.github,
-    ],
-  },
-  {
-    text: "Split interfaces into reusable and independent components.",
-    items: [
-      stackName.bem,
     ],
   },
   {
