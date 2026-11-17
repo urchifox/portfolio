@@ -106,10 +106,28 @@
                 <div class="subsection__skills-icon-wrapper">
                   <p class="subsection__skills-icon subsection__skills-icon--icon-javascript"><span class="visually-hidden">JavaScript</span></p>
                   <p class="subsection__skills-icon subsection__skills-icon--icon-typescript"><span class="visually-hidden">TypeScript</span></p>
-                  <p class="subsection__skills-icon subsection__skills-icon--icon-react"><span class="visually-hidden">React</span></p>
                   <p class="subsection__skills-icon subsection__skills-icon--icon-jquery"><span class="visually-hidden">jQuery</span></p>
                 </div>
-                <p class="subsection__skills-text">Write confidently in both TypeScript and vanilla JS, am familiar with React, work with asynchronous operations, understand how various algorithms work, know Big O notation, and consider algorithmic complexity when writing code</p>
+                <p class="subsection__skills-text">Write confidently in both TypeScript and vanilla JS, can deal with legacy jQuery, work with asynchronous operations, understand how various algorithms work, know Big O notation, and consider algorithmic complexity when writing code</p>
+              </li>
+              <li class="subsection__skills-item">
+                <div class="subsection__skills-icon-wrapper">
+                  <p class="subsection__skills-icon subsection__skills-icon--icon-react"><span class="visually-hidden">React</span></p>
+                  <p class="subsection__skills-icon subsection__skills-icon--icon-redux"><span class="visually-hidden">Redux</span></p>
+                </div>
+                <p class="subsection__skills-text">Build SPAs with React and Redux Toolkit</p>
+              </li>
+              <li class="subsection__skills-item">
+                <div class="subsection__skills-icon-wrapper">
+                  <p class="subsection__skills-icon subsection__skills-icon--icon-vitest"><span class="visually-hidden">Vitest</span></p>
+                </div>
+                <p class="subsection__skills-text">Use Clean Architecture principles to write test-covered code using Vitest</p>
+              </li>
+              <li class="subsection__skills-item">
+                <div class="subsection__skills-icon-wrapper">
+                  <p class="subsection__skills-icon subsection__skills-icon--icon-bem"><span class="visually-hidden">BEM</span></p>
+                </div>
+                <p class="subsection__skills-text">Split interfaces into reusable and independent components.</p>
               </li>
               <li class="subsection__skills-item">
                 <div class="subsection__skills-icon-wrapper">
@@ -117,12 +135,6 @@
                   <p class="subsection__skills-icon subsection__skills-icon--icon-github"><span class="visually-hidden">Github</span></p>
                 </div>
                 <p class="subsection__skills-text">Work with the GIT version control system, know the main repository commands, and how to work with branches and forks</p>
-              </li>
-              <li class="subsection__skills-item">
-                <div class="subsection__skills-icon-wrapper">
-                  <p class="subsection__skills-icon subsection__skills-icon--icon-bem"><span class="visually-hidden">BEM</span></p>
-                </div>
-                <p class="subsection__skills-text">Split interfaces into reusable and independent components.</p>
               </li>
               <li class="subsection__skills-item">
                 <div class="subsection__skills-icon-wrapper">
@@ -262,6 +274,27 @@
                 </picture>
               </div>
             </li>
+            <li class="projects__item project-card" id="spin-the-wheel" data-type="personal">
+              <h3 class="project-card__title">Spin the Wheel</h3>
+              <p class="project-card__caption">Personal project</p>
+              <p class="project-card__text">Spin the Wheel is a responsive, embeddable promo widget for gaming and casino sites, built with TypeScript, HTML, and CSS and animated with the Web Animations API, including support for "prefers-reduced-motion". The component is split into focused modules for orchestration, DOM handling, pure geometry math, label fitting, animation, and spin lifecycle, which keeps each part easy to reason about and test. Prize outcomes are never decided on the client: an injected "Authorizer" interface commits the result on the backend and the component only animates it, so the single-spin rule can't be bypassed from the browser, and a mock adapter lets the demo run without a server.</p>
+              <ul class="project-card__stack-list">
+                <li class="project-card__stack-item project-card__stack-item--icon-typescript"><span class="visually-hidden">TypeScript</span></li>
+                <li class="project-card__stack-item project-card__stack-item--icon-css"><span class="visually-hidden">CSS</span></li>
+                <li class="project-card__stack-item project-card__stack-item--icon-html"><span class="visually-hidden">HTML</span></li>
+                <li class="project-card__stack-item project-card__stack-item--icon-bem"><span class="visually-hidden">BEM</span></li>
+              </ul>
+              <div class="project-card__buttons-wrapper"><a class="project-card__button button button--icon-github" href="https://github.com/urchifox/spin-the-wheel"><span class="visually-hidden">Project on GitHub</span></a><a class="project-card__button button button--icon-external-link" href="https://urchifox.github.io/spin-the-wheel/"><span class="visually-hidden">Live demo</span></a></div>
+              <div class="project-card__slider">
+                <picture>
+                  <source type="image/webp" media="(min-width: 1200px)" srcset="./images/cover-spin-the-wheel-large@1x.webp 1x, ./images/cover-spin-the-wheel-large@2x.webp 2x" width="441" height="248">
+                  <source type="image/webp" media="(min-width: 760px)" srcset="./images/cover-spin-the-wheel-medium@1x.webp 1x, ./images/cover-spin-the-wheel-medium@2x.webp 2x" width="1096" height="616">
+                  <source type="image/webp" srcset="./images/cover-spin-the-wheel-small@1x.webp 1x, ./images/cover-spin-the-wheel-small@2x.webp 2x" width="689" height="387">
+                  <source type="image/jpg" media="(min-width: 1200px)" srcset="./images/cover-spin-the-wheel-large@1x.jpg 1x, ./images/cover-spin-the-wheel-large@2x.jpg 2x" width="441" height="248">
+                  <source type="image/jpg" media="(min-width: 760px)" srcset="./images/cover-spin-the-wheel-medium@1x.jpg 1x, ./images/cover-spin-the-wheel-medium@2x.jpg 2x" width="1096" height="616"><img class="project-card__picture" loading="lazy" src="./images/cover-spin-the-wheel-small@1x.jpg" srcset="./images/cover-spin-the-wheel-small@2x.jpg 2x" width="689" height="387" alt="Screenshot of the live-demo">
+                </picture>
+              </div>
+            </li>
             <li class="projects__item project-card" id="blast-game" data-type="personal">
               <h3 class="project-card__title">Blast Game</h3>
               <p class="project-card__caption">Personal project</p>
@@ -270,6 +303,7 @@
                 <li class="project-card__stack-item project-card__stack-item--icon-typescript"><span class="visually-hidden">TypeScript</span></li>
                 <li class="project-card__stack-item project-card__stack-item--icon-css"><span class="visually-hidden">CSS</span></li>
                 <li class="project-card__stack-item project-card__stack-item--icon-html"><span class="visually-hidden">HTML</span></li>
+                <li class="project-card__stack-item project-card__stack-item--icon-vitest"><span class="visually-hidden">Vitest</span></li>
                 <li class="project-card__stack-item project-card__stack-item--icon-bem"><span class="visually-hidden">BEM</span></li>
               </ul>
               <div class="project-card__buttons-wrapper"><a class="project-card__button button button--icon-github" href="https://github.com/urchifox/blast-game"><span class="visually-hidden">Project on GitHub</span></a><a class="project-card__button button button--icon-external-link" href="https://urchifox.github.io/blast-game/"><span class="visually-hidden">Live demo</span></a></div>
@@ -291,6 +325,8 @@
               <ul class="project-card__stack-list">
                 <li class="project-card__stack-item project-card__stack-item--icon-typescript"><span class="visually-hidden">TypeScript</span></li>
                 <li class="project-card__stack-item project-card__stack-item--icon-react"><span class="visually-hidden">React</span></li>
+                <li class="project-card__stack-item project-card__stack-item--icon-redux"><span class="visually-hidden">Redux</span></li>
+                <li class="project-card__stack-item project-card__stack-item--icon-vitest"><span class="visually-hidden">Vitest</span></li>
                 <li class="project-card__stack-item project-card__stack-item--icon-sass"><span class="visually-hidden">Sass</span></li>
               </ul>
               <div class="project-card__buttons-wrapper"><a class="project-card__button button button--icon-github" href="https://github.com/urchifox/sliding-lines"><span class="visually-hidden">Project on GitHub</span></a><a class="project-card__button button button--icon-external-link" href="https://urchifox.github.io/sliding-lines/"><span class="visually-hidden">Live demo</span></a></div>
