@@ -1,14 +1,25 @@
 .additions-card {
+  position: relative;
   padding-top: $font-size-1;
-  padding-bottom: $font-size-xxs;
-  padding-left: $font-size-xxs;
-  padding-right: $font-size-xxs;
-  border-radius: $font-size-xs;
 
   display: flex;
   flex-direction: column;
-  gap: $font-size-xxs;
+  gap: calc($font-size-xxs / 2);
   align-items: center;
+}
+
+.additions-card::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin-inline: auto;
+
+  border-radius: $font-size-xs;
+  width: calc(100% - $font-size-2 * 2);
+  height: 100%;
 
   background-color: var(--color-background-secondary);
 }
@@ -66,12 +77,17 @@
   margin-top: 0;
   margin-bottom: 0;
 
-  padding-left: 0;
+  border-radius: $font-size-xs;
+  border: $border-standard;
+  padding: 2px;
   width: 100%;
 
   display: flex;
   flex-direction: column;
-  gap: $font-size-xxs;
+  gap: calc($font-size-xxs / 2);
+
+  background-color: var(--color-background-secondary);
+  box-shadow: $shadow-standard;
 
   list-style: none;
 }
