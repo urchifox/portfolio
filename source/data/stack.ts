@@ -40,6 +40,10 @@ export const stackName: Record<string, Stack> = {
     name: "jquery",
     text: "jQuery",
   },
+  vitest: {
+    name: "vitest",
+    text: "Vitest",
+  },
   bem: {
     name: "bem",
     text: "BEM",

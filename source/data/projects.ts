@@ -38,7 +38,7 @@ export const projects: Array<Project> = [
     name: 'Blast Game',
     type: "personal",
     description: `Blast Game is a browser-based puzzle game built with TypeScript and rendered with Phaser, where the player clears groups of matching tiles, uses boosters, and tries to reach the target score within a limited number of moves. The project is structured with an object-oriented approach, using classes to model the board, tiles, game rules, progress, and level flow. Its architecture follows SOLID-style principles through clear separation of concerns, dependency injection, and abstraction of the rendering layer behind interfaces.`,
-    tools: [stackName.ts, stackName.css, stackName.html, stackName.bem],
+    tools: [stackName.ts, stackName.css, stackName.html, stackName.vitest, stackName.bem],
     github: 'https://github.com/urchifox/blast-game',
     webpage: 'https://urchifox.github.io/blast-game/',
     images: ['blast']
@@ -49,7 +49,7 @@ export const projects: Array<Project> = [
     type: "personal",
     description: `The sliding puzzle game built with React to deepen component and state management skills. Styled with Emotion (CSS-in-JS) and animated state transitions.
     <br/>Implemented custom level generation that ramps difficulty to keep players engaged.`,
-    tools: [stackName.ts, stackName.react, stackName.redux, stackName.sass],
+    tools: [stackName.ts, stackName.react, stackName.redux, stackName.vitest, stackName.sass],
     github: 'https://github.com/urchifox/sliding-lines',
     webpage: 'https://urchifox.github.io/sliding-lines/',
     images: ['sliding-lines']

@@ -31,6 +31,12 @@ export const skills: Array<Skill> = [
     ],
   },
   {
+    text: "Write unit tests for the code using Vitest",
+    items: [
+      stackName.vitest,
+    ],
+  },
+  {
     text: "Work with the GIT version control system, know the main repository commands, and how to work with branches and forks",
     items: [
       stackName.git,
